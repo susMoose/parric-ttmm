@@ -1,1 +1,1 @@
-./ttmm/mylib 16 * -5
+./ttmm/mylib 16 -5

@@ -1,1 +1,1 @@
-./ttmm/mylib 0 * 45;
+./ttmm/mylib 0 45
