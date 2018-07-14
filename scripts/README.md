@@ -1,6 +1,7 @@
 ## Jenkins containers ## 
 
-These scripts spin up Jenkins master and slave instances as docker containers from [https://hub.docker.com/r/lnarmour/parric/tags/](https://hub.docker.com/r/lnarmour/parric/tags/).
+These scripts spin up Jenkins master and slave instances as docker containers from:
+[https://hub.docker.com/r/lnarmour/parric/tags/](https://hub.docker.com/r/lnarmour/parric/tags/).
 
 Create **master**:
 ```
