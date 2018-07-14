@@ -1,1 +1,1 @@
-printf "test2 logic...\n"
+./ttmm/mylib 0 * 45;
