@@ -4,5 +4,10 @@ node('slave') {
     }
     stage('Test') { 
         shell './tests/test0.sh'
+        shell './tests/test1.sh'
+        shell './tests/test2.sh'
+    }
+    stage('Cleanup') {
+        shell 'make --directory=ttmm clean'
     }
 }
