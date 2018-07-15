@@ -1,4 +1,15 @@
-node('slave') {
-	sh 'echo test 1'
+pipeline {
+    agent {
+        label 'slave'
+    }
+
+    stages {
+        stage('build') {
+            steps {
+                sh 'make --directory=ttmm all'
+            }
+        }
+    }
+
 
 }
