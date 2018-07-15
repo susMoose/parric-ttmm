@@ -17,6 +17,6 @@ int multiply(int x, int y) {
 }
 
 int multiply3(int x, int y, int z) {
-	// add a commenta
+	// add a commentas
 	return multiply(x,y)*z;
 }
