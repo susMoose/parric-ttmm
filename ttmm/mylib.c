@@ -13,3 +13,7 @@ int main(int argc, char** argv) {
 int multiply(int x, int y) {
 	return x*y;
 }
+
+int multiply3(int x, int y, int z) {
+	return multiply(x,y)*z;
+}
