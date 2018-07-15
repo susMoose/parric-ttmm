@@ -11,5 +11,7 @@ int main(int argc, char** argv) {
 }
 
 int multiply(int x, int y) {
-	return x*y;
+	int a = x;
+	int b = y;
+	return a*b;
 }
