@@ -24,11 +24,6 @@ pipeline {
                 sh './tests/test2.sh'
             }
         }
-        stage('cleanup') {
-            steps {
-                sh 'make --directory=ttmm clean'
-            }
-        }
     }
 
 
