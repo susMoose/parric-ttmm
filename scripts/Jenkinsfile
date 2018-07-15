@@ -1,0 +1,8 @@
+node('slave') {  
+    stage('Build') { 
+        shell 'make --directory=ttmm all'
+    }
+    stage('Test') { 
+        shell './tests/test0.sh'
+    }
+}
