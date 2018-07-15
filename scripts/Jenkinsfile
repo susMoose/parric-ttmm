@@ -1,13 +1,13 @@
 node('slave') {  
     stage('Build') { 
-        shell 'make --directory=ttmm all'
+        sh 'make --directory=ttmm all'
     }
     stage('Test') { 
-        shell './tests/test0.sh', returnStdout: true
-        shell './tests/test1.sh', returnStdout: true
-        shell './tests/test2.sh', returnStdout: true
+        sh './tests/test0.sh'
+        sh './tests/test1.sh'
+        sh './tests/test2.sh'
     }
     stage('Cleanup') {
-        shell 'make --directory=ttmm clean'
+        sh 'make --directory=ttmm clean'
     }
 }
