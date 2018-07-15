@@ -3,9 +3,9 @@ node('slave') {
         shell 'make --directory=ttmm all'
     }
     stage('Test') { 
-        shell './tests/test0.sh'
-        shell './tests/test1.sh'
-        shell './tests/test2.sh'
+        shell './tests/test0.sh', returnStdout: true
+        shell './tests/test1.sh', returnStdout: true
+        shell './tests/test2.sh', returnStdout: true
     }
     stage('Cleanup') {
         shell 'make --directory=ttmm clean'
