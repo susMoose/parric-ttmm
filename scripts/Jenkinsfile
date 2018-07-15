@@ -1,6 +1,0 @@
-node('slave') {  
-    sh 'hostname'
-
-
-    sh 'make --directory=/home/jenkins/slave/workspace/blocked-ttmm/ttmm clean'
-}
