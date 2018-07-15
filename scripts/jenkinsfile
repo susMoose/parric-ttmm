@@ -1,0 +1,4 @@
+node('slave') {
+	sh 'echo test 1'
+
+}
