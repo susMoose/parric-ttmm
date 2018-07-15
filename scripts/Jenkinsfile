@@ -1,13 +1,8 @@
 node('slave') {  
-    stage('Build') { 
-        shell 'make --directory=ttmm all'
-    }
-    stage('Test') { 
-        shell './tests/test0.sh', returnStdout: true
-        shell './tests/test1.sh', returnStdout: true
-        shell './tests/test2.sh', returnStdout: true
-    }
-    stage('Cleanup') {
-        shell 'make --directory=ttmm clean'
-    }
+    sh 'pwd && ls -la ../blocked-ttmm && make --directory=/home/jenkins/slave/workspace/blocked-ttmm/ttmm all'
+    
+
+    sh '/home/jenkins/slave/workspace/blocked-ttmm/tests/test0.sh'
+
+    sh 'make --directory=/home/jenkins/slave/workspace/blocked-ttmm/ttmm clean'
 }
