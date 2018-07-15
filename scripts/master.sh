@@ -35,5 +35,12 @@ docker run \
   --name jenkins \
   lnarmour/parric:jenkins-master
 
-ips=(`hostname -I`)
-printf "SUCCESS : Jenkins master created at http://%s:8080\n\n" ${ips[0]}
+sleep 3
+
+if [[ -n $(docker ps -f name=jenkins -q) ]]; then
+   printf "SUCCESS : Created 'jenkins' successfully.\n"
+   printf "SUCCESS : Available at http://ci-parric.ddns.net.\n"
+else
+   printf "ERROR : Couldn't create 'jenkins' master. See 'docker logs jenkins'.\n\n"
+   exit 1
+fi

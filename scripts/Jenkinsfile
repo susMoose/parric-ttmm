@@ -1,8 +1,0 @@
-node('slave') {  
-    sh 'pwd && ls -la ../blocked-ttmm && make --directory=/home/jenkins/slave/workspace/blocked-ttmm/ttmm all'
-    
-
-    sh '/home/jenkins/slave/workspace/blocked-ttmm/tests/test0.sh'
-
-    sh 'make --directory=/home/jenkins/slave/workspace/blocked-ttmm/ttmm clean'
-}
