@@ -39,7 +39,7 @@ sleep 3
 
 if [[ -n $(docker ps -f name=jenkins -q) ]]; then
    printf "SUCCESS : Created 'jenkins' successfully.\n"
-   printf "SUCCESS : Available at http://ci-parric.ddns.net.\n"
+   printf "SUCCESS : Available at http://ci-parric.ddns.net.\n\n"
 else
    printf "ERROR : Couldn't create 'jenkins' master. See 'docker logs jenkins'.\n\n"
    exit 1
