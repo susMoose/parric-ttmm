@@ -21,7 +21,7 @@ docker run \
 sleep 3
 
 if [[ -n $(docker ps -f name=slave -q) ]]; then
-   printf "SUCCESS : Created 'slave' successfully.\n\n"
+   printf "SUCCESS : Created 'slave' successfully.\n"
 else
    printf "ERROR : Couldn't create 'slave'. See 'docker logs slave'.\n\n"
    exit 1
