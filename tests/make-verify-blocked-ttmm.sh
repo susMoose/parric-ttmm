@@ -1,1 +1,1 @@
-make --directory ttmm/blockedTTMM/ verify
+make --directory=ttmm/blockedTTMM/ verify
