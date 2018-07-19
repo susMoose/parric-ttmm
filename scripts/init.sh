@@ -1,5 +1,5 @@
 # make sure docker client is logged into docker hub with 'docker login'
-
+# as written, must run this from the scripts/ directory (or wherever master.sh and slave.sh live)
 
 if [[ -n $(docker ps -q) ]]
 then
