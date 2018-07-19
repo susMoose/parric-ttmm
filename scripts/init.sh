@@ -21,7 +21,7 @@ printf "INFO : ...done.\n\n"
 
 printf "INFO : Sleeping for 30 seconds to let 'jenkins' initialize..."
 sleep 30
-printf "done."
+printf "done.\n\n"
 
 printf "INFO : Invoking 'slave.sh'...\n"
 # This slave secret '85a3ba...' may not work.
