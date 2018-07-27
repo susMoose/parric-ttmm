@@ -1,0 +1,33 @@
+FROM lnarmour/parric:jenkins-slave
+
+COPY eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz /home/jenkins/eclipse-dsl-photon-R-linux-gtk-x86_64.ta
+COPY eclim_2.8.0.bin /tmp/eclim_2.8.0.bin
+COPY linux64.tar.gz /home/jenkins/linux64.tar.gz
+COPY alphaz /usr/local/bin/alphaz
+
+USER root
+
+RUN apt-get update && \
+    apt-get install -y vim xvfb && \
+    chmod 755 /tmp/eclim_2.8.0.bin
+
+USER jenkins
+
+RUN cd /home/jenkins/ && \
+    tar -xzf eclipse-dsl-photon-R-linux-gtk-x86_64.tar.gz
+
+RUN echo 'set nocompatible' > $HOME/.vimrc && \
+    echo 'filetype plugin indent on' > $HOME/.vimrc && \
+    mkdir $HOME/.vim
+
+RUN /tmp/eclim_2.8.0.bin --yes --eclipse=/home/jenkins/eclipse --vimfiles=$HOME/.vim --plugins=jdt
+
+RUN cd $HOME && \
+    tar -xzf linux64.tar.gz
+
+RUN chmod 755 -R $HOME/eclipse/plugins
+
+USER root
+RUN chmod 755 /usr/local/bin/alphaz
+USER jenkins
+
