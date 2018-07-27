@@ -1,0 +1,15 @@
+pipeline {
+    agent {
+        label 'slave'
+    }
+
+    stages {
+	stage('sample-test.sh') {
+            steps {
+                sh './tests/sample-test.sh'
+            }
+        }
+    }
+
+
+}
