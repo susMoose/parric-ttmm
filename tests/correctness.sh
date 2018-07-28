@@ -1,4 +1,4 @@
-cd ../ttmm/alphaz_stuff
+cd ttmm/alphaz_stuff
 ./cmdlinecompile.sh
 cd out
 cp Makefile.old Makefile
