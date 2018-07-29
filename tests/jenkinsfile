@@ -9,6 +9,11 @@ pipeline {
                 sh './tests/sample-test.sh'
             }
         }
+	stage('correctness test') {
+		steps{
+			sh './tests/correctness.sh'
+		}
+	}
     }
 
 
