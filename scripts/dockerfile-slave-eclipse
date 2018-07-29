@@ -1,0 +1,9 @@
+FROM lnarmour/parric:jenkins-slave-eclipse
+
+USER root
+
+RUN apt-get install -y libboost-all-dev
+
+USER jenkins
+
+ENV DISPLAY=:1
