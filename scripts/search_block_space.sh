@@ -12,7 +12,7 @@ let "b3 = $N / 2"
 let "step = $N / 4"
 
 cd ttmm/alphaz_stuff/out
-for iterations in {1..$2}
+for ((iterations=1;iterations<=$2;iterations++))
 do
 	for ts1 in {0..1}
 	do
