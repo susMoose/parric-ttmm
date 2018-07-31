@@ -1,14 +1,18 @@
 #! /usr/bin/bash
-
+if [ $# -ne 2 ]
+then
+	echo "usage: $0 <size> <iterations>"
+	exit 1
+fi
 min=100000000
-N=5000
+N=$1
 let "b1 = $N / 2"
 let "b2 = $N / 2"
 let "b3 = $N / 2"
 let "step = $N / 4"
 
 cd ttmm/alphaz_stuff/out
-for iterations in {1..6}
+for iterations in {1..$2}
 do
 	for ts1 in {0..1}
 	do
