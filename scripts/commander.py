@@ -1,3 +1,20 @@
+# python3
+
+import subprocess
+import queue
+import threading
+
+global machines
+global hostnames
+global tasks
+global results
+
+hostnames = [
+    'cod',
+    'eel',
+    'flounder',
+    'dorado'
+]
 
 
 def partition(parent, segments):
@@ -42,24 +59,120 @@ class Cube:
         return (x+d, y+d, z+d)
 
 
-''' If print(cube, cube.center()) = {'length': 1666, 'origin': (0, 0, 0)} (833, 833, 833)
-    Then this returns:
-        ./TMM 
-'''
-def make_command(N, cube, path_prefix='.'):
-    executable = '{}/TMM'.format(path_prefix)
-    (ts1, ts2, ts3) = cube.center()
-    command = [executable, str(N), str(ts1), str(ts2), str(ts3)]
-    return command
+class Machine:
+    def __init__(self, hostname):
+        self.tasks = []
+        self.hostname = hostname
+        self.cores = self.calc_cores()
+    
+    def __str__(self):
+        return str(self.hostname)
+
+    def calc_cores(self):
+        # $ lscpu | grep -i socket
+        # Core(s) per socket:  8
+        # Socket(s):           1
+        cores_per_socket_pipe = subprocess.Popen(['echo', 'lscpu | grep -i "per socket"'] , stdout=subprocess.PIPE)
+        cps_str = subprocess.Popen(['ssh', self.hostname], stdin=cores_per_socket_pipe.stdout, stdout=subprocess.PIPE).stdout.read()
+
+        sockets_pipe = subprocess.Popen(['echo', 'lscpu | grep "Socket"'] , stdout=subprocess.PIPE)
+        socks_str = subprocess.Popen(['ssh', self.hostname], stdin=sockets_pipe.stdout, stdout=subprocess.PIPE).stdout.read()
+
+        cores_per_socket = int(cps_str.decode('utf-8').split(':')[1].replace(' ', ''))
+        sockets = int(socks_str.decode('utf-8').split(':')[1].replace(' ', ''))
+
+        return cores_per_socket * sockets
 
 
-def main(N=1000, partitions=2):
+class Command:
+    def __init__(self, executable, params):
+        self.executable = executable
+        self.params = params
+
+    def __str__(self):
+        p_str = ''
+        for p in self.params:
+            p_str += ' ' + str(p)
+        return str(self.executable) + p_str
+
+    def as_list(self):
+        ret = [str(self.executable)]
+        for p in self.params:
+            ret.append(str(p))
+        return ret
+
+
+class Result:
+    def __init__(self, machine, core, command, time):
+        self.machine = machine
+        self.core = core
+        self.command = command
+        self.time = time
+
+    def __str__(self):
+        ret = '[' +  str(self.machine) + '-' + str(self.core) + ']'
+        ret += ' : ' + str(self.command) + ' : ' + str(self.time) + ' seconds'
+        return ret
+
+
+def init_machines():
+    global machines
+    global hostnames
+    machines = []
+    for h in hostnames:
+        print('Creating','Machine(\''+str(h)+'\')...')
+        machines.append(Machine(h))
+
+
+def worker(machine, core):
+    global tasks
+    global results
+    while True:
+        command = tasks.get()
+        if not command:
+            break
+
+        # remotely invoke 'command' on 'machine' via ssh
+        echo_pipe = subprocess.Popen(['echo', str(command)], stdout=subprocess.PIPE)
+        ssh_pipe = subprocess.Popen(['ssh', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
+        result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
+        time = float(result_bytes.decode('utf-8').split(' ')[3])
+        result = Result(machine, core, command, time)
+        results.append(result)
+
+        print(str(result))
+
+        tasks.task_done()
+
+
+def main(N=1000, partitions=2, path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out'):
+    global tasks
+    global results
+
+    init_machines()
+    
+    # FIRST level - add tasks to queue
     parent = Cube((0,0,0), N)
-    
+    tasks = queue.Queue()
     for child in partition(parent, partitions):
-        print(child)
-    
+        (ts1, ts2, ts3) = child.center()
+        tasks.put(Command('{}/TMM'.format(path_prefix), [N, ts1, ts2, ts3]))
 
+    threads = []
+    results = []
+    for machine in machines:
+        for i in range(0, machine.cores):
+            #print('--> setup', machine, i)
+            t = threading.Thread(target=worker, args=(machine, i))
+            t.start()
+            threads.append(t)
+    tasks.join()
+
+    for machine in machines:
+        for i in range(0, machine.cores):
+            tasks.put(None)
+    for t in threads:
+        t.join()
 
 
 
