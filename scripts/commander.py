@@ -8,12 +8,13 @@ global machines
 global hostnames
 global tasks
 global results
+global level
 
 hostnames = [
     'cod',
     'eel',
-    'flounder',
-    'dorado'
+#    'flounder',
+#    'dorado'
 ]
 
 
@@ -103,16 +104,23 @@ class Command:
 
 
 class Result:
-    def __init__(self, machine, core, command, time):
+    def __init__(self, machine, core, command, time, level):
         self.machine = machine
         self.core = core
         self.command = command
         self.time = time
+        self.level = level
 
     def __str__(self):
-        ret = '[' +  str(self.machine) + '-' + str(self.core) + ']'
+        ret = '[' +  str(self.machine) + '-' + str(self.core) + '] : [level-' + str(self.level) + ']'
         ret += ' : ' + str(self.command) + ' : ' + str(self.time) + ' seconds'
         return ret
+
+    def __lt__(self, other):
+        return self.time < other.time
+
+    def __gt__(self, other):
+        return self.time > other.time
 
 
 def init_machines():
@@ -127,6 +135,7 @@ def init_machines():
 def worker(machine, core):
     global tasks
     global results
+    global level
     while True:
         command = tasks.get()
         if not command:
@@ -137,7 +146,7 @@ def worker(machine, core):
         ssh_pipe = subprocess.Popen(['ssh', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
         result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
         time = float(result_bytes.decode('utf-8').split(' ')[3])
-        result = Result(machine, core, command, time)
+        result = Result(machine, core, command, time, level)
         results.append(result)
 
         print(str(result))
@@ -145,16 +154,24 @@ def worker(machine, core):
         tasks.task_done()
 
 
-def main(N=1000, partitions=2, path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out'):
+def main(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out', keep=[]):
     global tasks
     global results
+    global level
+
+    if not keep:
+        keep = [1] * 100
+
+    if not partitions:
+        partitions = [2] * 100
 
     init_machines()
     
     # FIRST level - add tasks to queue
+    level = 0
     parent = Cube((0,0,0), N)
     tasks = queue.Queue()
-    for child in partition(parent, partitions):
+    for child in partition(parent, partitions[0]):
         (ts1, ts2, ts3) = child.center()
         tasks.put(Command('{}/TMM'.format(path_prefix), [N, ts1, ts2, ts3]))
 
@@ -173,6 +190,44 @@ def main(N=1000, partitions=2, path_prefix='./workspace/parric-ttmm/ttmm/alphaz_
             tasks.put(None)
     for t in threads:
         t.join()
+
+
+    # SECOND level
+    level = 1
+    parents = []
+    tasks = queue.Queue()
+    results.sort()
+    N1 = int(N / partitions[0])
+    for r in results[:keep[0]]:
+        print('Selected :', tuple(r.command.params[1:]))
+        origin = tuple(r.command.params[1:]) # command.params = [1000, 250, 250, 750]
+        parents.append(Cube(origin, N1))
+    
+    for parent in parents:
+        for child in partition(parent, partitions[1]):
+            (ts1, ts2, ts3) = child.center()
+            tasks.put(Command('{}/TMM'.format(path_prefix), [N, ts1, ts2, ts3]))    
+
+    for t in list(tasks.queue):
+        print('New task :', str(t)) 
+
+    return results, tasks
+        
+        
+        
+        
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
