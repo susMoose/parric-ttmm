@@ -1,0 +1,30 @@
+script TMMScript.cs {
+    pass ReadAlphabets:ReadAlphabets {
+    }
+    pass CheckProgram:CheckProgram {
+    }
+    pass SerializeReduction:SerializeReduction {
+    }
+    pass Normalize:Normalize {
+    }
+    pass RenameVariable:RenameVariable {
+    }
+    pass setSpaceTimeMap:SetSpaceTimeMap {
+    }
+    pass setSpaceTimeMap:SetSpaceTimeMap {
+    }
+    pass setMemoryMap:SetMemoryMap {
+    }
+    pass setStatementOrdering:SetStatementOrdering {
+    }
+    pass createTiledCGOptionForScheduledC:CreateTiledCGOptionForScheduledC {
+    }
+    pass setDefaultDTilerConfiguration:SetDefaultDTilerConfiguration {
+    }
+    pass generateScheduledCode:GenerateScheduledCode {
+    }
+    pass generateWrapper:GenerateWrapper {
+    }
+    pass generateMakefile:GenerateMakefile {
+    }
+}
