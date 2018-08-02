@@ -134,7 +134,7 @@ class Command:
 
     def __lt__(self, other):
         #In case a tuple with a command at the end ties the previous results during a sort
-        return self.__hash__ < other.__hash__
+        return self.__hash__() < other.__hash__()
 
 
 class Result:
