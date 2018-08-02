@@ -3,42 +3,40 @@
 import subprocess
 import queue
 import threading
+import statistics
 
 global machines
 global hostnames
 global tasks
-global results
 global level
 global master_cube_N
-
-results = {}
 
 hostnames = [
     'anchovy',
     'barracuda',
-    'blowfish',
-    'bonito',
-    'brill',
-    'char',
-    'cod',
-    'dorado',
-    'eel',
-    'flounder',
-    'grouper',
-    'halibut',
-    'herring',
-    'mackerel',
-    'marlin',
-    'perch',
-    'pollock',
-    'sardine',
-    'shark',
-    'sole',
-    'swordfish',
-    'tarpon',
-    'turbot',
-    'tuna',
-    'wahoo'
+#    'blowfish',
+#    'bonito',
+#    'brill',
+#    'char',
+#    'cod',
+#    'dorado',
+#    'eel',
+#    'flounder',
+#    'grouper',
+#    'halibut',
+#    'herring',
+#    'mackerel',
+#    'marlin',
+#    'perch',
+#    'pollock',
+#    'sardine',
+#    'shark',
+#    'sole',
+#    'swordfish',
+#    'tarpon',
+#    'turbot',
+#    'tuna',
+#    'wahoo'
 ]
 
 
@@ -124,6 +122,19 @@ class Command:
         for p in self.params:
             ret.append(str(p))
         return ret
+    
+    def __hash__(self):
+        return (self.executable, tuple(self.params)).__hash__()
+    
+    def __eq__(self, other):
+        return isinstance(other, self.__class__) and self.executable==other.executable and self.params==other.params
+    
+    def __ne__(self, other):
+        return not self==other
+
+    def __lt__(self, other):
+        #In case a tuple with a command at the end ties the previous results during a sort
+        return self.__hash__ < other.__hash__
 
 
 class Result:
@@ -158,9 +169,8 @@ def init_machines():
         print('done.')
 
 
-def worker(machine, core, tasks, level, parent):
+def worker(machine, core, tasks, level, results, parent):
     #global tasks
-    global results
     #global level
     while True:
         command = tasks.get()
@@ -171,26 +181,27 @@ def worker(machine, core, tasks, level, parent):
         echo_pipe = subprocess.Popen(['echo', str(command)], stdout=subprocess.PIPE)
         ssh_pipe = subprocess.Popen(['ssh', '-T', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
         result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
-        #print('------>', command)
+        #print('------>', result_bytes.decode('utf-8'))
         time = float(result_bytes.decode('utf-8').split(' ')[3])
         result = Result(machine, core, command, time, level, parent)
-        results[level].append(result)
+        if not command in results:
+            results[command]=[]
+        results[command].append(result)
 
         print(str(result))
 
         tasks.task_done()
 
 
-def run_workers(machines, tasks, level, parent):
-    global results
+def run_workers(machines, tasks, level, results, parent):
+    #global results
     #global machines
     #global tasks
 
     threads = []
-    results[level] = []
     for machine in machines:
         for i in range(0, machine.cores):
-            t = threading.Thread(target=worker, args=(machine, i, tasks, level, parent))
+            t = threading.Thread(target=worker, args=(machine, i, tasks, level, results, parent))
             t.start()
             threads.append(t)
     tasks.join()
@@ -202,7 +213,7 @@ def run_workers(machines, tasks, level, parent):
         t.join()
 
   
-def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out', keep=[], iterations=10):
+def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out', keep=[], iterations=3):
     global machines
     global master_cube_N
     master_cube_N = N
@@ -216,37 +227,37 @@ def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm
     if not keep:
         keep = [1] * iterations
 
-    main_rec(0, parent, partitions, path_prefix, keep)
+    main_rec(0, parent, partitions, path_prefix, keep, iterations)
 
 
-def main_rec(level, parent, partitions, path_prefix, keep):
+def main_rec(level, parent, partitions, path_prefix, keep, iterations):
     global master_cube_N
     
-    if level == 3:
+    if level >= iterations:
         return
     
+    results={}
     # Add tasks to queue
     tasks = queue.Queue()
     print('\nCreating tasks for parent', parent.c,'...')
     for child in partition(parent, partitions[level]):
         (ts1, ts2, ts3) = child.center()
-        tasks.put(Command('{}/TMM'.format(path_prefix), [master_cube_N, ts1, ts2, ts3]))
-    run_workers(machines, tasks, level, parent)
+        for i in range(5):
+            tasks.put(Command('{}/TMM'.format(path_prefix), [master_cube_N, ts1, ts2, ts3]))
+    run_workers(machines, tasks, level, results, parent)
     print('...done.')
-
-    # choose best results for next iteration, i.e. next set of parents
-    results[level].sort()
-    parents = []
     
+    # choose best results for next iteration, i.e. next set of parents
+    sorted_results=[(results[command], command) for command in results]
+    sorted_results=sorted([ ( statistics.mean([r.time for r in sr[0]]), sr[1]) for sr in sorted_results]) 
     print('\nChoosing best', keep[level], 'results...')
-    for r in results[level][:keep[level]]:
-        print('Selected :', tuple(r.command.params[1:]), str(r.time), 'seconds')
-        origin = tuple(r.command.params[1:]) # command.params = [1000, 250, 250, 750]
-        parents.append(Cube(origin, parent.l//partitions[level]))
+    for r in sorted_results[:keep[level]]:
+        print('Selected :', tuple(r[1].params[1:]), str(r[0]), 'seconds')
+        origin = tuple(r[1].params[1:]) # command.params = [1000, 250, 250, 750]
     print('...done.')
 
-    for r in results[level][:keep[level]]: 
-        main_rec(level+1, Cube(tuple(r.command.params[1:]), parent.l//partitions[level]), partitions, path_prefix, keep)
+    for r in sorted_results[:keep[level]]: 
+        main_rec(level+1, Cube(tuple(r[1].params[1:]), parent.l//partitions[level]), partitions, path_prefix, keep, iterations)
 
 
 
