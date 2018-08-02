@@ -8,11 +8,8 @@ import statistics
 global machines
 global hostnames
 global tasks
-global results
 global level
 global master_cube_N
-
-results = {}
 
 hostnames = [
     'anchovy',
@@ -133,7 +130,11 @@ class Command:
         return isinstance(other, self.__class__) and self.executable==other.executable and self.params==other.params
     
     def __ne__(self, other):
-            return not self==other
+        return not self==other
+
+    def __lt__(self, other):
+        #In case a tuple with a command at the end ties the previous results during a sort
+        return self.__hash__ < other.__hash__
 
 
 class Result:
@@ -168,9 +169,8 @@ def init_machines():
         print('done.')
 
 
-def worker(machine, core, tasks, level, parent):
+def worker(machine, core, tasks, level, results, parent):
     #global tasks
-    global results
     #global level
     while True:
         command = tasks.get()
@@ -184,25 +184,24 @@ def worker(machine, core, tasks, level, parent):
         #print('------>', result_bytes.decode('utf-8'))
         time = float(result_bytes.decode('utf-8').split(' ')[3])
         result = Result(machine, core, command, time, level, parent)
-        if not command in results[level]:
-            results[level][command]=[]
-        results[level][command].append(result)
+        if not command in results:
+            results[command]=[]
+        results[command].append(result)
 
         print(str(result))
 
         tasks.task_done()
 
 
-def run_workers(machines, tasks, level, parent):
-    global results
+def run_workers(machines, tasks, level, results, parent):
+    #global results
     #global machines
     #global tasks
 
     threads = []
-    results[level] = {}
     for machine in machines:
         for i in range(0, machine.cores):
-            t = threading.Thread(target=worker, args=(machine, i, tasks, level, parent))
+            t = threading.Thread(target=worker, args=(machine, i, tasks, level, results, parent))
             t.start()
             threads.append(t)
     tasks.join()
@@ -237,6 +236,7 @@ def main_rec(level, parent, partitions, path_prefix, keep, iterations):
     if level >= iterations:
         return
     
+    results={}
     # Add tasks to queue
     tasks = queue.Queue()
     print('\nCreating tasks for parent', parent.c,'...')
@@ -244,11 +244,11 @@ def main_rec(level, parent, partitions, path_prefix, keep, iterations):
         (ts1, ts2, ts3) = child.center()
         for i in range(5):
             tasks.put(Command('{}/TMM'.format(path_prefix), [master_cube_N, ts1, ts2, ts3]))
-    run_workers(machines, tasks, level, parent)
+    run_workers(machines, tasks, level, results, parent)
     print('...done.')
     
     # choose best results for next iteration, i.e. next set of parents
-    sorted_results=[(results[level][command], command) for command in results[level]]
+    sorted_results=[(results[command], command) for command in results]
     sorted_results=sorted([ ( statistics.mean([r.time for r in sr[0]]), sr[1]) for sr in sorted_results]) 
     print('\nChoosing best', keep[level], 'results...')
     for r in sorted_results[:keep[level]]:
