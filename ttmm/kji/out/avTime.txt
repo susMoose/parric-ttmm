@@ -1,0 +1,9 @@
+[kji]
+marlin.cs.colostate.edu
+TMM problem size = 2 * (1.0/6) * (N^3)
+N=5000 -> 148,649,472 flop = 0.1486495 GFlop
+search_block_space.sh:
+run 0 -> 126.045513 (1250, 3750, 1250)
+**caveat - didn't even make it past the first iteration.
+**Didn't bother to pursue further since it's clearly slower.
+(0.1486495 GFlop) / (126.0455 sec) --> 0.001179332 GFlop/sec --> 1.179332 MFlops/sec
