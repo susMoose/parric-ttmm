@@ -117,83 +117,38 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 	}
 	//Memory Allocation
 	
-	#define S1(i,j,k) R(i,k) = (A(i,j))*(B(j,k))
-	#define S2(i,j,k) R(i,k) = (R(i,k))+((A(i,j))*(B(j,k)))
-	#define S0(i,j,i2) R(i,i2) = R(i,i2)
+	#define S1(i,j,k) R(j,k) = (R(j,k))+((A(j,i))*(B(i,k)))
+	#define S2(i,j,k) R(j,k) = (A(j,i))*(B(i,k))
+	#define S0(i,j,i2) R(j,i2) = R(j,i2)
 	{
 		//Domain
+		//{i,j,k|j>=1 && N>=k && k>=i && i>=j+1 && i>=2 && N>=i && k>=j && k>=1 && N>=1}
 		//{i,j,k|j==i && i>=1 && N>=k && k>=i && k>=1 && N>=i && N>=1}
-		//{i,j,k|i>=1 && N>=k && k>=j && j>=i+1 && j>=2 && N>=j && k>=i && k>=1 && N>=1}
-		//{i,j,i2|j==N && i2>=1 && N>=i2 && i>=1 && i2>=i && N>=1}
+		//{i,j,i2|i==N && i2>=1 && N>=i2 && j>=1 && i2>=j && N>=1}
 		int ti1_l1,ti2_l1,ti3_l1,c1,c2,c3;
-		for(ti1_l1=(ceild((-ts1_l1+2),(ts1_l1))) * (ts1_l1);ti1_l1 <= N-2;ti1_l1+=ts1_l1)
-		 {
-		 	for(ti2_l1=(ceild((ti1_l1-ts2_l1+1),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
-		 	 {
-		 	 	for(ti3_l1=(ceild((min(ti1_l1,ti2_l1) + -ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
-		 	 	 {
-		 	 	 	{
-		 	 	 		for(c1=max(ti1_l1,1);c1 <= min(ti1_l1+ts1_l1-1,N-2);c1+=1)
-		 	 	 		 {
-		 	 	 		 	for(c2=max(ti2_l1,c1);c2 <= min(ti2_l1+ts2_l1-1,c1);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S1((c1),(c1),(c3));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 	for(c2=max(ti2_l1,c1+1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,c2);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S2((c1),(c2),(c3));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S0((c1),(N),(c3));
-		 	 	 		 	 	 }
-		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S2((c1),(N),(N));
-		 	 	 		 	 	 	S0((c1),(N),(N));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 }
-		 	 	 	}
-		 	 	 }
-		 	 }
-		 }
-		if ((N >= 2)) {
+		if ((N == 1)) {
 			{
-				for(ti1_l1=(ceild((N-ts1_l1+0),(ts1_l1))) * (ts1_l1);ti1_l1 <= N-1;ti1_l1+=ts1_l1)
+				for(ti1_l1=(ceild((-ts1_l1+2),(ts1_l1))) * (ts1_l1);ti1_l1 <= 1;ti1_l1+=ts1_l1)
 				 {
-				 	for(ti2_l1=(ceild((N-ts2_l1+0),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
+				 	for(ti2_l1=(ceild((-ts2_l1+2),(ts2_l1))) * (ts2_l1);ti2_l1 <= 1;ti2_l1+=ts2_l1)
 				 	 {
-				 	 	for(ti3_l1=(ceild((N-ts3_l1+0),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
+				 	 	for(ti3_l1=(ceild((-ts3_l1+2),(ts3_l1))) * (ts3_l1);ti3_l1 <= 1;ti3_l1+=ts3_l1)
 				 	 	 {
 				 	 	 	{
-				 	 	 		for(c1=max(ti1_l1,N-1);c1 <= min(ti1_l1+ts1_l1-1,N-1);c1+=1)
+				 	 	 		for(c1=max(ti1_l1,1);c1 <= min(ti1_l1+ts1_l1-1,1);c1+=1)
 				 	 	 		 {
-				 	 	 		 	for(c2=max(ti2_l1,N-1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
+				 	 	 		 	for(c2=max(ti2_l1,1);c2 <= min(ti2_l1+ts2_l1-1,1);c2+=1)
 				 	 	 		 	 {
-				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+				 	 	 		 	 	for(c3=max(ti3_l1,1);c3 <= min(ti3_l1+ts3_l1-1,1);c3+=1)
 				 	 	 		 	 	 {
-				 	 	 		 	 	 	S1((N-1),(N-1),(c3));
+				 	 	 		 	 	 	S2((1),(1),(1));
 				 	 	 		 	 	 }
 				 	 	 		 	 }
-				 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+				 	 	 		 	for(c2=max(ti2_l1,1);c2 <= min(ti2_l1+ts2_l1-1,1);c2+=1)
 				 	 	 		 	 {
-				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
+				 	 	 		 	 	for(c3=max(ti3_l1,1);c3 <= min(ti3_l1+ts3_l1-1,1);c3+=1)
 				 	 	 		 	 	 {
-				 	 	 		 	 	 	S0((N-1),(N),(N-1));
-				 	 	 		 	 	 }
-				 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-				 	 	 		 	 	 {
-				 	 	 		 	 	 	S2((N-1),(N),(N));
-				 	 	 		 	 	 	S0((N-1),(N),(N));
+				 	 	 		 	 	 	S0((1),(1),(1));
 				 	 	 		 	 	 }
 				 	 	 		 	 }
 				 	 	 		 }
@@ -203,27 +158,52 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 				 }
 			}
 		}
-		for(ti1_l1=(ceild((N-ts1_l1+1),(ts1_l1))) * (ts1_l1);ti1_l1 <= N;ti1_l1+=ts1_l1)
+		if ((N >= 2)) {
+			{
+				for(ti1_l1=(ceild((-ts1_l1+2),(ts1_l1))) * (ts1_l1);ti1_l1 <= 1;ti1_l1+=ts1_l1)
+				 {
+				 	for(ti2_l1=(ceild((-ts2_l1+2),(ts2_l1))) * (ts2_l1);ti2_l1 <= 1;ti2_l1+=ts2_l1)
+				 	 {
+				 	 	for(ti3_l1=(ceild((-ts3_l1+2),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
+				 	 	 {
+				 	 	 	{
+				 	 	 		for(c1=max(ti1_l1,1);c1 <= min(ti1_l1+ts1_l1-1,1);c1+=1)
+				 	 	 		 {
+				 	 	 		 	for(c2=max(ti2_l1,1);c2 <= min(ti2_l1+ts2_l1-1,1);c2+=1)
+				 	 	 		 	 {
+				 	 	 		 	 	for(c3=max(ti3_l1,1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+				 	 	 		 	 	 {
+				 	 	 		 	 	 	S2((1),(1),(c3));
+				 	 	 		 	 	 }
+				 	 	 		 	 }
+				 	 	 		 }
+				 	 	 	}
+				 	 	 }
+				 	 }
+				 }
+			}
+		}
+		for(ti1_l1=(ceild((-ts1_l1+3),(ts1_l1))) * (ts1_l1);ti1_l1 <= N-1;ti1_l1+=ts1_l1)
 		 {
-		 	for(ti2_l1=(ceild((N-ts2_l1+1),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
+		 	for(ti2_l1=(ceild((-ts2_l1+2),(ts2_l1))) * (ts2_l1);ti2_l1 <= ti1_l1+ts1_l1-1;ti2_l1+=ts2_l1)
 		 	 {
-		 	 	for(ti3_l1=(ceild((N-ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
+		 	 	for(ti3_l1=(ceild((ti1_l1-ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
 		 	 	 {
 		 	 	 	{
-		 	 	 		for(c1=max(ti1_l1,N);c1 <= min(ti1_l1+ts1_l1-1,N);c1+=1)
+		 	 	 		for(c1=max(ti1_l1,2);c1 <= min(ti1_l1+ts1_l1-1,N-1);c1+=1)
 		 	 	 		 {
-		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+		 	 	 		 	for(c2=max(ti2_l1,1);c2 <= min(ti2_l1+ts2_l1-1,c1-1);c2+=1)
 		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
 		 	 	 		 	 	 {
-		 	 	 		 	 	 	S1((N),(N),(N));
+		 	 	 		 	 	 	S1((c1),(c2),(c3));
 		 	 	 		 	 	 }
 		 	 	 		 	 }
-		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+		 	 	 		 	for(c2=max(ti2_l1,c1);c2 <= min(ti2_l1+ts2_l1-1,c1);c2+=1)
 		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
 		 	 	 		 	 	 {
-		 	 	 		 	 	 	S0((N),(N),(N));
+		 	 	 		 	 	 	S2((c1),(c1),(c3));
 		 	 	 		 	 	 }
 		 	 	 		 	 }
 		 	 	 		 }
@@ -231,6 +211,47 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 		 	 	 }
 		 	 }
 		 }
+		if ((N >= 2)) {
+			{
+				for(ti1_l1=(ceild((N-ts1_l1+1),(ts1_l1))) * (ts1_l1);ti1_l1 <= N;ti1_l1+=ts1_l1)
+				 {
+				 	for(ti2_l1=(ceild((-ts2_l1+2),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
+				 	 {
+				 	 	for(ti3_l1=(ceild((min(ti2_l1,N) + -ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
+				 	 	 {
+				 	 	 	{
+				 	 	 		for(c1=max(ti1_l1,N);c1 <= min(ti1_l1+ts1_l1-1,N);c1+=1)
+				 	 	 		 {
+				 	 	 		 	for(c2=max(ti2_l1,1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
+				 	 	 		 	 {
+				 	 	 		 	 	for(c3=max(ti3_l1,c2);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
+				 	 	 		 	 	 {
+				 	 	 		 	 	 	S0((N),(c2),(c3));
+				 	 	 		 	 	 }
+				 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+				 	 	 		 	 	 {
+				 	 	 		 	 	 	S1((N),(c2),(N));
+				 	 	 		 	 	 	S0((N),(c2),(N));
+				 	 	 		 	 	 }
+				 	 	 		 	 }
+				 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+				 	 	 		 	 {
+				 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+				 	 	 		 	 	 {
+				 	 	 		 	 	 	S2((N),(N),(N));
+				 	 	 		 	 	 }
+				 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+				 	 	 		 	 	 {
+				 	 	 		 	 	 	S0((N),(N),(N));
+				 	 	 		 	 	 }
+				 	 	 		 	 }
+				 	 	 		 }
+				 	 	 	}
+				 	 	 }
+				 	 }
+				 }
+			}
+		}
 	}
 	#undef S1
 	#undef S2

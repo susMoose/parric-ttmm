@@ -12,8 +12,8 @@ CheckProgram(prog);
 SerializeReduction(prog, system, "R", "(i,j,k->i,j,k)");
 Normalize(prog);
 RenameVariable(prog, system, "_serR", "AccR");
-setSpaceTimeMap(prog, system, "R", "(i,j->i,N,j)");
-setSpaceTimeMap(prog, system, "AccR", "(i,j,k->i,k,j)");
+setSpaceTimeMap(prog, system, "R", "(i,j->N,i,j)");
+setSpaceTimeMap(prog, system, "AccR", "(i,j,k->k,i,j)");
 setMemoryMap(prog, system, "AccR", "R", "(i,j,k -> i,j)");
 setStatementOrdering(prog, system, "AccR", "R");
 
