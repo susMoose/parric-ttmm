@@ -4,12 +4,16 @@ import subprocess
 import queue
 import threading
 import statistics
+import os
+import sys
+import argparse
 
 global machines
 global hostnames
 global tasks
 global level
 global master_cube_N
+global gflops
 
 hostnames = [
     'anchovy',
@@ -213,6 +217,43 @@ def run_workers(machines, tasks, level, results, parent):
         t.join()
 
 
+# python3 commander.py -N 5000 --parent-center 500 500 500 --parent-size 1000 -i 4 --partitions 4 4 4 4 -k 16 4 2 2 --path-prefix ./workspace/parric-ttmm/ttmm/ikj/out
+def main():
+    '''Command line options processing.'''
+    program_name = os.path.basename(sys.argv[0])
+
+    # parse command line arguments
+    parser = argparse.ArgumentParser(prog=program_name)
+    parser.add_argument('-N', '--matrix-size', help='Length of matrix.', default=1000)
+    parser.add_argument('--path-prefix', '--path-prefix', help='Path to directory containing TMM executable file', default='./workspace/parric-ttmm/ttmm/alphaz_stuff/out')
+    parser.add_argument('-k', '--keep', help='Comma-delimited list of number of results to keep at each iteration', nargs='+')
+    parser.add_argument('--partitions', '--partitions', help='Comma-delimited list of number of partitions to divide each dimension in at each iteration. For example, [4,2] divides the parent cube into 64 cubes (4^3) on the first iteration, and divides each of those 64 cubes into 8 cubes (2^3) for the second iteration.', nargs='+')
+    parser.add_argument('--parent-center', '--parent-center', help='Comma-delimted list of initial parent center.', nargs='+')
+    parser.add_argument('--parent-size', '--parent-size', help='Size of initial parent.')
+    parser.add_argument('-i', '--iterations', help='Number of times to recurse down into smaller cubes.', default=3)
+
+    args = vars(parser.parse_args())
+
+    N = int(args['matrix_size'])
+    path_prefix = args['path_prefix']
+    keep = [int(i) for i in args['keep']] if args['keep'] else []
+    partitions = [int(i) for i in args['partitions']] if args['partitions'] else []
+    iterations = int(args['iterations'])
+
+    parent_center = tuple([int(i) for i in args['parent_center']]) if args['parent_center'] else None
+    parent_size = int(args['parent_size']) if args['parent_size'] else None
+    if (parent_center and not parent_size) or (not parent_center and parent_size):
+        print('Must specify niether OR both --parent-center and --parent-size.')
+        print(parser.print_help())
+        sys.exit()
+    if parent_center and parent_size:
+        parent = Cube(parent_center, parent_size)
+    else:
+        parent = None
+    
+    args_log = {'N':N, 'path_prefix':path_prefix, 'keep':keep, 'partitions':partitions, 'parent_center':parent_center, 'parent_size':parent_size, 'iterations':iterations}
+    print('args', ':', args_log, end='\n\n')
+    return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
 
 # main_helper(N=5000, 
 #    partitions=[4,4,4,4],
@@ -224,8 +265,10 @@ def run_workers(machines, tasks, level, results, parent):
 def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out', keep=[], iterations=3, parent=None):
     global machines
     global master_cube_N
+    global gflops
     master_cube_N = N
     init_machines()
+    gflops = N*N*N*(1.0/3.0)*(10**-9)
 
     if not parent:
         parent = Cube((N//2, N//2, N//2), N)
@@ -240,10 +283,12 @@ def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm
     main_rec(0, parent, partitions, path_prefix, keep, iterations)
 
 
-def main_rec(level, parent, partitions, path_prefix, keep, iterations):
+def main_rec(level, parent, partitions, path_prefix, keep, iterations, best_time=None):
     global master_cube_N
+    global gflops
     
     if level >= iterations:
+        print('\nOPTIMAL',':', parent.center(), best_time, 'seconds', ':', gflops/best_time, 'GFlops/sec')
         return
     
     results={}
@@ -267,8 +312,10 @@ def main_rec(level, parent, partitions, path_prefix, keep, iterations):
     print('...done.')
 
     for r in sorted_results[:keep[level]]: 
-        main_rec(level+1, Cube(tuple(r[1].params[1:]), parent.l//partitions[level]), partitions, path_prefix, keep, iterations)
+        main_rec(level+1, Cube(tuple(r[1].params[1:]), parent.l//partitions[level]), partitions, path_prefix, keep, iterations, best_time=r[0])
 
 
+if __name__ == '__main__':
+    sys.exit(main())
 
  
