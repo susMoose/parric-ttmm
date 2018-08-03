@@ -85,7 +85,7 @@ class Machine:
     def __init__(self, hostname):
         self.tasks = []
         self.hostname = hostname
-        self.cores = self.calc_cores()
+        self.cores = 1 # self.calc_cores()
     
     def __str__(self):
         return str(self.hostname)
@@ -212,14 +212,24 @@ def run_workers(machines, tasks, level, results, parent):
     for t in threads:
         t.join()
 
-  
-def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out', keep=[], iterations=3):
+
+
+# main_helper(N=5000, 
+#    partitions=[4,4,4,4],
+#    path_prefix='./workspace/parric-ttmm/ttmm/ikj/out',
+#    keep=[16,4,2,2], 
+#    iterations=4, 
+#    parent=c.Cube((500,500,500),1000)
+#    )
+def main_helper(N=1000, partitions=[], path_prefix='./workspace/parric-ttmm/ttmm/alphaz_stuff/out', keep=[], iterations=3, parent=None):
     global machines
     global master_cube_N
     master_cube_N = N
     init_machines()
 
-    parent = Cube((N//2, N//2, N//2), N)
+    if not parent:
+        parent = Cube((N//2, N//2, N//2), N)
+
     tasks = queue.Queue()
 
     if not partitions:
