@@ -18,29 +18,29 @@ global gflops
 hostnames = [
     'anchovy',
     'barracuda',
-#    'blowfish',
-#    'bonito',
-#    'brill',
-#    'char',
-#    'cod',
-#    'dorado',
-#    'eel',
-#    'flounder',
-#    'grouper',
-#    'halibut',
-#    'herring',
-#    'mackerel',
-#    'marlin',
-#    'perch',
-#    'pollock',
-#    'sardine',
-#    'shark',
-#    'sole',
-#    'swordfish',
-#    'tarpon',
-#    'turbot',
-#    'tuna',
-#    'wahoo'
+    'blowfish',
+    'bonito',
+    'brill',
+    'char',
+    'cod',
+    'dorado',
+    'eel',
+    'flounder',
+    'grouper',
+    'halibut',
+    'herring',
+    'mackerel',
+    'marlin',
+    'perch',
+    'pollock',
+    'sardine',
+    'shark',
+    'sole',
+    'swordfish',
+    'tarpon',
+    'turbot',
+    'tuna',
+    'wahoo'
 ]
 
 
@@ -284,7 +284,7 @@ def main():
 
 
     if args['rectangle']:
-        parent = Rectangle( ( 500, 25, 3000), ( 1000, 50, 2000) )
+        parent = Rectangle( ( 500, 32, 3000), ( 1000, 64, 2000) )
         
     
     return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
