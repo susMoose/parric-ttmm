@@ -45,24 +45,35 @@ hostnames = [
 
 
 def partition(parent, segments):
-    if not isinstance(parent, Cube):
+    if not (isinstance(parent, Cube)or isinstance(parent, Rectangle)):
         raise ValueError('passed non-Cube object as parent. parent must be a Cube')
     if segments < 1:
         raise ValueError('segments must be 1 or greater')
 
     children = []
-
     (x_p, y_p, z_p) = parent.c
-    (x_p, y_p, z_p) = (x_p-parent.l//2, y_p-parent.l//2, z_p-parent.l//2) #convert center into point at bottom left
-    step = int(parent.l / segments)  # if segments is 4 and parent.l is N, then step = N/4
-    for x in range(0, segments): 
-        x_c = x_p + x*step + step // 2
-        for y in range(0, segments):
-            y_c = y_p + y*step + step // 2
-            for z in range(0, segments):
-                z_c = z_p + z*step + step // 2
-                child = Cube(center=(x_c,y_c,z_c), side_length=step)
-                children.append(child)
+    if isinstance(parent, Cube):
+        (x_p, y_p, z_p) = (x_p-parent.l//2, y_p-parent.l//2, z_p-parent.l//2) #convert center into point at bottom left
+        step = int(parent.l / segments)  # if segments is 4 and parent.l is N, then step = N/4
+        for x in range(0, segments): 
+            x_c = x_p + x*step + step // 2
+            for y in range(0, segments):
+                y_c = y_p + y*step + step // 2
+                for z in range(0, segments):
+                    z_c = z_p + z*step + step // 2
+                    child = Cube(center=(x_c,y_c,z_c), side_length=step)
+                    children.append(child)
+    if isinstance(parent, Rectangle):
+        (x_p, y_p, z_p) = (x_p-parent.ls[0]//2, y_p-parent.ls[1]//2, z_p-parent.ls[2]//2) #convert center into point at bottom left
+        steps = tuple([int(l / segments) for l in parent.ls])  # if segments is 4 and parent.l is N, then step = N/4
+        for x in range(0, segments): 
+            x_c = x_p + x*steps[0] + steps[0] // 2
+            for y in range(0, segments):
+                y_c = y_p + y*steps[1] + steps[1] // 2
+                for z in range(0, segments):
+                    z_c = z_p + z*steps[2] + steps[2] // 2
+                    child = Rectangle((x_c,y_c,z_c), steps)
+                    children.append(child)
     
     return children
 
@@ -84,6 +95,20 @@ class Cube:
     def center(self):
         return self.c
 
+class Rectangle:
+    
+    def __init__(self, center, steps):
+        (x, y, z) = center
+        if not (isinstance(x, int) and isinstance(y, int) and isinstance(z, int)):
+            raise ValueError('origin must be integer tuple')
+        self.c = center
+        self.ls= steps
+
+    def __str__(self):
+        return str({'length':self.ls, 'center': self.c})
+
+    def center(self):
+        return self.c
 
 class Machine:
     def __init__(self, hostname):
@@ -230,6 +255,8 @@ def main():
     parser.add_argument('--partitions', '--partitions', help='Comma-delimited list of number of partitions to divide each dimension in at each iteration. For example, [4,2] divides the parent cube into 64 cubes (4^3) on the first iteration, and divides each of those 64 cubes into 8 cubes (2^3) for the second iteration.', nargs='+')
     parser.add_argument('--parent-center', '--parent-center', help='Comma-delimted list of initial parent center.', nargs='+')
     parser.add_argument('--parent-size', '--parent-size', help='Size of initial parent.')
+    parser.add_argument('--rectangle')
+
     parser.add_argument('-i', '--iterations', help='Number of times to recurse down into smaller cubes.', default=3)
 
     args = vars(parser.parse_args())
@@ -253,6 +280,13 @@ def main():
     
     args_log = {'N':N, 'path_prefix':path_prefix, 'keep':keep, 'partitions':partitions, 'parent_center':parent_center, 'parent_size':parent_size, 'iterations':iterations}
     print('args', ':', args_log, end='\n\n')
+
+
+
+    if args['rectangle']:
+        parent = Rectangle( ( 500, 25, 3000), ( 1000, 50, 2000) )
+        
+    
     return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
 
 # main_helper(N=5000, 
@@ -312,10 +346,23 @@ def main_rec(level, parent, partitions, path_prefix, keep, iterations, best_time
     print('...done.')
 
     for r in sorted_results[:keep[level]]: 
-        main_rec(level+1, Cube(tuple(r[1].params[1:]), parent.l//partitions[level]), partitions, path_prefix, keep, iterations, best_time=r[0])
+        if isinstance(parent, Cube):
+            main_rec(level+1, Cube(tuple(r[1].params[1:]), parent.l//partitions[level]), partitions, path_prefix, keep, iterations, best_time=r[0])
+        elif isinstance(parent, Rectangle):
+            pl = partitions[level]
+            main_rec(level+1, Rectangle(tuple(r[1].params[1:]), (parent.ls[0]//pl, parent.ls[1]//pl, parent.ls[2]//pl)), partitions, path_prefix, keep, iterations, best_time=r[0])
 
 
 if __name__ == '__main__':
     sys.exit(main())
+
+
+
+
+
+
+
+
+
 
  
