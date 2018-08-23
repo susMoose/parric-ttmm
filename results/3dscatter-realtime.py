@@ -52,9 +52,9 @@ if __name__ == "__main__":
         
         
         s = graph.scatter([p[0] for p in points], [p[1] for p in points], [p[2] for p in points], c=[p[3] for p in points], cmap=cm.plasma)
-        graph.set_xlabel("ts1")
-        graph.set_ylabel("ts2")
-        graph.set_zlabel("ts3")
+        graph.set_xlabel("tsi")
+        graph.set_ylabel("tsk")
+        graph.set_zlabel("tsj")
         graph.set_xlim3d(0,5000)
         graph.set_ylim3d(0,5000)
         graph.set_zlim3d(0,5000)
