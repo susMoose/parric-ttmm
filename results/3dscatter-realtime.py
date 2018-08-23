@@ -1,3 +1,14 @@
+def points_per_level(keep, partitions, levels):
+    my_sum=0
+    if levels > len(partitions):
+        return "ERROR: INVALID LEVEL NUM: "+str(levels)
+    for i in range(levels):
+        product=1
+        for j in range(i):
+            product *=keep[j]
+        product *= partitions[i] **3
+        my_sum += product
+    
 if __name__ == "__main__":
     import matplotlib.pyplot as plot
     import matplotlib.cm as cm
