@@ -8,7 +8,6 @@ void add(double *A, double *B) {
         A[i] += B[i];
     }
 }
-
 ```
 
 using ```gcc add.c -o add``` and disassemble with ```objdump -d add```, then the following assembly is produced:
@@ -49,7 +48,6 @@ using ```gcc add.c -o add``` and disassemble with ```objdump -d add```, then the
   4005d2:       90                      nop
   4005d3:       5d                      pop    %rbp
   4005d4:       c3                      retq
-
 ```
 
 We can tell that this is not vectorized because the instructions being used have the suffix **sd** like movsd and addsd (with the "s" meaning "scalar"). 
@@ -89,7 +87,6 @@ using ```gcc -O3 add_v.c -o add_v``` and disassemble, then we get:
   400644:       66 90                   xchg   %ax,%ax
   400646:       66 2e 0f 1f 84 00 00    nopw   %cs:0x0(%rax,%rax,1)
   40064d:       00 00 00
-
 ```
 
 We can tell this ***is vectorized*** because the instructions are different. The **addpd** is the add instruction for "packed" values ("add two, four or eight packed double-precision floating-point values", [link](https://www.felixcloutier.com/x86/ADDPD.html)).
