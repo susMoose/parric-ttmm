@@ -1,3 +1,5 @@
+*referencing [https://locklessinc.com/articles/vectorize/](https://locklessinc.com/articles/vectorize/)*
+
 ## No vectorization - add.c ##
 
 If you compile this code,
@@ -91,14 +93,4 @@ using ```gcc -O3 add_v.c -o add_v``` and disassemble, then we get:
 
 We can tell this ***is vectorized*** because the instructions are different. The **addpd** is the add instruction for "packed" values ("add two, four or eight packed double-precision floating-point values", [link](https://www.felixcloutier.com/x86/ADDPD.html)).
 
-
-
-
-
-
-
-
-
-
-
- 
+Since we're using floats (not doubles) in the TMM code, we'd expect to see [addps](https://www.felixcloutier.com/x86/ADDPS.html) instructions instead of addpd.
