@@ -1,6 +1,7 @@
-CFLAGS= -O3  -std=c99  -I/usr/include/malloc/
+CFLAGS= -O3  -I/usr/include/malloc/ 
+VECFLAGS=-fopt-info-vec-all -ftree-vectorizer-verbose=0 -march=native -mfma -fassociative-math
 LIBRARIES=-lm
-CC?=gcc
+CC=gcc
 OBJS = TMM.o 
 all: plain check
 
@@ -19,8 +20,8 @@ verify: $(OBJS) TMM_verify.o
 verify-rand: $(OBJS) TMM_verify.o
 	$(CC) TMM-wrapper.c -o TMM.verify-rand $(OBJS) TMM_verify.o $(CFLAGS) $(LIBRARIES) -DVERIFY -DRANDOM
 
-TMM.o : TMM.c
-	$(CC) TMM.c -o TMM.o $(CFLAGS) $(LIBRARIES) -c
+TMM.o : clean TMM.c
+	$(CC) TMM.c -o TMM.o $(CFLAGS) $(LIBRARIES) -c $(VECFLAGS)
 
 TMM_verify.o : TMM_verify.c
 	$(CC) TMM_verify.c -o TMM_verify.o $(CFLAGS) $(LIBRARIES) -c

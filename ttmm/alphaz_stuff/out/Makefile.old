@@ -1,4 +1,4 @@
-CFLAGS= -O3  -I/usr/include/malloc/ -Wfatal-errors -ggdb -Wall -Wextra -Wpedantic -Werror
+CFLAGS= -O3  -I/usr/include/malloc/ -Wfatal-errors -Wall -Wextra -Wpedantic
 LIBRARIES=-lm
 CC=g++
 OBJS = TMM.o 
