@@ -11,7 +11,7 @@
 #include <sstream>
 #include <chrono>
 #include "TMM_known_good.c"
-void TMM(long, float**, float**, float**);
+void TMM(long, long, long, long, float**, float**, float**);
 using namespace std;
 
 int main(int argc, char** argv){
@@ -55,7 +55,13 @@ int main(int argc, char** argv){
 	}
 	//now call the alphaz routine
 	auto start= chrono::system_clock::now();
-	TMM(N,a,b,c);
+
+
+
+	TMM(N,N,N,N,a,b,c);
+
+
+
 	auto end= chrono::system_clock::now();
 	chrono::duration<double> elapsed_seconds = end-start;
 	TMM_good(N, a, b, d);
