@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#ifdef __INTEL_COMPILER
+typedef __float128 _Float128;
+#endif
 #include <math.h>
 #include <string.h>
 #include <limits.h>
@@ -38,24 +41,24 @@
 
 
 //Memory Macros
-#define A(i,j) A[i][j]
-#define B(i,j) B[i][j]
-#define R(i,j) R[i][j]
+#define A(i,j) A[i*(N+1)+j]
+#define B(i,j) B[i*(N+1)+j]
+#define R(i,j) R[i*(N+1)+j]
 
 #define R_verify(i,j) R_verify[i][j]
 #define var_R(i,j) R(i,j)
 #define var_R_verify(i,j) R_verify(i,j)
 
 //function prototypes
-void TMM(long, long, long, long, float**, float**, float**);
-void TMM_verify(long, long, long, long, float**, float**, float**);
+void TMM(long, float*, float*, float*);
+void TMM_verify(long, float**, float**, float**);
 
 //main
 int main(int argc, char** argv) {
 	//Check number of args
-	if (argc <= 4) {
+	if (argc <= 1) {
 		printf("Number of argument is smaller than expected.\n");
-		printf("Expecting N,ts1_l1,ts2_l1,ts3_l1\n");
+		printf("Expecting N\n");
 		exit(0);
 	}
 	
@@ -80,63 +83,9 @@ int main(int argc, char** argv) {
 		exit(EXIT_FAILURE);
 	}
 	
-	//Initialisation of ts1_l1
-	errno = 0;
-	end = 0;
-	val = argv[2];
-	long ts1_l1 = strtol(val,&end,10);
-	if ((errno == ERANGE && (ts1_l1 == LONG_MAX || ts1_l1 == LONG_MIN)) || (errno != 0 && ts1_l1 == 0)) {
-		perror("strtol");
-		exit(EXIT_FAILURE);
-	}
-	if (end == val) {
-		fprintf(stderr, "No digits were found for ts1_l1\n");
-		exit(EXIT_FAILURE);
-	}
-	if (*end != '\0'){
-		printf("For parameter ts1_l1: Converted part: %ld, non-convertible part: %s\n", ts1_l1, end);
-		exit(EXIT_FAILURE);
-	}
-	
-	//Initialisation of ts2_l1
-	errno = 0;
-	end = 0;
-	val = argv[3];
-	long ts2_l1 = strtol(val,&end,10);
-	if ((errno == ERANGE && (ts2_l1 == LONG_MAX || ts2_l1 == LONG_MIN)) || (errno != 0 && ts2_l1 == 0)) {
-		perror("strtol");
-		exit(EXIT_FAILURE);
-	}
-	if (end == val) {
-		fprintf(stderr, "No digits were found for ts2_l1\n");
-		exit(EXIT_FAILURE);
-	}
-	if (*end != '\0'){
-		printf("For parameter ts2_l1: Converted part: %ld, non-convertible part: %s\n", ts2_l1, end);
-		exit(EXIT_FAILURE);
-	}
-	
-	//Initialisation of ts3_l1
-	errno = 0;
-	end = 0;
-	val = argv[4];
-	long ts3_l1 = strtol(val,&end,10);
-	if ((errno == ERANGE && (ts3_l1 == LONG_MAX || ts3_l1 == LONG_MIN)) || (errno != 0 && ts3_l1 == 0)) {
-		perror("strtol");
-		exit(EXIT_FAILURE);
-	}
-	if (end == val) {
-		fprintf(stderr, "No digits were found for ts3_l1\n");
-		exit(EXIT_FAILURE);
-	}
-	if (*end != '\0'){
-		printf("For parameter ts3_l1: Converted part: %ld, non-convertible part: %s\n", ts3_l1, end);
-		exit(EXIT_FAILURE);
-	}
-	
 	
 	///Parameter checking
-	if (!((N >= 1 && ts1_l1 > 0 && ts2_l1 > 0 && ts3_l1 > 0))) {
+	if (!((N >= 1))) {
 		printf("The value of parameters are not valid.\n");
 		exit(-1);
 	}
@@ -144,27 +93,12 @@ int main(int argc, char** argv) {
 	
 	//Memory Allocation
 	int mz1, mz2;
-	float* _lin_A = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
-	mallocCheck(_lin_A, ((N+1) * (N+1)), float);
-	float** A = (float**)malloc(sizeof(float*)*(N+1));
-	mallocCheck(A, (N+1), float*);
-	for (mz1=0;mz1 < N+1; mz1++) {
-		A[mz1] = &_lin_A[(mz1*(N+1))];
-	}
-	float* _lin_B = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
-	mallocCheck(_lin_B, ((N+1) * (N+1)), float);
-	float** B = (float**)malloc(sizeof(float*)*(N+1));
-	mallocCheck(B, (N+1), float*);
-	for (mz1=0;mz1 < N+1; mz1++) {
-		B[mz1] = &_lin_B[(mz1*(N+1))];
-	}
-	float* _lin_R = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
-	mallocCheck(_lin_R, ((N+1) * (N+1)), float);
-	float** R = (float**)malloc(sizeof(float*)*(N+1));
-	mallocCheck(R, (N+1), float*);
-	for (mz1=0;mz1 < N+1; mz1++) {
-		R[mz1] = &_lin_R[(mz1*(N+1))];
-	}
+	float* A = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
+	mallocCheck(A, ((N+1) * (N+1)), float);
+	float* B = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
+	mallocCheck(B, ((N+1) * (N+1)), float);
+	float* R = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
+	mallocCheck(R, ((N+1) * (N+1)), float);
 	#ifdef VERIFY
 		float* _lin_R_verify = (float*)malloc(sizeof(float)*((N+1) * (N+1)));
 		mallocCheck(_lin_R_verify, ((N+1) * (N+1)), float);
@@ -236,7 +170,7 @@ int main(int argc, char** argv) {
 	gettimeofday(&time, NULL);
 	elapsed_time = (((double) time.tv_sec) + ((double) time.tv_usec)/1000000);
 	
-	TMM(N, ts1_l1, ts2_l1, ts3_l1, A, B, R);
+	TMM(N, A, B, R);
 
 	gettimeofday(&time, NULL);
 	elapsed_time = (((double) time.tv_sec) + ((double) time.tv_usec)/1000000) - elapsed_time;
@@ -250,7 +184,7 @@ int main(int argc, char** argv) {
 				printf("I couldn't open trace.dat for writing.\n");
 				exit(EXIT_FAILURE);
 		}
-		fprintf(fp, "%ld\t%ld\t%ld\t%ld\t%lf\n",N,ts1_l1,ts2_l1,ts3_l1,elapsed_time);
+		fprintf(fp, "%ld\t%lf\n",N,elapsed_time);
 		fclose(fp);
 	#endif
 	
@@ -260,7 +194,7 @@ int main(int argc, char** argv) {
 			gettimeofday(&time, NULL);
 			elapsed_time = (((double) time.tv_sec) + ((double) time.tv_usec)/1000000);
 		#endif
-    	TMM_verify(N, ts1_l1, ts2_l1, ts3_l1, A, B, R_verify);
+    	TMM_verify(N, A, B, R_verify);
     	#ifdef TIMING
     		gettimeofday(&time, NULL);
 			elapsed_time = (((double) time.tv_sec) + ((double) time.tv_usec)/1000000) - elapsed_time;
@@ -270,7 +204,7 @@ int main(int argc, char** argv) {
 					printf("I couldn't open trace_verify.dat for writing.\n");
 					exit(EXIT_FAILURE);
 			}
-			fprintf(fp, "%ld\t%ld\t%ld\t%ld\t%lf\n",N,ts1_l1,ts2_l1,ts3_l1,elapsed_time);
+			fprintf(fp, "%ld\t%lf\n",N,elapsed_time);
 			fclose(fp_verify);
 		#endif
 	#endif
@@ -318,11 +252,8 @@ int main(int argc, char** argv) {
     #endif
     
 	//Memory Free
-	free(_lin_A);
 	free(A);
-	free(_lin_B);
 	free(B);
-	free(_lin_R);
 	free(R);
 	#ifdef VERIFY
 		free(_lin_R_verify);
