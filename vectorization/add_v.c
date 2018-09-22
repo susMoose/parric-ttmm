@@ -24,5 +24,5 @@ int main() {
 	populate_array(A);
 	populate_array(B);
 	add_v(A,B);
-	printf("I still compile.\n");
+	//printf("I still compile.\n");
 }
