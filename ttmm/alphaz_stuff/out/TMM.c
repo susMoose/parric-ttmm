@@ -5,6 +5,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdbool.h>
+#ifdef __INTEL_COMPILER
+typedef __float128 _Float128;
+#endif
 #include <math.h>
 #include <string.h>
 #include <limits.h>
@@ -101,17 +104,18 @@ inline double __min_double(double x, double y){
 }
 
 
-
+#define Nbad 5001
 
 
 //Memory Macros
-#define A(i,j) A[i][j]
-#define B(i,j) B[i][j]
-#define R(i,j) R[i][j]
+#define A(i,j) A[i*Nbad+j]
+#define B(i,j) B[i*Nbad+j]
+#define R(i,j) R[i*Nbad+j]
 
-void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, float** R){
+void TMM(long N, float* __restrict__ A, float* __restrict__ B, float* __restrict__ R){
+	N = Nbad-1;
 	///Parameter checking
-	if (!((N >= 1 && ts1_l1 > 0 && ts2_l1 > 0 && ts3_l1 > 0))) {
+	if (!((N >= 1))) {
 		printf("The value of parameters are not valid.\n");
 		exit(-1);
 	}
@@ -125,112 +129,40 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 		//{i,j,k|j==i && i>=1 && N>=k && k>=i && k>=1 && N>=i && N>=1}
 		//{i,j,k|i>=1 && N>=k && k>=j && j>=i+1 && j>=2 && N>=j && k>=i && k>=1 && N>=1}
 		//{i,j,i2|j==N && i2>=1 && N>=i2 && i>=1 && i2>=i && N>=1}
-		int ti1_l1,ti2_l1,ti3_l1,c1,c2,c3;
-		for(ti1_l1=(ceild((-ts1_l1+2),(ts1_l1))) * (ts1_l1);ti1_l1 <= N-2;ti1_l1+=ts1_l1)
+		int c1,c2,c3;
+		for(c1=1;c1 <= N-2;c1+=1)
 		 {
-		 	for(ti2_l1=(ceild((ti1_l1-ts2_l1+1),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
+		 	for(c3=c1;c3 <= N;c3+=1)
 		 	 {
-		 	 	for(ti3_l1=(ceild((min(ti1_l1,ti2_l1) + -ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
+		 	 	S1((c1),(c1),(c3));
+		 	 }
+		 	for(c2=c1+1;c2 <= N-1;c2+=1)
+		 	 {
+		 	 	for(c3=c2;c3 <= N;c3+=1)
 		 	 	 {
-		 	 	 	{
-		 	 	 		for(c1=max(ti1_l1,1);c1 <= min(ti1_l1+ts1_l1-1,N-2);c1+=1)
-		 	 	 		 {
-		 	 	 		 	for(c2=max(ti2_l1,c1);c2 <= min(ti2_l1+ts2_l1-1,c1);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S1((c1),(c1),(c3));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 	for(c2=max(ti2_l1,c1+1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,c2);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S2((c1),(c2),(c3));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S0((c1),(N),(c3));
-		 	 	 		 	 	 }
-		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S2((c1),(N),(N));
-		 	 	 		 	 	 	S0((c1),(N),(N));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 }
-		 	 	 	}
+		 	 	 	S2((c1),(c2),(c3));
 		 	 	 }
 		 	 }
+		 	for(c3=c1;c3 <= N-1;c3+=1)
+		 	 {
+		 	 	S0((c1),(N),(c3));
+		 	 }
+		 	S2((c1),(N),(N));
+		 	S0((c1),(N),(N));
 		 }
 		if ((N >= 2)) {
 			{
-				for(ti1_l1=(ceild((N-ts1_l1+0),(ts1_l1))) * (ts1_l1);ti1_l1 <= N-1;ti1_l1+=ts1_l1)
+				for(c3=N-1;c3 <= N;c3+=1)
 				 {
-				 	for(ti2_l1=(ceild((N-ts2_l1+0),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
-				 	 {
-				 	 	for(ti3_l1=(ceild((N-ts3_l1+0),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
-				 	 	 {
-				 	 	 	{
-				 	 	 		for(c1=max(ti1_l1,N-1);c1 <= min(ti1_l1+ts1_l1-1,N-1);c1+=1)
-				 	 	 		 {
-				 	 	 		 	for(c2=max(ti2_l1,N-1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
-				 	 	 		 	 {
-				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-				 	 	 		 	 	 {
-				 	 	 		 	 	 	S1((N-1),(N-1),(c3));
-				 	 	 		 	 	 }
-				 	 	 		 	 }
-				 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-				 	 	 		 	 {
-				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
-				 	 	 		 	 	 {
-				 	 	 		 	 	 	S0((N-1),(N),(N-1));
-				 	 	 		 	 	 }
-				 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-				 	 	 		 	 	 {
-				 	 	 		 	 	 	S2((N-1),(N),(N));
-				 	 	 		 	 	 	S0((N-1),(N),(N));
-				 	 	 		 	 	 }
-				 	 	 		 	 }
-				 	 	 		 }
-				 	 	 	}
-				 	 	 }
-				 	 }
+				 	S1((N-1),(N-1),(c3));
 				 }
+				S0((N-1),(N),(N-1));
+				S2((N-1),(N),(N));
+				S0((N-1),(N),(N));
 			}
 		}
-		for(ti1_l1=(ceild((N-ts1_l1+1),(ts1_l1))) * (ts1_l1);ti1_l1 <= N;ti1_l1+=ts1_l1)
-		 {
-		 	for(ti2_l1=(ceild((N-ts2_l1+1),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
-		 	 {
-		 	 	for(ti3_l1=(ceild((N-ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
-		 	 	 {
-		 	 	 	{
-		 	 	 		for(c1=max(ti1_l1,N);c1 <= min(ti1_l1+ts1_l1-1,N);c1+=1)
-		 	 	 		 {
-		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S1((N),(N),(N));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-		 	 	 		 	 {
-		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-		 	 	 		 	 	 {
-		 	 	 		 	 	 	S0((N),(N),(N));
-		 	 	 		 	 	 }
-		 	 	 		 	 }
-		 	 	 		 }
-		 	 	 	}
-		 	 	 }
-		 	 }
-		 }
+		S1((N),(N),(N));
+		S0((N),(N),(N));
 	}
 	#undef S1
 	#undef S2

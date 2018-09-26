@@ -1,0 +1,783 @@
+Analyzing loop at TMM.c:133
+TMM.c:133:3: note: ===== analyze_loop_nest =====
+TMM.c:133:3: note: === vect_analyze_loop_form ===
+TMM.c:133:3: note: not vectorized: multiple nested loops.
+TMM.c:133:3: note: bad loop form.
+Analyzing loop at TMM.c:139
+TMM.c:139:5: note: ===== analyze_loop_nest =====
+TMM.c:139:5: note: === vect_analyze_loop_form ===
+TMM.c:139:5: note: === vect_analyze_loop_form ===
+TMM.c:139:5: note: === get_loop_niters ===
+TMM.c:139:5: note: not vectorized: inner-loop count not invariant.
+TMM.c:139:5: note: bad loop form.
+Analyzing loop at TMM.c:141
+TMM.c:141:7: note: ===== analyze_loop_nest =====
+TMM.c:141:7: note: === vect_analyze_loop_form ===
+TMM.c:141:7: note: === get_loop_niters ===
+TMM.c:141:7: note: Symbolic number of iterations is 5001 - (unsigned int) c2_99
+TMM.c:141:7: note: === vect_analyze_data_refs ===
+TMM.c:141:7: note: got vectype for stmt: _19 = *_18;
+TMM.c:141:7: note: got vectype for stmt: _30 = *_29;
+TMM.c:141:7: note: got vectype for stmt: *_18 = _32;
+TMM.c:141:7: note: === vect_analyze_scalar_cycles ===
+TMM.c:141:7: note: Analyze phi: c3_46 = PHI <c3_83(6), c2_99(10)>
+TMM.c:141:7: note: Access function of PHI: {c2_99, +, 1}_6
+TMM.c:141:7: note: step: 1,  init: c2_99
+TMM.c:141:7: note: Detected induction.
+TMM.c:141:7: note: Analyze phi: .MEM_48 = PHI <.MEM_82(6), .MEM_49(10)>
+TMM.c:141:7: note: === vect_pattern_recog ===
+TMM.c:141:7: note: vect_is_simple_use: operand _16
+TMM.c:141:7: note: def_stmt: _16 = (long unsigned int) _15;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_is_simple_use: operand _15
+TMM.c:141:7: note: def_stmt: _15 = _6 + c3_46;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_is_simple_use: operand 4
+TMM.c:141:7: note: vect_is_simple_use: operand _27
+TMM.c:141:7: note: def_stmt: _27 = (long unsigned int) _26;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_is_simple_use: operand _26
+TMM.c:141:7: note: def_stmt: _26 = _25 + c3_46;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_is_simple_use: operand 4
+TMM.c:141:7: note: vect_is_simple_use: operand _24
+TMM.c:141:7: note: def_stmt: _24 = *_23;
+TMM.c:141:7: note: type of def: external
+TMM.c:141:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:7: note: === vect_mark_stmts_to_be_vectorized ===
+TMM.c:141:7: note: init: phi relevant? c3_46 = PHI <c3_83(6), c2_99(10)>
+TMM.c:141:7: note: init: phi relevant? .MEM_48 = PHI <.MEM_82(6), .MEM_49(10)>
+TMM.c:141:7: note: init: stmt relevant? _15 = _6 + c3_46;
+TMM.c:141:7: note: init: stmt relevant? _16 = (long unsigned int) _15;
+TMM.c:141:7: note: init: stmt relevant? _17 = _16 * 4;
+TMM.c:141:7: note: init: stmt relevant? _18 = R_72(D) + _17;
+TMM.c:141:7: note: init: stmt relevant? _19 = *_18;
+TMM.c:141:7: note: init: stmt relevant? _26 = _25 + c3_46;
+TMM.c:141:7: note: init: stmt relevant? _27 = (long unsigned int) _26;
+TMM.c:141:7: note: init: stmt relevant? _28 = _27 * 4;
+TMM.c:141:7: note: init: stmt relevant? _29 = B_74(D) + _28;
+TMM.c:141:7: note: init: stmt relevant? _30 = *_29;
+TMM.c:141:7: note: init: stmt relevant? _31 = _24 * _30;
+TMM.c:141:7: note: init: stmt relevant? _32 = _19 + _31;
+TMM.c:141:7: note: init: stmt relevant? *_18 = _32;
+TMM.c:141:7: note: vec_stmt_relevant_p: stmt has vdefs.
+TMM.c:141:7: note: mark relevant 5, live 0: *_18 = _32;
+TMM.c:141:7: note: init: stmt relevant? c3_83 = c3_46 + 1;
+TMM.c:141:7: note: init: stmt relevant? if (c3_83 <= 5000)
+TMM.c:141:7: note: worklist: examine stmt: *_18 = _32;
+TMM.c:141:7: note: vect_is_simple_use: operand _32
+TMM.c:141:7: note: def_stmt: _32 = _19 + _31;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: mark relevant 5, live 0: _32 = _19 + _31;
+TMM.c:141:7: note: worklist: examine stmt: _32 = _19 + _31;
+TMM.c:141:7: note: vect_is_simple_use: operand _19
+TMM.c:141:7: note: def_stmt: _19 = *_18;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: mark relevant 5, live 0: _19 = *_18;
+TMM.c:141:7: note: vect_is_simple_use: operand _31
+TMM.c:141:7: note: def_stmt: _31 = _24 * _30;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: mark relevant 5, live 0: _31 = _24 * _30;
+TMM.c:141:7: note: worklist: examine stmt: _31 = _24 * _30;
+TMM.c:141:7: note: vect_is_simple_use: operand _24
+TMM.c:141:7: note: def_stmt: _24 = *_23;
+TMM.c:141:7: note: type of def: external
+TMM.c:141:7: note: def_stmt is out of loop.
+TMM.c:141:7: note: vect_is_simple_use: operand _30
+TMM.c:141:7: note: def_stmt: _30 = *_29;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: mark relevant 5, live 0: _30 = *_29;
+TMM.c:141:7: note: worklist: examine stmt: _30 = *_29;
+TMM.c:141:7: note: worklist: examine stmt: _19 = *_18;
+TMM.c:141:7: note: === vect_analyze_data_ref_dependences ===
+TMM.c:141:7: note: dependence distance  = 0.
+TMM.c:141:7: note: dependence distance == 0 between *_18 and *_18
+TMM.c:141:7: note: === vect_determine_vectorization_factor ===
+TMM.c:141:7: note: ==> examining phi: c3_46 = PHI <c3_83(6), c2_99(10)>
+TMM.c:141:7: note: ==> examining phi: .MEM_48 = PHI <.MEM_82(6), .MEM_49(10)>
+TMM.c:141:7: note: ==> examining statement: _15 = _6 + c3_46;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _16 = (long unsigned int) _15;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _17 = _16 * 4;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _18 = R_72(D) + _17;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _19 = *_18;
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: nunits = 4
+TMM.c:141:7: note: ==> examining statement: _26 = _25 + c3_46;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _27 = (long unsigned int) _26;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _28 = _27 * 4;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _29 = B_74(D) + _28;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: _30 = *_29;
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: nunits = 4
+TMM.c:141:7: note: ==> examining statement: _31 = _24 * _30;
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: nunits = 4
+TMM.c:141:7: note: ==> examining statement: _32 = _19 + _31;
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: nunits = 4
+TMM.c:141:7: note: ==> examining statement: *_18 = _32;
+TMM.c:141:7: note: get vectype for scalar type:  float
+TMM.c:141:7: note: vectype: vector(4) float
+TMM.c:141:7: note: nunits = 4
+TMM.c:141:7: note: ==> examining statement: c3_83 = c3_46 + 1;
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: ==> examining statement: if (c3_83 <= 5000)
+TMM.c:141:7: note: skip.
+TMM.c:141:7: note: vectorization factor = 4
+TMM.c:141:7: note: === vect_analyze_slp ===
+TMM.c:141:7: note: === vect_make_slp_decision ===
+TMM.c:141:7: note: === vect_analyze_data_refs_alignment ===
+TMM.c:141:7: note: dependence distance  = 0.
+TMM.c:141:7: note: accesses have the same alignment.
+TMM.c:141:7: note: vect_compute_data_ref_alignment:
+TMM.c:141:7: note: can't force alignment of ref: *_18
+TMM.c:141:7: note: vect_compute_data_ref_alignment:
+TMM.c:141:7: note: can't force alignment of ref: *_29
+TMM.c:141:7: note: vect_compute_data_ref_alignment:
+TMM.c:141:7: note: can't force alignment of ref: *_18
+TMM.c:141:7: note: === vect_prune_runtime_alias_test_list ===
+TMM.c:141:7: note: === vect_enhance_data_refs_alignment ===
+TMM.c:141:7: note: Unknown misalignment, naturally aligned
+TMM.c:141:7: note: Unknown misalignment, naturally aligned
+TMM.c:141:7: note: Unknown misalignment, naturally aligned
+TMM.c:141:7: note: vect_can_advance_ivs_p:
+TMM.c:141:7: note: Analyze phi: c3_46 = PHI <c3_83(6), c2_99(10)>
+TMM.c:141:7: note: Analyze phi: .MEM_48 = PHI <.MEM_82(6), .MEM_49(10)>
+TMM.c:141:7: note: reduc or virtual phi. skip.
+TMM.c:141:7: note: vect_model_load_cost: unaligned supported by hardware.
+TMM.c:141:7: note: vect_get_data_access_cost: inside_cost = 2, outside_cost = 0.
+TMM.c:141:7: note: vect_model_store_cost: unaligned supported by hardware.
+TMM.c:141:7: note: vect_get_data_access_cost: inside_cost = 2, outside_cost = 0.
+TMM.c:141:7: note: Setting misalignment to -1.
+TMM.c:141:7: note: Setting misalignment to -1.
+TMM.c:141:7: note: Alignment of access forced using peeling.
+TMM.c:141:7: note: Peeling for alignment will be applied.
+TMM.c:141:7: note: Vectorizing an unaligned access.
+TMM.c:141:7: note: === vect_analyze_loop_operations ===
+TMM.c:141:7: note: examining phi: c3_46 = PHI <c3_83(6), c2_99(10)>
+TMM.c:141:7: note: examining phi: .MEM_48 = PHI <.MEM_82(6), .MEM_49(10)>
+TMM.c:141:7: note: ==> examining statement: _15 = _6 + c3_46;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _16 = (long unsigned int) _15;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _17 = _16 * 4;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _18 = R_72(D) + _17;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _19 = *_18;
+TMM.c:141:7: note: vect_is_simple_use: operand *_18
+TMM.c:141:7: note: not ssa-name.
+TMM.c:141:7: note: use not simple.
+TMM.c:141:7: note: vect_is_simple_use: operand *_18
+TMM.c:141:7: note: not ssa-name.
+TMM.c:141:7: note: use not simple.
+TMM.c:141:7: note: vect_model_load_cost: aligned.
+TMM.c:141:7: note: vect_model_load_cost: inside_cost = 1, prologue_cost = 0 .
+TMM.c:141:7: note: ==> examining statement: _26 = _25 + c3_46;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _27 = (long unsigned int) _26;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _28 = _27 * 4;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _29 = B_74(D) + _28;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: _30 = *_29;
+TMM.c:141:7: note: vect_is_simple_use: operand *_29
+TMM.c:141:7: note: not ssa-name.
+TMM.c:141:7: note: use not simple.
+TMM.c:141:7: note: vect_is_simple_use: operand *_29
+TMM.c:141:7: note: not ssa-name.
+TMM.c:141:7: note: use not simple.
+TMM.c:141:7: note: vect_model_load_cost: unaligned supported by hardware.
+TMM.c:141:7: note: vect_model_load_cost: inside_cost = 2, prologue_cost = 0 .
+TMM.c:141:7: note: ==> examining statement: _31 = _24 * _30;
+TMM.c:141:7: note: vect_is_simple_use: operand _24
+TMM.c:141:7: note: def_stmt: _24 = *_23;
+TMM.c:141:7: note: type of def: external
+TMM.c:141:7: note: vect_is_simple_use: operand _30
+TMM.c:141:7: note: def_stmt: _30 = *_29;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: === vectorizable_operation ===
+TMM.c:141:7: note: vect_model_simple_cost: inside_cost = 1, prologue_cost = 1 .
+TMM.c:141:7: note: ==> examining statement: _32 = _19 + _31;
+TMM.c:141:7: note: vect_is_simple_use: operand _19
+TMM.c:141:7: note: def_stmt: _19 = *_18;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_is_simple_use: operand _31
+TMM.c:141:7: note: def_stmt: _31 = _24 * _30;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: === vectorizable_operation ===
+TMM.c:141:7: note: vect_model_simple_cost: inside_cost = 1, prologue_cost = 0 .
+TMM.c:141:7: note: ==> examining statement: *_18 = _32;
+TMM.c:141:7: note: vect_is_simple_use: operand _32
+TMM.c:141:7: note: def_stmt: _32 = _19 + _31;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_model_store_cost: aligned.
+TMM.c:141:7: note: vect_model_store_cost: inside_cost = 1, prologue_cost = 0 .
+TMM.c:141:7: note: ==> examining statement: c3_83 = c3_46 + 1;
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: ==> examining statement: if (c3_83 <= 5000)
+TMM.c:141:7: note: irrelevant.
+TMM.c:141:7: note: Cost model analysis: 
+TMM.c:141:7: note:   Runtime profitability threshold = 4
+TMM.c:141:7: note:   Static estimate profitability threshold = 7
+TMM.c:141:7: note: epilog loop required
+TMM.c:141:7: note: vect_can_advance_ivs_p:
+TMM.c:141:7: note: Analyze phi: c3_46 = PHI <c3_83(6), c2_99(10)>
+TMM.c:141:7: note: Analyze phi: .MEM_48 = PHI <.MEM_82(6), .MEM_49(10)>
+TMM.c:141:7: note: reduc or virtual phi. skip.
+TMM.c:141:7: note: loop vectorized
+TMM.c:141:7: note: === vec_transform_loop ===
+TMM.c:141:7: note: Profitability threshold is 4 loop iterations.
+TMM.c:141:7: note: created vectp.11_157
+TMM.c:141:7: note: niters for prolog loop: (unsigned int) -((unsigned long) vectp.11_157 >> 2) & 3
+loop at TMM.c:143: if (ivtmp_145 < prolog_loop_niters.12_151)
+TMM.c:141:7: note: === vect_update_inits_of_dr ===
+TMM.c:141:7: note: vect_update_ivs_after_vectorizer: phi: c3_46 = PHI <c3_83(6), c3_144(20)>
+TMM.c:141:7: note: vect_update_ivs_after_vectorizer: phi: .MEM_48 = PHI <.MEM_82(6), .MEM_143(20)>
+TMM.c:141:7: note: reduc or virtual phi. skip.
+TMM.c:141:7: note: ------>vectorizing phi: c3_46 = PHI <c3_83(6), c3_144(28)>
+TMM.c:141:7: note: ------>vectorizing phi: .MEM_48 = PHI <.MEM_82(6), .MEM_143(28)>
+TMM.c:141:7: note: ------>vectorizing statement: _15 = _6 + c3_46;
+TMM.c:141:7: note: ------>vectorizing statement: _16 = (long unsigned int) _15;
+TMM.c:141:7: note: ------>vectorizing statement: _17 = _16 * 4;
+TMM.c:141:7: note: ------>vectorizing statement: _18 = R_72(D) + _17;
+TMM.c:141:7: note: ------>vectorizing statement: _19 = *_18;
+TMM.c:141:7: note: transform statement.
+TMM.c:141:7: note: transform load. ncopies = 1
+TMM.c:141:7: note: create vector_type-pointer variable to type: vector(4) float  vectorizing a pointer ref: *(float *) R_72(D) + (sizetype) (((long unsigned int) (c1_100 * 5001) + (long unsigned int) c2_99) * 4)
+TMM.c:141:7: note: created vectp.19_113
+TMM.c:141:7: note: add new stmt: vect__19.20_101 = MEM[(float *)vectp.18_103];
+TMM.c:141:7: note: ------>vectorizing statement: _26 = _25 + c3_46;
+TMM.c:141:7: note: ------>vectorizing statement: _27 = (long unsigned int) _26;
+TMM.c:141:7: note: ------>vectorizing statement: _28 = _27 * 4;
+TMM.c:141:7: note: ------>vectorizing statement: _29 = B_74(D) + _28;
+TMM.c:141:7: note: ------>vectorizing statement: _30 = *_29;
+TMM.c:141:7: note: transform statement.
+TMM.c:141:7: note: transform load. ncopies = 1
+TMM.c:141:7: note: create vector_type-pointer variable to type: vector(4) float  vectorizing a pointer ref: *(float *) B_74(D) + (sizetype) (((long unsigned int) (c2_99 * 5001) + (long unsigned int) c2_99) * 4)
+TMM.c:141:7: note: created vectp.22_98
+TMM.c:141:7: note: add new stmt: vect__30.23_77 = MEM[(float *)vectp.21_87];
+TMM.c:141:7: note: ------>vectorizing statement: _31 = _24 * _30;
+TMM.c:141:7: note: transform statement.
+TMM.c:141:7: note: vect_is_simple_use: operand _24
+TMM.c:141:7: note: def_stmt: _24 = *_23;
+TMM.c:141:7: note: type of def: external
+TMM.c:141:7: note: vect_is_simple_use: operand _30
+TMM.c:141:7: note: def_stmt: _30 = *_29;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: transform binary/unary operation.
+TMM.c:141:7: note: vect_get_vec_def_for_operand: _24
+TMM.c:141:7: note: vect_is_simple_use: operand _24
+TMM.c:141:7: note: def_stmt: _24 = *_23;
+TMM.c:141:7: note: type of def: external
+TMM.c:141:7: note:   def_stmt =  _24 = *_23;
+TMM.c:141:7: note: created new init_stmt: vect_cst__76 = {_24, _24, _24, _24};
+TMM.c:141:7: note: vect_get_vec_def_for_operand: _30
+TMM.c:141:7: note: vect_is_simple_use: operand _30
+TMM.c:141:7: note: def_stmt: _30 = *_29;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note:   def_stmt =  _30 = *_29;
+TMM.c:141:7: note: add new stmt: vect__31.24_70 = vect_cst__76 * vect__30.23_77;
+TMM.c:141:7: note: ------>vectorizing statement: _32 = _19 + _31;
+TMM.c:141:7: note: transform statement.
+TMM.c:141:7: note: vect_is_simple_use: operand _19
+TMM.c:141:7: note: def_stmt: _19 = *_18;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: vect_is_simple_use: operand _31
+TMM.c:141:7: note: def_stmt: _31 = _24 * _30;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: transform binary/unary operation.
+TMM.c:141:7: note: vect_get_vec_def_for_operand: _19
+TMM.c:141:7: note: vect_is_simple_use: operand _19
+TMM.c:141:7: note: def_stmt: _19 = *_18;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note:   def_stmt =  _19 = *_18;
+TMM.c:141:7: note: vect_get_vec_def_for_operand: _31
+TMM.c:141:7: note: vect_is_simple_use: operand _31
+TMM.c:141:7: note: def_stmt: _31 = _24 * _30;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note:   def_stmt =  _31 = _24 * _30;
+TMM.c:141:7: note: add new stmt: vect__32.25_69 = vect__19.20_101 + vect__31.24_70;
+TMM.c:141:7: note: ------>vectorizing statement: *_18 = _32;
+TMM.c:141:7: note: transform statement.
+TMM.c:141:7: note: vect_is_simple_use: operand _32
+TMM.c:141:7: note: def_stmt: _32 = _19 + _31;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note: transform store. ncopies = 1
+TMM.c:141:7: note: vect_get_vec_def_for_operand: _32
+TMM.c:141:7: note: vect_is_simple_use: operand _32
+TMM.c:141:7: note: def_stmt: _32 = _19 + _31;
+TMM.c:141:7: note: type of def: internal
+TMM.c:141:7: note:   def_stmt =  _32 = _19 + _31;
+TMM.c:141:7: note: create vector_type-pointer variable to type: vector(4) float  vectorizing a pointer ref: *(float *) R_72(D) + (sizetype) (((long unsigned int) (c1_100 * 5001) + (long unsigned int) c2_99) * 4)
+TMM.c:141:7: note: created vectp.27_68
+TMM.c:141:7: note: add new stmt: MEM[(float *)vectp.26_61] = vect__32.25_69;
+TMM.c:141:7: note: ------>vectorizing statement: c3_83 = c3_46 + 1;
+TMM.c:141:7: note: ------>vectorizing statement: vectp.18_102 = vectp.18_103 + 16;
+TMM.c:141:7: note: ------>vectorizing statement: vectp.21_86 = vectp.21_87 + 16;
+TMM.c:141:7: note: ------>vectorizing statement: vectp.26_56 = vectp.26_61 + 16;
+TMM.c:141:7: note: ------>vectorizing statement: if (c3_83 <= 5000)
+loop at TMM.c:143: if (ivtmp_52 < bnd.15_118)
+TMM.c:141:7: note: LOOP VECTORIZED
+Analyzing loop at TMM.c:135
+TMM.c:135:5: note: ===== analyze_loop_nest =====
+TMM.c:135:5: note: === vect_analyze_loop_form ===
+TMM.c:135:5: note: === get_loop_niters ===
+TMM.c:135:5: note: Symbolic number of iterations is 5001 - (unsigned int) c1_100
+TMM.c:135:5: note: === vect_analyze_data_refs ===
+TMM.c:135:5: note: got vectype for stmt: _11 = *_10;
+TMM.c:135:5: note: got vectype for stmt: *_12 = _13;
+TMM.c:135:5: note: === vect_analyze_scalar_cycles ===
+TMM.c:135:5: note: Analyze phi: c3_45 = PHI <c3_85(3), c1_100(13)>
+TMM.c:135:5: note: Access function of PHI: {c1_100, +, 1}_3
+TMM.c:135:5: note: step: 1,  init: c1_100
+TMM.c:135:5: note: Detected induction.
+TMM.c:135:5: note: Analyze phi: .MEM_47 = PHI <.MEM_84(3), .MEM_50(13)>
+TMM.c:135:5: note: === vect_pattern_recog ===
+TMM.c:135:5: note: vect_is_simple_use: operand _8
+TMM.c:135:5: note: def_stmt: _8 = (long unsigned int) _7;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: vect_is_simple_use: operand _7
+TMM.c:135:5: note: def_stmt: _7 = _6 + c3_45;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: vect_is_simple_use: operand 4
+TMM.c:135:5: note: vect_is_simple_use: operand _5
+TMM.c:135:5: note: def_stmt: _5 = *_4;
+TMM.c:135:5: note: type of def: external
+TMM.c:135:5: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:5: note: === vect_mark_stmts_to_be_vectorized ===
+TMM.c:135:5: note: init: phi relevant? c3_45 = PHI <c3_85(3), c1_100(13)>
+TMM.c:135:5: note: init: phi relevant? .MEM_47 = PHI <.MEM_84(3), .MEM_50(13)>
+TMM.c:135:5: note: init: stmt relevant? _7 = _6 + c3_45;
+TMM.c:135:5: note: init: stmt relevant? _8 = (long unsigned int) _7;
+TMM.c:135:5: note: init: stmt relevant? _9 = _8 * 4;
+TMM.c:135:5: note: init: stmt relevant? _10 = B_74(D) + _9;
+TMM.c:135:5: note: init: stmt relevant? _11 = *_10;
+TMM.c:135:5: note: init: stmt relevant? _12 = R_72(D) + _9;
+TMM.c:135:5: note: init: stmt relevant? _13 = _5 * _11;
+TMM.c:135:5: note: init: stmt relevant? *_12 = _13;
+TMM.c:135:5: note: vec_stmt_relevant_p: stmt has vdefs.
+TMM.c:135:5: note: mark relevant 5, live 0: *_12 = _13;
+TMM.c:135:5: note: init: stmt relevant? c3_85 = c3_45 + 1;
+TMM.c:135:5: note: init: stmt relevant? if (c3_85 != 5001)
+TMM.c:135:5: note: worklist: examine stmt: *_12 = _13;
+TMM.c:135:5: note: vect_is_simple_use: operand _13
+TMM.c:135:5: note: def_stmt: _13 = _5 * _11;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: mark relevant 5, live 0: _13 = _5 * _11;
+TMM.c:135:5: note: worklist: examine stmt: _13 = _5 * _11;
+TMM.c:135:5: note: vect_is_simple_use: operand _5
+TMM.c:135:5: note: def_stmt: _5 = *_4;
+TMM.c:135:5: note: type of def: external
+TMM.c:135:5: note: def_stmt is out of loop.
+TMM.c:135:5: note: vect_is_simple_use: operand _11
+TMM.c:135:5: note: def_stmt: _11 = *_10;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: mark relevant 5, live 0: _11 = *_10;
+TMM.c:135:5: note: worklist: examine stmt: _11 = *_10;
+TMM.c:135:5: note: === vect_analyze_data_ref_dependences ===
+TMM.c:135:5: note: === vect_determine_vectorization_factor ===
+TMM.c:135:5: note: ==> examining phi: c3_45 = PHI <c3_85(3), c1_100(13)>
+TMM.c:135:5: note: ==> examining phi: .MEM_47 = PHI <.MEM_84(3), .MEM_50(13)>
+TMM.c:135:5: note: ==> examining statement: _7 = _6 + c3_45;
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: ==> examining statement: _8 = (long unsigned int) _7;
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: ==> examining statement: _9 = _8 * 4;
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: ==> examining statement: _10 = B_74(D) + _9;
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: ==> examining statement: _11 = *_10;
+TMM.c:135:5: note: get vectype for scalar type:  float
+TMM.c:135:5: note: vectype: vector(4) float
+TMM.c:135:5: note: nunits = 4
+TMM.c:135:5: note: ==> examining statement: _12 = R_72(D) + _9;
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: ==> examining statement: _13 = _5 * _11;
+TMM.c:135:5: note: get vectype for scalar type:  float
+TMM.c:135:5: note: vectype: vector(4) float
+TMM.c:135:5: note: get vectype for scalar type:  float
+TMM.c:135:5: note: vectype: vector(4) float
+TMM.c:135:5: note: nunits = 4
+TMM.c:135:5: note: ==> examining statement: *_12 = _13;
+TMM.c:135:5: note: get vectype for scalar type:  float
+TMM.c:135:5: note: vectype: vector(4) float
+TMM.c:135:5: note: nunits = 4
+TMM.c:135:5: note: ==> examining statement: c3_85 = c3_45 + 1;
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: ==> examining statement: if (c3_85 != 5001)
+TMM.c:135:5: note: skip.
+TMM.c:135:5: note: vectorization factor = 4
+TMM.c:135:5: note: === vect_analyze_slp ===
+TMM.c:135:5: note: === vect_make_slp_decision ===
+TMM.c:135:5: note: === vect_analyze_data_refs_alignment ===
+TMM.c:135:5: note: vect_compute_data_ref_alignment:
+TMM.c:135:5: note: can't force alignment of ref: *_10
+TMM.c:135:5: note: vect_compute_data_ref_alignment:
+TMM.c:135:5: note: can't force alignment of ref: *_12
+TMM.c:135:5: note: === vect_prune_runtime_alias_test_list ===
+TMM.c:135:5: note: === vect_enhance_data_refs_alignment ===
+TMM.c:135:5: note: Unknown misalignment, naturally aligned
+TMM.c:135:5: note: Unknown misalignment, naturally aligned
+TMM.c:135:5: note: vect_can_advance_ivs_p:
+TMM.c:135:5: note: Analyze phi: c3_45 = PHI <c3_85(3), c1_100(13)>
+TMM.c:135:5: note: Analyze phi: .MEM_47 = PHI <.MEM_84(3), .MEM_50(13)>
+TMM.c:135:5: note: reduc or virtual phi. skip.
+TMM.c:135:5: note: vect_model_load_cost: unaligned supported by hardware.
+TMM.c:135:5: note: vect_get_data_access_cost: inside_cost = 2, outside_cost = 0.
+TMM.c:135:5: note: vect_model_store_cost: unaligned supported by hardware.
+TMM.c:135:5: note: vect_get_data_access_cost: inside_cost = 2, outside_cost = 0.
+TMM.c:135:5: note: Setting misalignment to -1.
+TMM.c:135:5: note: Setting misalignment to -1.
+TMM.c:135:5: note: Alignment of access forced using peeling.
+TMM.c:135:5: note: Peeling for alignment will be applied.
+TMM.c:135:5: note: Vectorizing an unaligned access.
+TMM.c:135:5: note: === vect_analyze_loop_operations ===
+TMM.c:135:5: note: examining phi: c3_45 = PHI <c3_85(3), c1_100(13)>
+TMM.c:135:5: note: examining phi: .MEM_47 = PHI <.MEM_84(3), .MEM_50(13)>
+TMM.c:135:5: note: ==> examining statement: _7 = _6 + c3_45;
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: ==> examining statement: _8 = (long unsigned int) _7;
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: ==> examining statement: _9 = _8 * 4;
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: ==> examining statement: _10 = B_74(D) + _9;
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: ==> examining statement: _11 = *_10;
+TMM.c:135:5: note: vect_is_simple_use: operand *_10
+TMM.c:135:5: note: not ssa-name.
+TMM.c:135:5: note: use not simple.
+TMM.c:135:5: note: vect_is_simple_use: operand *_10
+TMM.c:135:5: note: not ssa-name.
+TMM.c:135:5: note: use not simple.
+TMM.c:135:5: note: vect_model_load_cost: aligned.
+TMM.c:135:5: note: vect_model_load_cost: inside_cost = 1, prologue_cost = 0 .
+TMM.c:135:5: note: ==> examining statement: _12 = R_72(D) + _9;
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: ==> examining statement: _13 = _5 * _11;
+TMM.c:135:5: note: vect_is_simple_use: operand _5
+TMM.c:135:5: note: def_stmt: _5 = *_4;
+TMM.c:135:5: note: type of def: external
+TMM.c:135:5: note: vect_is_simple_use: operand _11
+TMM.c:135:5: note: def_stmt: _11 = *_10;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: === vectorizable_operation ===
+TMM.c:135:5: note: vect_model_simple_cost: inside_cost = 1, prologue_cost = 1 .
+TMM.c:135:5: note: ==> examining statement: *_12 = _13;
+TMM.c:135:5: note: vect_is_simple_use: operand _13
+TMM.c:135:5: note: def_stmt: _13 = _5 * _11;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: vect_model_store_cost: unaligned supported by hardware.
+TMM.c:135:5: note: vect_model_store_cost: inside_cost = 2, prologue_cost = 0 .
+TMM.c:135:5: note: ==> examining statement: c3_85 = c3_45 + 1;
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: ==> examining statement: if (c3_85 != 5001)
+TMM.c:135:5: note: irrelevant.
+TMM.c:135:5: note: Cost model analysis: 
+TMM.c:135:5: note:   Runtime profitability threshold = 5
+TMM.c:135:5: note:   Static estimate profitability threshold = 11
+TMM.c:135:5: note: epilog loop required
+TMM.c:135:5: note: vect_can_advance_ivs_p:
+TMM.c:135:5: note: Analyze phi: c3_45 = PHI <c3_85(3), c1_100(13)>
+TMM.c:135:5: note: Analyze phi: .MEM_47 = PHI <.MEM_84(3), .MEM_50(13)>
+TMM.c:135:5: note: reduc or virtual phi. skip.
+TMM.c:135:5: note: loop vectorized
+TMM.c:135:5: note: === vec_transform_loop ===
+TMM.c:135:5: note: Profitability threshold is 5 loop iterations.
+TMM.c:135:5: note: created vectp.29_177
+TMM.c:135:5: note: niters for prolog loop: (unsigned int) -((unsigned long) vectp.29_177 >> 2) & 3
+loop at TMM.c:137: if (ivtmp_206 < prolog_loop_niters.30_169)
+TMM.c:135:5: note: === vect_update_inits_of_dr ===
+TMM.c:135:5: note: vect_update_ivs_after_vectorizer: phi: c3_45 = PHI <c3_85(3), c3_207(34)>
+TMM.c:135:5: note: vect_update_ivs_after_vectorizer: phi: .MEM_47 = PHI <.MEM_84(3), .MEM_208(34)>
+TMM.c:135:5: note: reduc or virtual phi. skip.
+TMM.c:135:5: note: ------>vectorizing phi: c3_45 = PHI <c3_85(3), c3_207(42)>
+TMM.c:135:5: note: ------>vectorizing phi: .MEM_47 = PHI <.MEM_84(3), .MEM_208(42)>
+TMM.c:135:5: note: ------>vectorizing statement: _7 = _6 + c3_45;
+TMM.c:135:5: note: ------>vectorizing statement: _8 = (long unsigned int) _7;
+TMM.c:135:5: note: ------>vectorizing statement: _9 = _8 * 4;
+TMM.c:135:5: note: ------>vectorizing statement: _10 = B_74(D) + _9;
+TMM.c:135:5: note: ------>vectorizing statement: _11 = *_10;
+TMM.c:135:5: note: transform statement.
+TMM.c:135:5: note: transform load. ncopies = 1
+TMM.c:135:5: note: create vector_type-pointer variable to type: vector(4) float  vectorizing a pointer ref: *(float *) B_74(D) + (sizetype) (((long unsigned int) (c1_100 * 5001) + (long unsigned int) c1_100) * 4)
+TMM.c:135:5: note: created vectp.37_234
+TMM.c:135:5: note: add new stmt: vect__11.38_243 = MEM[(float *)vectp.36_241];
+TMM.c:135:5: note: ------>vectorizing statement: _12 = R_72(D) + _9;
+TMM.c:135:5: note: ------>vectorizing statement: _13 = _5 * _11;
+TMM.c:135:5: note: transform statement.
+TMM.c:135:5: note: vect_is_simple_use: operand _5
+TMM.c:135:5: note: def_stmt: _5 = *_4;
+TMM.c:135:5: note: type of def: external
+TMM.c:135:5: note: vect_is_simple_use: operand _11
+TMM.c:135:5: note: def_stmt: _11 = *_10;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: transform binary/unary operation.
+TMM.c:135:5: note: vect_get_vec_def_for_operand: _5
+TMM.c:135:5: note: vect_is_simple_use: operand _5
+TMM.c:135:5: note: def_stmt: _5 = *_4;
+TMM.c:135:5: note: type of def: external
+TMM.c:135:5: note:   def_stmt =  _5 = *_4;
+TMM.c:135:5: note: created new init_stmt: vect_cst__244 = {_5, _5, _5, _5};
+TMM.c:135:5: note: vect_get_vec_def_for_operand: _11
+TMM.c:135:5: note: vect_is_simple_use: operand _11
+TMM.c:135:5: note: def_stmt: _11 = *_10;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note:   def_stmt =  _11 = *_10;
+TMM.c:135:5: note: add new stmt: vect__13.39_245 = vect_cst__244 * vect__11.38_243;
+TMM.c:135:5: note: ------>vectorizing statement: *_12 = _13;
+TMM.c:135:5: note: transform statement.
+TMM.c:135:5: note: vect_is_simple_use: operand _13
+TMM.c:135:5: note: def_stmt: _13 = _5 * _11;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note: transform store. ncopies = 1
+TMM.c:135:5: note: vect_get_vec_def_for_operand: _13
+TMM.c:135:5: note: vect_is_simple_use: operand _13
+TMM.c:135:5: note: def_stmt: _13 = _5 * _11;
+TMM.c:135:5: note: type of def: internal
+TMM.c:135:5: note:   def_stmt =  _13 = _5 * _11;
+TMM.c:135:5: note: create vector_type-pointer variable to type: vector(4) float  vectorizing a pointer ref: *(float *) R_72(D) + (sizetype) (((long unsigned int) (c1_100 * 5001) + (long unsigned int) c1_100) * 4)
+TMM.c:135:5: note: created vectp.41_246
+TMM.c:135:5: note: add new stmt: MEM[(float *)vectp.40_253] = vect__13.39_245;
+TMM.c:135:5: note: ------>vectorizing statement: c3_85 = c3_45 + 1;
+TMM.c:135:5: note: ------>vectorizing statement: vectp.36_242 = vectp.36_241 + 16;
+TMM.c:135:5: note: ------>vectorizing statement: vectp.40_254 = vectp.40_253 + 16;
+TMM.c:135:5: note: ------>vectorizing statement: if (c3_85 != 5001)
+loop at TMM.c:137: if (ivtmp_257 < bnd.33_229)
+TMM.c:135:5: note: LOOP VECTORIZED
+TMM.c:135:5: note: === vect_analyze_data_refs ===
+TMM.c:135:5: note: got vectype for stmt: _349 = *_348;
+TMM.c:135:5: note: got vectype for stmt: *_350 = _351;
+TMM.c:135:5: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:5: note: not consecutive access _349 = *_348;
+TMM.c:135:5: note: not consecutive access *_350 = _351;
+TMM.c:135:5: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:5: note: ===vect_slp_analyze_bb===
+TMM.c:135:5: note: === vect_analyze_data_refs ===
+TMM.c:135:5: note: got vectype for stmt: _360 = *_359;
+TMM.c:135:5: note: got vectype for stmt: *_361 = _362;
+TMM.c:135:5: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:5: note: not consecutive access _360 = *_359;
+TMM.c:135:5: note: not consecutive access *_361 = _362;
+TMM.c:135:5: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:5: note: ===vect_slp_analyze_bb===
+TMM.c:135:5: note: === vect_analyze_data_refs ===
+TMM.c:135:5: note: got vectype for stmt: _371 = *_370;
+TMM.c:135:5: note: got vectype for stmt: *_372 = _373;
+TMM.c:135:5: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:5: note: not consecutive access _371 = *_370;
+TMM.c:135:5: note: not consecutive access *_372 = _373;
+TMM.c:135:5: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:5: note: ===vect_slp_analyze_bb===
+TMM.c:135:5: note: === vect_analyze_data_refs ===
+TMM.c:135:5: note: got vectype for stmt: _382 = *_381;
+TMM.c:135:5: note: got vectype for stmt: *_383 = _384;
+TMM.c:135:5: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:5: note: not consecutive access _382 = *_381;
+TMM.c:135:5: note: not consecutive access *_383 = _384;
+TMM.c:135:5: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:5: note: ===vect_slp_analyze_bb===
+TMM.c:135:5: note: === vect_analyze_data_refs ===
+TMM.c:135:5: note: got vectype for stmt: _393 = *_392;
+TMM.c:135:5: note: got vectype for stmt: *_394 = _395;
+TMM.c:135:5: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:5: note: not consecutive access _393 = *_392;
+TMM.c:135:5: note: not consecutive access *_394 = _395;
+TMM.c:135:5: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:5: note: ===vect_slp_analyze_bb===
+TMM.c:135:25: note: === vect_analyze_data_refs ===
+TMM.c:135:25: note: got vectype for stmt: _217 = *_216;
+TMM.c:135:25: note: got vectype for stmt: *_218 = _219;
+TMM.c:135:25: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:25: note: not consecutive access _217 = *_216;
+TMM.c:135:25: note: not consecutive access *_218 = _219;
+TMM.c:135:25: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:25: note: ===vect_slp_analyze_bb===
+TMM.c:137:7: note: === vect_analyze_data_refs ===
+TMM.c:137:7: note: not vectorized: no vectype for stmt: vect__11.38_243 = MEM[(float *)vectp.36_241];
+TMM.c:137:7: note: not vectorized: no vectype for stmt: MEM[(float *)vectp.40_253] = vect__13.39_245;
+TMM.c:137:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:137:7: note: not vectorized: no grouped stores in basic block.
+TMM.c:137:7: note: ===vect_slp_analyze_bb===
+TMM.c:139:11: note: === vect_analyze_data_refs ===
+TMM.c:139:11: note: not vectorized: not enough data-refs in basic block.
+TMM.c:139:11: note: ===vect_slp_analyze_bb===
+TMM.c:139:11: note: ===vect_slp_analyze_bb===
+TMM.c:139:11: note: === vect_analyze_data_refs ===
+TMM.c:139:11: note: not vectorized: not enough data-refs in basic block.
+TMM.c:139:11: note: ===vect_slp_analyze_bb===
+TMM.c:141:7: note: === vect_analyze_data_refs ===
+TMM.c:141:7: note: got vectype for stmt: _7 = *_222;
+TMM.c:141:7: note: got vectype for stmt: _12 = *_11;
+TMM.c:141:7: note: got vectype for stmt: *_222 = _85;
+TMM.c:141:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:7: note: not consecutive access _7 = *_222;
+TMM.c:141:7: note: not consecutive access *_222 = _85;
+TMM.c:141:7: note: not consecutive access _12 = *_11;
+TMM.c:141:7: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:7: note: ===vect_slp_analyze_bb===
+TMM.c:141:7: note: === vect_analyze_data_refs ===
+TMM.c:141:7: note: got vectype for stmt: _29 = *_28;
+TMM.c:141:7: note: got vectype for stmt: _14 = *_83;
+TMM.c:141:7: note: got vectype for stmt: *_28 = _84;
+TMM.c:141:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:7: note: not consecutive access _29 = *_28;
+TMM.c:141:7: note: not consecutive access *_28 = _84;
+TMM.c:141:7: note: not consecutive access _14 = *_83;
+TMM.c:141:7: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:7: note: ===vect_slp_analyze_bb===
+TMM.c:141:7: note: === vect_analyze_data_refs ===
+TMM.c:141:7: note: got vectype for stmt: _265 = *_264;
+TMM.c:141:7: note: got vectype for stmt: _270 = *_269;
+TMM.c:141:7: note: got vectype for stmt: *_264 = _272;
+TMM.c:141:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:7: note: not consecutive access _265 = *_264;
+TMM.c:141:7: note: not consecutive access *_264 = _272;
+TMM.c:141:7: note: not consecutive access _270 = *_269;
+TMM.c:141:7: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:7: note: ===vect_slp_analyze_bb===
+TMM.c:141:7: note: === vect_analyze_data_refs ===
+TMM.c:141:7: note: got vectype for stmt: _281 = *_280;
+TMM.c:141:7: note: got vectype for stmt: _286 = *_285;
+TMM.c:141:7: note: got vectype for stmt: *_280 = _288;
+TMM.c:141:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:7: note: not consecutive access _281 = *_280;
+TMM.c:141:7: note: not consecutive access *_280 = _288;
+TMM.c:141:7: note: not consecutive access _286 = *_285;
+TMM.c:141:7: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:7: note: ===vect_slp_analyze_bb===
+TMM.c:141:7: note: === vect_analyze_data_refs ===
+TMM.c:141:7: note: got vectype for stmt: _297 = *_296;
+TMM.c:141:7: note: got vectype for stmt: _302 = *_301;
+TMM.c:141:7: note: got vectype for stmt: *_296 = _304;
+TMM.c:141:7: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:7: note: not consecutive access _297 = *_296;
+TMM.c:141:7: note: not consecutive access *_296 = _304;
+TMM.c:141:7: note: not consecutive access _302 = *_301;
+TMM.c:141:7: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:7: note: ===vect_slp_analyze_bb===
+TMM.c:141:27: note: === vect_analyze_data_refs ===
+TMM.c:141:27: note: got vectype for stmt: _134 = *_135;
+TMM.c:141:27: note: got vectype for stmt: _129 = *_130;
+TMM.c:141:27: note: got vectype for stmt: *_135 = _127;
+TMM.c:141:27: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:27: note: not consecutive access _134 = *_135;
+TMM.c:141:27: note: not consecutive access *_135 = _127;
+TMM.c:141:27: note: not consecutive access _129 = *_130;
+TMM.c:141:27: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:27: note: ===vect_slp_analyze_bb===
+TMM.c:143:9: note: === vect_analyze_data_refs ===
+TMM.c:143:9: note: not vectorized: no vectype for stmt: vect__19.20_101 = MEM[(float *)vectp.18_103];
+TMM.c:143:9: note: not vectorized: no vectype for stmt: vect__30.23_77 = MEM[(float *)vectp.21_87];
+TMM.c:143:9: note: not vectorized: no vectype for stmt: MEM[(float *)vectp.26_61] = vect__32.25_69;
+TMM.c:143:9: note: === vect_analyze_data_ref_accesses ===
+TMM.c:143:9: note: not vectorized: no grouped stores in basic block.
+TMM.c:143:9: note: ===vect_slp_analyze_bb===
+TMM.c:139:5: note: === vect_analyze_data_refs ===
+TMM.c:139:5: note: not vectorized: not enough data-refs in basic block.
+TMM.c:139:5: note: ===vect_slp_analyze_bb===
+TMM.c:139:5: note: ===vect_slp_analyze_bb===
+TMM.c:143:9: note: === vect_analyze_data_refs ===
+TMM.c:143:9: note: got vectype for stmt: _24 = *_23;
+TMM.c:143:9: note: not vectorized: not enough data-refs in basic block.
+TMM.c:143:9: note: ===vect_slp_analyze_bb===
+TMM.c:143:9: note: === vect_analyze_data_refs ===
+TMM.c:143:9: note: not vectorized: not enough data-refs in basic block.
+TMM.c:143:9: note: ===vect_slp_analyze_bb===
+TMM.c:141:27: note: === vect_analyze_data_refs ===
+TMM.c:141:27: note: got vectype for stmt: _314 = *_313;
+TMM.c:141:27: note: got vectype for stmt: _319 = *_318;
+TMM.c:141:27: note: got vectype for stmt: *_313 = _321;
+TMM.c:141:27: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:27: note: not consecutive access _314 = *_313;
+TMM.c:141:27: note: not consecutive access *_313 = _321;
+TMM.c:141:27: note: not consecutive access _319 = *_318;
+TMM.c:141:27: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:27: note: ===vect_slp_analyze_bb===
+TMM.c:141:27: note: === vect_analyze_data_refs ===
+TMM.c:141:27: note: got vectype for stmt: _332 = *_331;
+TMM.c:141:27: note: got vectype for stmt: _337 = *_336;
+TMM.c:141:27: note: got vectype for stmt: *_331 = _339;
+TMM.c:141:27: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:27: note: not consecutive access _332 = *_331;
+TMM.c:141:27: note: not consecutive access *_331 = _339;
+TMM.c:141:27: note: not consecutive access _337 = *_336;
+TMM.c:141:27: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:27: note: ===vect_slp_analyze_bb===
+TMM.c:141:27: note: === vect_analyze_data_refs ===
+TMM.c:141:27: note: got vectype for stmt: _191 = *_192;
+TMM.c:141:27: note: got vectype for stmt: _164 = *_165;
+TMM.c:141:27: note: got vectype for stmt: *_192 = _162;
+TMM.c:141:27: note: === vect_analyze_data_ref_accesses ===
+TMM.c:141:27: note: not consecutive access _191 = *_192;
+TMM.c:141:27: note: not consecutive access *_192 = _162;
+TMM.c:141:27: note: not consecutive access _164 = *_165;
+TMM.c:141:27: note: not vectorized: no grouped stores in basic block.
+TMM.c:141:27: note: ===vect_slp_analyze_bb===
+TMM.c:141:27: note: ===vect_slp_analyze_bb===
+TMM.c:141:27: note: === vect_analyze_data_refs ===
+TMM.c:141:27: note: not vectorized: not enough data-refs in basic block.
+TMM.c:141:27: note: ===vect_slp_analyze_bb===
+TMM.c:133:3: note: === vect_analyze_data_refs ===
+TMM.c:133:3: note: got vectype for stmt: _39 = *_38;
+TMM.c:133:3: note: got vectype for stmt: _41 = *_40;
+TMM.c:133:3: note: got vectype for stmt: *_38 = _44;
+TMM.c:133:3: note: === vect_analyze_data_ref_accesses ===
+TMM.c:133:3: note: not consecutive access _41 = *_40;
+TMM.c:133:3: note: not consecutive access _39 = *_38;
+TMM.c:133:3: note: not consecutive access *_38 = _44;
+TMM.c:133:3: note: not vectorized: no grouped stores in basic block.
+TMM.c:133:3: note: ===vect_slp_analyze_bb===
+TMM.c:133:3: note: ===vect_slp_analyze_bb===
+TMM.c:137:7: note: === vect_analyze_data_refs ===
+TMM.c:137:7: note: got vectype for stmt: _5 = *_4;
+TMM.c:137:7: note: not vectorized: not enough data-refs in basic block.
+TMM.c:137:7: note: ===vect_slp_analyze_bb===
+TMM.c:137:7: note: === vect_analyze_data_refs ===
+TMM.c:137:7: note: not vectorized: not enough data-refs in basic block.
+TMM.c:137:7: note: ===vect_slp_analyze_bb===
+TMM.c:135:25: note: === vect_analyze_data_refs ===
+TMM.c:135:25: note: got vectype for stmt: _405 = *_404;
+TMM.c:135:25: note: got vectype for stmt: *_406 = _407;
+TMM.c:135:25: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:25: note: not consecutive access _405 = *_404;
+TMM.c:135:25: note: not consecutive access *_406 = _407;
+TMM.c:135:25: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:25: note: ===vect_slp_analyze_bb===
+TMM.c:135:25: note: === vect_analyze_data_refs ===
+TMM.c:135:25: note: got vectype for stmt: _418 = *_417;
+TMM.c:135:25: note: got vectype for stmt: *_419 = _420;
+TMM.c:135:25: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:25: note: not consecutive access _418 = *_417;
+TMM.c:135:25: note: not consecutive access *_419 = _420;
+TMM.c:135:25: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:25: note: ===vect_slp_analyze_bb===
+TMM.c:135:25: note: === vect_analyze_data_refs ===
+TMM.c:135:25: note: got vectype for stmt: _184 = *_185;
+TMM.c:135:25: note: got vectype for stmt: *_183 = _182;
+TMM.c:135:25: note: === vect_analyze_data_ref_accesses ===
+TMM.c:135:25: note: not consecutive access _184 = *_185;
+TMM.c:135:25: note: not consecutive access *_183 = _182;
+TMM.c:135:25: note: not vectorized: no grouped stores in basic block.
+TMM.c:135:25: note: ===vect_slp_analyze_bb===
+TMM.c:135:25: note: ===vect_slp_analyze_bb===
+TMM.c:135:25: note: === vect_analyze_data_refs ===
+TMM.c:135:25: note: not vectorized: not enough data-refs in basic block.
+TMM.c:135:25: note: ===vect_slp_analyze_bb===

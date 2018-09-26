@@ -11,7 +11,7 @@
 #include <sstream>
 #include <chrono>
 #include "TMM_known_good.c"
-void TMM(long, long, long, long, float**, float**, float**);
+void TMM(long, float* __restrict__, float* __restrict__, float* __restrict__);
 using namespace std;
 
 int main(int argc, char** argv){
@@ -26,17 +26,13 @@ int main(int argc, char** argv){
 	ss<<argv[1];
 	ss>>N;
 	//now make empty matrices in the format that alphaz expects
-	float **a, **b, **c, **d;
+	float **a, **b, **d;
 	a=new float*[N+1];
 	for(int i=0;i<N+1;i++)
 		a[i]=new float[N+1];
 	b=new float*[N+1];
 	for(int i=0;i<N+1;i++)
 		b[i]=new float[N+1];
-	c=new float*[N+1];
-	for(int i=0;i<N+1;i++){
-		c[i]=new float[N+1];
-	}
 	d=new float*[N+1];
 	for(int i=0;i<N+1;i++){
 		d[i]=new float[N+1];
@@ -53,12 +49,24 @@ int main(int argc, char** argv){
 			b[i+1][j+1]=j<i?0:rand()%15;
 		}
 	}
+
+	float *A, *B, *C;
+	A= (float*) new float[(N+1)*(N+1)];
+	B= (float*) new float[(N+1)*(N+1)];
+	C= (float*) new float[(N+1)*(N+1)];
+	
+	for(int i=1; i<N+1; i++){
+		for(int j=1;j<N+1;j++){
+			A[(N+1)*i+j]=a[i][j];
+			B[(N+1)*i+j]=b[i][j];
+		}
+	}
 	//now call the alphaz routine
 	auto start= chrono::system_clock::now();
 
 
 
-	TMM(N,N,N,N,a,b,c);
+	TMM(N,A,B,C);
 
 
 
@@ -68,8 +76,8 @@ int main(int argc, char** argv){
 	
 	for(int i=1;i<=N;i++)
 		for(int j=i;j<=N;j++){
-			if (abs(c[i][j]-d[i][j]) > .01)
-				cerr<<"result at ("<<i<<", "<<j<<") was "<<d[i][j]<<" instead of "<<a[i][j]<<".\n";
+			if (abs(C[i*(N+1)+j]-d[i][j]) > .01)
+				cerr<<"result at ("<<i<<", "<<j<<") was "<<C[i*(N+1) +j]<<" instead of "<<d[i][j]<<".\n";
 		}
 	for(int i =0; i <=N; i++)
 		delete[] a[i];
@@ -78,11 +86,13 @@ int main(int argc, char** argv){
 		delete[] b[i];
 	delete[] b;
 	for(int i =0; i <=N; i++)
-		delete[] c[i];
-	delete[] c;
-	for(int i =0; i <=N; i++)
 		delete[] d[i];
 	delete[] d;
+	
+	delete[] A;
+	delete[] B;
+	delete[] C;
+
 	cout<<"Alphaz time: "<<elapsed_seconds.count()<<"\n";
 	return 0;
 }
