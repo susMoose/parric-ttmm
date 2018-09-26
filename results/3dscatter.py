@@ -3,13 +3,15 @@ if __name__ == "__main__":
     from mpl_toolkits.mplot3d import Axes3D
     size=5000
     points=[]
-    f=open("experiment-20180804.opt","r")
-    for line in f:
-        line=line.split(" ")
-        print(line)
-        point=( float(line[2][1:-1]), float(line[3][:-1]), float(line[4][:-1]))
-        gflops = float(line[-2])
-        points.append((gflops, point))
+    fs = ["experiment-20180804.opt","experiment-20180805.opt"]
+    for name in fs:
+        f=open(name,"r")
+        for line in f:
+            line=line.split(" ")
+            print(line)
+            point=( float(line[2][1:-1]), float(line[3][:-1]), float(line[4][:-1]))
+            gflops = float(line[-2])
+            points.append((gflops, point))
    
         
     
@@ -31,8 +33,8 @@ if __name__ == "__main__":
     graph.set_xlabel("ts1")
     graph.set_ylabel("ts2")
     graph.set_zlabel("ts3")
-    graph.set_xlim3d(0,1000)
-    graph.set_ylim3d(0,1000)
-    graph.set_zlim3d(0,1000)
+    graph.set_xlim3d(0,5000)
+    graph.set_ylim3d(0,5000)
+    graph.set_zlim3d(0,5000)
     graph.legend()
     plot.show()
