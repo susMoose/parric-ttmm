@@ -1,0 +1,154 @@
+args : {'N': 500, 'path_prefix': './workspace/parric-ttmm/ttmm/ikj/out', 'keep': [2, 1], 'partitions': [2, 2], 'parent_center': (50, 50, 50), 'parent_size': 100, 'iterations': 2}
+
+Creating Machine('anchovy')...done.
+Creating Machine('barracuda')...done.
+Creating Machine('blowfish')...done.
+Creating Machine('bonito')...done.
+Creating Machine('brill')...done.
+Creating Machine('char')...done.
+
+Creating tasks for parent (50, 50, 50) ...
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (25, 25, 25) : 0.017652 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (25, 25, 25) : 0.015174 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (25, 25, 75) : 0.013676 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (25, 25, 75) : 0.013277 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (25, 25, 75) : 0.012437 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (25, 25, 75) : 0.01245 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (25, 75, 25) : 0.018284 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (25, 75, 25) : 0.026676 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (25, 25, 75) : 0.011013 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (25, 25, 25) : 0.019211 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (25, 75, 25) : 0.016048 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (25, 75, 25) : 0.01598 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (25, 75, 25) : 0.016477 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (25, 75, 75) : 0.013784 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (25, 75, 75) : 0.013602 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (25, 75, 75) : 0.010885 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (25, 75, 75) : 0.010049 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (25, 75, 75) : 0.01386 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (75, 25, 25) : 0.016999 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (75, 25, 25) : 0.019644 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (75, 25, 25) : 0.018803 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (75, 25, 25) : 0.019399 seconds
+Result [bonito-0] : level-0 : parent(50, 50, 50) : (25, 25, 25) : 0.015771 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (75, 25, 75) : 0.016712 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (75, 25, 75) : 0.016085 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (75, 25, 75) : 0.011388 seconds
+Result [bonito-0] : level-0 : parent(50, 50, 50) : (75, 25, 75) : 0.014753 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (75, 25, 75) : 0.013445 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (75, 75, 25) : 0.014789 seconds
+Result [bonito-0] : level-0 : parent(50, 50, 50) : (75, 75, 25) : 0.01871 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (75, 25, 25) : 0.018194 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (75, 75, 25) : 0.017924 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (75, 75, 25) : 0.016124 seconds
+Result [bonito-0] : level-0 : parent(50, 50, 50) : (75, 75, 75) : 0.012457 seconds
+Result [brill-0] : level-0 : parent(50, 50, 50) : (75, 75, 75) : 0.011001 seconds
+Result [char-0] : level-0 : parent(50, 50, 50) : (75, 75, 75) : 0.013961 seconds
+Result [blowfish-0] : level-0 : parent(50, 50, 50) : (25, 25, 25) : 0.019056 seconds
+Result [bonito-0] : level-0 : parent(50, 50, 50) : (75, 75, 75) : 0.01397 seconds
+Result [anchovy-0] : level-0 : parent(50, 50, 50) : (75, 75, 25) : 0.016288 seconds
+Result [barracuda-0] : level-0 : parent(50, 50, 50) : (75, 75, 75) : 0.010629 seconds
+...done.
+
+Choosing best 2 results...
+Selected : (75, 75, 75) 0.012403599999999999 seconds
+Selected : (25, 75, 75) 0.012436000000000001 seconds
+...done.
+
+Creating tasks for parent (75, 75, 75) ...
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 62, 62) : 0.013308 seconds
+Result [brill-0] : level-1 : parent(75, 75, 75) : (62, 62, 62) : 0.014245 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 62, 87) : 0.013529 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 62, 87) : 0.017782 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 62, 87) : 0.011331 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (62, 62, 87) : 0.009231 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 87, 62) : 0.014583 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (62, 87, 62) : 0.011328 seconds
+Result [brill-0] : level-1 : parent(75, 75, 75) : (62, 62, 87) : 0.010257 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 87, 62) : 0.014247 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (62, 87, 62) : 0.014912 seconds
+Result [brill-0] : level-1 : parent(75, 75, 75) : (62, 87, 62) : 0.012591 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 87, 87) : 0.013243 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (62, 87, 87) : 0.01853 seconds
+Result [brill-0] : level-1 : parent(75, 75, 75) : (62, 87, 87) : 0.012551 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (62, 87, 87) : 0.009969 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (62, 62, 62) : 0.021836 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (62, 87, 87) : 0.011707 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (87, 62, 62) : 0.014217 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (87, 62, 62) : 0.014609 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (87, 62, 62) : 0.011656 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (87, 62, 62) : 0.013934 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (87, 62, 87) : 0.011644 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (87, 62, 87) : 0.009252 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (87, 62, 87) : 0.013569 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (87, 62, 87) : 0.018825 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (87, 62, 87) : 0.013697 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (87, 87, 62) : 0.012323 seconds
+Result [barracuda-0] : level-1 : parent(75, 75, 75) : (62, 62, 62) : 0.011989 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (87, 87, 62) : 0.015621 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (87, 87, 62) : 0.012603 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (87, 87, 62) : 0.012808 seconds
+Result [barracuda-0] : level-1 : parent(75, 75, 75) : (87, 87, 62) : 0.014736 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (87, 87, 87) : 0.012994 seconds
+Result [blowfish-0] : level-1 : parent(75, 75, 75) : (87, 87, 87) : 0.012743 seconds
+Result [barracuda-0] : level-1 : parent(75, 75, 75) : (87, 87, 87) : 0.01019 seconds
+Result [bonito-0] : level-1 : parent(75, 75, 75) : (87, 87, 87) : 0.011679 seconds
+Result [anchovy-0] : level-1 : parent(75, 75, 75) : (62, 62, 62) : 0.014214 seconds
+Result [brill-0] : level-1 : parent(75, 75, 75) : (87, 62, 62) : 0.012051 seconds
+Result [char-0] : level-1 : parent(75, 75, 75) : (87, 87, 87) : 0.013222 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (87, 87, 87) 0.0121656 seconds
+...done.
+
+OPTIMAL : (87, 87, 87) 0.0121656 seconds : 3.424957804519848 GFlops/sec
+
+Creating tasks for parent (25, 75, 75) ...
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (12, 62, 62) : 0.013277 seconds
+Result [bonito-0] : level-1 : parent(25, 75, 75) : (12, 62, 62) : 0.015161 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (12, 62, 87) : 0.013562 seconds
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (12, 62, 87) : 0.016007 seconds
+Result [bonito-0] : level-1 : parent(25, 75, 75) : (12, 62, 87) : 0.010228 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (12, 62, 87) : 0.012183 seconds
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (12, 62, 87) : 0.013534 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (12, 87, 62) : 0.014813 seconds
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (12, 87, 62) : 0.01466 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (12, 87, 62) : 0.010072 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (12, 62, 62) : 0.011389 seconds
+Result [blowfish-0] : level-1 : parent(25, 75, 75) : (12, 62, 62) : 0.012187 seconds
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (12, 87, 62) : 0.012127 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (12, 87, 87) : 0.011306 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (12, 87, 87) : 0.013481 seconds
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (12, 87, 87) : 0.013923 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (12, 87, 87) : 0.013291 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (37, 62, 62) : 0.010013 seconds
+Result [bonito-0] : level-1 : parent(25, 75, 75) : (12, 87, 62) : 0.012368 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (37, 62, 62) : 0.01073 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (37, 62, 62) : 0.012078 seconds
+Result [bonito-0] : level-1 : parent(25, 75, 75) : (37, 62, 62) : 0.014307 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (37, 62, 87) : 0.013401 seconds
+Result [barracuda-0] : level-1 : parent(25, 75, 75) : (12, 62, 62) : 0.012935 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (37, 62, 87) : 0.01363 seconds
+Result [bonito-0] : level-1 : parent(25, 75, 75) : (37, 62, 87) : 0.013124 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (37, 62, 87) : 0.013112 seconds
+Result [barracuda-0] : level-1 : parent(25, 75, 75) : (37, 62, 87) : 0.009812 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (37, 87, 62) : 0.013645 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (37, 87, 62) : 0.011959 seconds
+Result [barracuda-0] : level-1 : parent(25, 75, 75) : (37, 87, 62) : 0.014986 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (37, 87, 62) : 0.01717 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (37, 87, 87) : 0.011916 seconds
+Result [barracuda-0] : level-1 : parent(25, 75, 75) : (37, 87, 87) : 0.013326 seconds
+Result [brill-0] : level-1 : parent(25, 75, 75) : (37, 87, 87) : 0.016463 seconds
+Result [char-0] : level-1 : parent(25, 75, 75) : (37, 87, 87) : 0.01369 seconds
+Result [barracuda-0] : level-1 : parent(25, 75, 75) : (37, 87, 87) : 0.011139 seconds
+Result [blowfish-0] : level-1 : parent(25, 75, 75) : (12, 87, 87) : 0.011971 seconds
+Result [bonito-0] : level-1 : parent(25, 75, 75) : (37, 87, 62) : 0.011867 seconds
+Result [anchovy-0] : level-1 : parent(25, 75, 75) : (37, 62, 62) : 0.014376 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (37, 62, 62) 0.0123008 seconds
+...done.
+
+OPTIMAL : (37, 62, 62) 0.0123008 seconds : 3.3873135622615327 GFlops/sec

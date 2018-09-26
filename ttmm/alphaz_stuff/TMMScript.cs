@@ -17,10 +17,16 @@ setSpaceTimeMap(prog, system, "AccR", "(i,j,k->i,k,j)");
 setMemoryMap(prog, system, "AccR", "R", "(i,j,k -> i,j)");
 setStatementOrdering(prog, system, "AccR", "R");
 
+options = createTiledCGOptionForScheduledC();
+setDefaultDTilerConfiguration(prog, system, "sequential");
+
+
+
+
 # print out the program using Show syntax
 #Show(prog);
 
 # generate codes
-generateScheduledCode(prog, system, outDir);
+generateScheduledCode(prog, system, options, outDir);
 generateWrapper(prog, system, outDir);
 generateMakefile(prog, system, outDir);
