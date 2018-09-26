@@ -1,0 +1,2274 @@
+args : {'N': 5000, 'path_prefix': './workspace/parric-ttmm/ttmm/ikj/out', 'keep': [3, 3, 3, 1], 'partitions': [4, 2, 2, 2], 'parent_center': None, 'parent_size': None, 'iterations': 4}
+
+Creating Machine('anchovy')...done.
+Creating Machine('barracuda')...done.
+Creating Machine('blowfish')...done.
+Creating Machine('bonito')...done.
+Creating Machine('brill')...done.
+Creating Machine('char')...done.
+Creating Machine('cod')...done.
+Creating Machine('dorado')...done.
+Creating Machine('eel')...done.
+Creating Machine('flounder')...done.
+Creating Machine('grouper')...done.
+Creating Machine('halibut')...done.
+Creating Machine('herring')...done.
+Creating Machine('mackerel')...done.
+Creating Machine('marlin')...done.
+Creating Machine('perch')...done.
+Creating Machine('pollock')...done.
+Creating Machine('sardine')...done.
+Creating Machine('shark')...done.
+Creating Machine('sole')...done.
+Creating Machine('swordfish')...done.
+Creating Machine('tarpon')...done.
+Creating Machine('turbot')...done.
+Creating Machine('wahoo')...done.
+
+Creating tasks for parent (2500, 2500, 2500) ...
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 3125) : 3.710625 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 625) : 4.294574 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 625) : 4.397856 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 1875) : 3.838223 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 3125) : 3.889282 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 4375) : 3.89124 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 625) : 4.283442 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 3125) : 3.708128 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 1875) : 3.834247 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 625) : 4.420664 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 625) : 4.39062 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 1875) : 4.138 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 1875) : 4.158499 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 1875) : 3.792151 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 1875) : 3.853875 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 3125) : 3.761442 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 4375) : 4.29519 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 625) : 4.379211 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 1875) : 4.109232 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 1875) : 4.326434 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 3125) : 4.423898 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 1875) : 3.803906 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 4375) : 4.056973 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 625) : 4.302141 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 625) : 4.416395 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 1875) : 4.112351 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 3125) : 4.532593 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 3125) : 4.814011 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 3125) : 4.558592 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 3125) : 4.527983 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 3125) : 4.121241 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 4375) : 4.669492 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 4375) : 4.644398 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 4375) : 4.732175 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 625) : 4.632749 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 625) : 4.570968 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 625) : 4.583254 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 4375) : 5.787906 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 4375) : 3.838831 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 625) : 4.750462 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (625, 625, 625) : 4.263677 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 625) : 4.392737 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 625) : 4.602541 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 4375) : 4.644654 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 1875) : 4.75942 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 1875) : 4.765401 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 1875) : 4.713596 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 1875) : 4.815275 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 1875) : 5.832807 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 3125) : 5.048782 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 3125) : 5.104958 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (625, 1875, 4375) : 4.698696 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 3125) : 4.974922 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 3125) : 4.918813 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 4375) : 5.114436 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 4375) : 5.209979 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 3125) : 5.690528 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 4375) : 5.174039 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 625) : 4.981161 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 4375) : 5.250589 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (625, 3125, 4375) : 5.326543 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 625) : 5.054585 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 625) : 5.005346 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 625) : 5.190905 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 1875) : 5.60465 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 1875) : 5.632111 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 1875) : 5.612299 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 1875) : 5.63952 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 1875) : 5.645899 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 3125) : 5.887925 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 3125) : 5.834338 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 3125) : 5.975766 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 625) : 4.364144 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 3125) : 5.859661 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 625) : 9.110578 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 4375) : 5.842534 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 4375) : 5.886027 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 4375) : 5.910465 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 625) : 4.293523 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 1875) : 3.791773 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 625) : 4.279034 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 1875) : 3.845577 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 1875) : 3.911537 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 625) : 4.369147 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 625) : 4.310929 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 4375) : 5.802452 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 4375) : 5.781715 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 1875) : 3.808935 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 1875) : 3.841432 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (625, 4375, 3125) : 6.202746 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 3125) : 3.721264 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 3125) : 3.864011 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 3125) : 3.694681 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 3125) : 3.707615 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 3125) : 3.693069 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 4375) : 3.873732 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 4375) : 3.863359 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 4375) : 3.875816 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 4375) : 3.841439 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 625) : 4.396369 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 625) : 4.43895 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 625) : 4.414212 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 625) : 4.421599 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 625) : 4.395128 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 1875) : 4.147579 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 1875) : 4.216733 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 1875) : 4.304359 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 1875) : 4.142816 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (1875, 625, 4375) : 5.780457 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 3125) : 4.532663 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 3125) : 4.484811 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 3125) : 4.421408 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 3125) : 4.507557 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 1875) : 4.099743 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 4375) : 4.662055 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 3125) : 5.110452 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 4375) : 4.577764 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 4375) : 4.583778 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 4375) : 4.63845 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (1875, 1875, 4375) : 4.749432 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 625) : 4.616889 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 625) : 4.755435 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 625) : 5.159468 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 625) : 4.630655 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 625) : 4.581085 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 1875) : 4.76344 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 1875) : 4.777199 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 3125) : 4.954945 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 3125) : 4.960184 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 3125) : 4.90662 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 4375) : 5.162779 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 1875) : 4.726656 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 1875) : 4.732855 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 4375) : 5.095509 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 4375) : 5.168714 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 4375) : 5.276807 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 3125) : 5.142618 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 625) : 5.017106 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 625) : 4.941091 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 625) : 5.105011 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 625) : 5.158132 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 625) : 5.035103 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 3125) : 8.490825 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 4375) : 5.499865 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 1875) : 5.661534 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 1875) : 5.696976 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 1875) : 5.582436 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 1875) : 5.599575 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (1875, 3125, 1875) : 4.952876 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 3125) : 5.774361 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 3125) : 5.839603 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 1875) : 7.40745 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 625) : 4.286527 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 3125) : 5.880967 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 3125) : 5.903846 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 625) : 4.331346 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 625) : 4.767882 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 3125) : 5.873788 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 625) : 4.328215 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 4375) : 5.845694 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 4375) : 5.81161 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 1875) : 3.871006 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 4375) : 5.893888 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 4375) : 6.034824 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 625) : 4.330451 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 1875) : 3.826929 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 1875) : 4.157173 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 3125) : 3.73229 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 1875) : 3.859185 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 3125) : 3.696805 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 1875) : 5.460627 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (1875, 4375, 4375) : 5.754628 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 3125) : 3.911659 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 3125) : 3.86644 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 3125) : 3.685201 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 4375) : 3.870586 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 4375) : 3.81721 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 4375) : 4.302085 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 4375) : 3.822001 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (3125, 625, 4375) : 3.85542 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 625) : 4.650253 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 625) : 4.39401 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 625) : 4.474391 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 625) : 4.382032 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 625) : 4.420899 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 1875) : 4.106117 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 1875) : 4.218727 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 1875) : 4.07656 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 1875) : 4.193761 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 1875) : 4.159823 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 3125) : 4.444336 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 3125) : 5.010875 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 4375) : 4.693483 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 4375) : 4.641713 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 4375) : 4.918603 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 4375) : 4.715156 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 625) : 4.555371 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 4375) : 4.653009 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 625) : 4.612201 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 3125) : 4.483999 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 625) : 4.828283 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 625) : 4.695966 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 625) : 4.813558 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 3125) : 7.624713 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 1875) : 4.77343 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 1875) : 4.953969 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 1875) : 4.779383 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 1875) : 4.791881 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 3125) : 4.94807 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 1875, 3125) : 4.489004 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 3125) : 5.072089 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 3125) : 5.030172 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 3125) : 5.013907 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 1875) : 4.828116 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 3125) : 4.97212 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 4375) : 5.214743 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 4375) : 5.605392 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 4375) : 5.294402 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 4375) : 5.245285 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (3125, 3125, 4375) : 5.24283 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 625) : 5.032826 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 625) : 5.20819 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 625) : 5.044549 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 625) : 5.729921 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 1875) : 5.70163 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 625) : 5.007341 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 1875) : 5.663743 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 1875) : 5.83254 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 1875) : 5.636599 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 3125) : 5.869921 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 3125) : 5.902459 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 3125) : 5.867071 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 3125) : 5.957093 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 4375) : 5.862012 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 4375) : 5.966497 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 625) : 4.58238 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 625) : 4.346322 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 4375) : 5.852064 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 625) : 4.307822 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 4375) : 5.819139 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 1875) : 3.823505 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 1875) : 3.810772 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 3125) : 5.824378 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 625) : 4.784143 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 625) : 4.316682 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 4375) : 5.716346 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 1875) : 3.814088 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (3125, 4375, 1875) : 9.10212 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 1875) : 3.979105 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 1875) : 3.828959 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 3125) : 3.897378 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 3125) : 3.734559 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 3125) : 3.701657 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 3125) : 3.74392 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 4375) : 3.988487 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 4375) : 3.814293 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 4375) : 3.85805 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 4375) : 3.834111 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 4375) : 4.048825 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 625) : 4.451613 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 625) : 4.442037 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 625) : 4.44985 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 1875) : 4.199074 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 1875) : 4.253859 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 625) : 4.415506 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 625) : 4.464758 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 1875) : 4.126622 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (4375, 625, 3125) : 3.694261 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 3125) : 4.411581 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 3125) : 4.961181 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 3125) : 4.500448 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 1875) : 4.081821 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 3125) : 4.651087 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 4375) : 4.629183 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 4375) : 4.800552 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 4375) : 4.657735 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 4375) : 4.635171 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 4375) : 4.611421 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 625) : 4.622097 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 1875) : 4.154726 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 625) : 4.625322 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (4375, 1875, 3125) : 7.607887 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 625) : 4.561323 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 625) : 5.294793 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 625) : 4.738107 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 1875) : 4.709369 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 1875) : 4.774694 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 1875) : 4.776258 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 1875) : 4.724665 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 3125) : 4.900222 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 3125) : 4.992245 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 3125) : 4.936086 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 3125) : 4.993336 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 1875) : 4.845081 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 3125) : 4.960727 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 4375) : 5.135424 seconds
+Result [sardine-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 4375) : 5.107684 seconds
+Result [grouper-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 4375) : 5.27961 seconds
+Result [blowfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 4375) : 5.10304 seconds
+Result [char-0] : level-0 : parent(2500, 2500, 2500) : (4375, 3125, 4375) : 5.114011 seconds
+Result [eel-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 625) : 4.996619 seconds
+Result [dorado-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 625) : 4.995802 seconds
+Result [marlin-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 625) : 5.05606 seconds
+Result [mackerel-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 625) : 5.047597 seconds
+Result [turbot-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 1875) : 5.536729 seconds
+Result [bonito-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 1875) : 5.575 seconds
+Result [anchovy-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 625) : 5.135543 seconds
+Result [cod-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 3125) : 5.794987 seconds
+Result [sole-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 1875) : 6.059103 seconds
+Result [halibut-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 3125) : 5.814463 seconds
+Result [barracuda-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 3125) : 6.016603 seconds
+Result [flounder-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 3125) : 5.781405 seconds
+Result [pollock-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 3125) : 5.856073 seconds
+Result [wahoo-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 4375) : 5.798266 seconds
+Result [brill-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 1875) : 5.623945 seconds
+Result [tarpon-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 4375) : 5.91652 seconds
+Result [shark-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 4375) : 5.987031 seconds
+Result [perch-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 1875) : 9.36817 seconds
+Result [herring-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 4375) : 6.536649 seconds
+Result [swordfish-0] : level-0 : parent(2500, 2500, 2500) : (4375, 4375, 4375) : 5.790292 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (1875, 625, 3125) 3.736128 seconds
+Selected : (4375, 625, 3125) 3.754355 seconds
+Selected : (3125, 625, 3125) 3.778479 seconds
+...done.
+
+Creating tasks for parent (1875, 625, 3125) ...
+Result [bonito-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 2812) : 3.719479 seconds
+Result [char-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 3437) : 3.885727 seconds
+Result [barracuda-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 2812) : 3.834224 seconds
+Result [sole-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 3437) : 4.060499 seconds
+Result [blowfish-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 2812) : 3.700232 seconds
+Result [flounder-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 3437) : 3.716882 seconds
+Result [eel-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 3437) : 3.7847 seconds
+Result [marlin-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 2812) : 3.910107 seconds
+Result [anchovy-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 2812) : 3.672895 seconds
+Result [dorado-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 3437) : 3.71657 seconds
+Result [pollock-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 3437) : 3.794237 seconds
+Result [grouper-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 2812) : 3.898532 seconds
+Result [bonito-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 2812) : 3.695308 seconds
+Result [char-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 3437) : 3.893211 seconds
+Result [sole-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 3437) : 3.968098 seconds
+Result [perch-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 3437) : 5.824472 seconds
+Result [halibut-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 2812) : 3.805484 seconds
+Result [mackerel-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 2812) : 3.787254 seconds
+Result [blowfish-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 3437) : 3.775535 seconds
+Result [eel-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 2812) : 3.753766 seconds
+Result [flounder-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 3437) : 3.879149 seconds
+Result [barracuda-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 3437) : 3.890417 seconds
+Result [marlin-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 2812) : 3.769616 seconds
+Result [cod-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 3437) : 3.738343 seconds
+Result [anchovy-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 2812) : 3.766692 seconds
+Result [dorado-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 2812) : 3.753154 seconds
+Result [pollock-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 2812) : 3.706476 seconds
+Result [shark-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 3437) : 4.206988 seconds
+Result [bonito-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 3437) : 3.752042 seconds
+Result [char-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 3437) : 3.791148 seconds
+Result [sole-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 3437) : 4.049396 seconds
+Result [grouper-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 3437) : 3.918922 seconds
+Result [herring-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 2812) : 4.755354 seconds
+Result [turbot-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 2812) : 3.673342 seconds
+Result [perch-0] : level-1 : parent(1875, 625, 3125) : (2187, 937, 3437) : 5.861372 seconds
+Result [tarpon-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 2812) : 3.685401 seconds
+Result [wahoo-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 2812) : 3.731252 seconds
+Result [swordfish-0] : level-1 : parent(1875, 625, 3125) : (2187, 312, 2812) : 3.685087 seconds
+Result [sardine-0] : level-1 : parent(1875, 625, 3125) : (1562, 937, 3437) : 3.940085 seconds
+Result [brill-0] : level-1 : parent(1875, 625, 3125) : (1562, 312, 2812) : 3.707675 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (2187, 312, 2812) 3.6940779999999998 seconds
+Selected : (1562, 312, 2812) 3.7269010000000002 seconds
+Selected : (2187, 937, 2812) 3.7499408 seconds
+...done.
+
+Creating tasks for parent (2187, 312, 2812) ...
+Result [brill-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2656) : 3.674696 seconds
+Result [halibut-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2656) : 3.665465 seconds
+Result [dorado-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2968) : 3.698374 seconds
+Result [anchovy-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2656) : 3.66238 seconds
+Result [barracuda-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2656) : 3.830395 seconds
+Result [blowfish-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2656) : 3.675451 seconds
+Result [mackerel-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2656) : 3.686558 seconds
+Result [marlin-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2656) : 3.701107 seconds
+Result [shark-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2968) : 3.752189 seconds
+Result [char-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2968) : 3.792843 seconds
+Result [brill-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2656) : 3.6702 seconds
+Result [dorado-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2968) : 3.695346 seconds
+Result [anchovy-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2968) : 3.674056 seconds
+Result [halibut-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2968) : 3.761892 seconds
+Result [barracuda-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2968) : 3.686293 seconds
+Result [grouper-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2656) : 4.068733 seconds
+Result [perch-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2968) : 5.48008 seconds
+Result [flounder-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2968) : 3.696399 seconds
+Result [pollock-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2968) : 3.685084 seconds
+Result [mackerel-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2656) : 3.731798 seconds
+Result [blowfish-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2968) : 3.842972 seconds
+Result [shark-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2656) : 4.157738 seconds
+Result [eel-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2968) : 3.701558 seconds
+Result [sole-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2968) : 4.029949 seconds
+Result [char-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2656) : 3.734274 seconds
+Result [dorado-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2968) : 3.722821 seconds
+Result [halibut-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2968) : 3.705031 seconds
+Result [wahoo-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2656) : 3.707728 seconds
+Result [brill-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2656) : 3.702221 seconds
+Result [anchovy-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2968) : 3.856769 seconds
+Result [grouper-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2968) : 3.884692 seconds
+Result [herring-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2656) : 3.874031 seconds
+Result [marlin-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2656) : 3.728784 seconds
+Result [barracuda-0] : level-2 : parent(2187, 312, 2812) : (2343, 468, 2968) : 3.726461 seconds
+Result [sardine-0] : level-2 : parent(2187, 312, 2812) : (2031, 468, 2968) : 3.689346 seconds
+Result [turbot-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2656) : 3.827941 seconds
+/usr/bin/xauth:  timeout in locking authority file /s/bach/g/under/lnarmour/.Xauthority
+Result [swordfish-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2656) : 3.673011 seconds
+/usr/bin/xauth:  timeout in locking authority file /s/bach/g/under/lnarmour/.Xauthority
+Result [cod-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2968) : 3.706007 seconds
+Result [tarpon-0] : level-2 : parent(2187, 312, 2812) : (2343, 156, 2656) : 3.709474 seconds
+Result [bonito-0] : level-2 : parent(2187, 312, 2812) : (2031, 156, 2656) : 3.70603 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (2031, 156, 2656) 3.7097904 seconds
+Selected : (2343, 156, 2656) 3.7176708 seconds
+Selected : (2031, 156, 2968) 3.7190362 seconds
+...done.
+
+Creating tasks for parent (2031, 156, 2656) ...
+Result [brill-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2578) : 3.671213 seconds
+Result [barracuda-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2578) : 3.675728 seconds
+Result [blowfish-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2578) : 3.681179 seconds
+Result [wahoo-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2578) : 3.667019 seconds
+Result [halibut-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2578) : 3.664941 seconds
+Result [bonito-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2578) : 3.657278 seconds
+Result [flounder-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2734) : 3.711596 seconds
+Result [herring-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2578) : 3.846617 seconds
+Result [cod-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2734) : 3.669575 seconds
+Result [sardine-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2734) : 3.692276 seconds
+Result [dorado-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2734) : 3.70383 seconds
+Result [swordfish-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2578) : 3.714331 seconds
+Result [brill-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2578) : 3.675685 seconds
+Result [barracuda-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2734) : 3.699262 seconds
+Result [wahoo-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2734) : 3.670363 seconds
+Result [anchovy-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2578) : 3.734608 seconds
+Result [grouper-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2578) : 3.838073 seconds
+Result [mackerel-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2578) : 3.818708 seconds
+Result [marlin-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2578) : 3.83252 seconds
+Result [sole-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2734) : 3.999077 seconds
+Result [herring-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2578) : 3.712947 seconds
+Result [bonito-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2734) : 3.827912 seconds
+Result [eel-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2734) : 3.679078 seconds
+Result [sardine-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2578) : 3.684056 seconds
+Result [cod-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2578) : 3.692615 seconds
+Result [dorado-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2578) : 3.65241 seconds
+Result [halibut-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2734) : 3.70747 seconds
+Result [brill-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2734) : 3.668087 seconds
+Result [swordfish-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2734) : 3.713964 seconds
+Result [barracuda-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2734) : 3.8414 seconds
+Result [perch-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2734) : 5.353167 seconds
+Result [turbot-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2578) : 3.701868 seconds
+Result [flounder-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2578) : 3.692261 seconds
+Result [anchovy-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2734) : 3.836189 seconds
+Result [wahoo-0] : level-3 : parent(2031, 156, 2656) : (2109, 234, 2734) : 3.675438 seconds
+Result [tarpon-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2578) : 3.670677 seconds
+Result [blowfish-0] : level-3 : parent(2031, 156, 2656) : (2109, 78, 2734) : 3.699984 seconds
+Result [shark-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2734) : 4.120998 seconds
+Result [char-0] : level-3 : parent(2031, 156, 2656) : (1953, 78, 2734) : 3.676503 seconds
+Result [pollock-0] : level-3 : parent(2031, 156, 2656) : (1953, 234, 2734) : 3.694955 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (1953, 78, 2578) 3.6840012 seconds
+...done.
+
+OPTIMAL : (1953, 78, 2578) 3.6840012 seconds : 11.310166420865082 GFlops/sec
+
+Creating tasks for parent (2343, 156, 2656) ...
+Result [brill-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2578) : 3.67798 seconds
+Result [grouper-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2578) : 3.776205 seconds
+Result [marlin-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2578) : 3.712731 seconds
+Result [shark-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2734) : 3.78069 seconds
+Result [anchovy-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2578) : 3.669569 seconds
+Result [pollock-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2734) : 3.657856 seconds
+Result [turbot-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2578) : 3.699737 seconds
+Result [barracuda-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2578) : 3.835791 seconds
+Result [eel-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2734) : 3.680548 seconds
+Result [dorado-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2734) : 3.728456 seconds
+Result [brill-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2578) : 3.71885 seconds
+Result [marlin-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2734) : 3.712837 seconds
+Result [grouper-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2734) : 4.09441 seconds
+Result [shark-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2734) : 4.123404 seconds
+Result [char-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2734) : 3.758694 seconds
+Result [flounder-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2734) : 3.836942 seconds
+Result [pollock-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2734) : 3.666723 seconds
+Result [anchovy-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2734) : 3.716229 seconds
+Result [turbot-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2578) : 3.72409 seconds
+Result [barracuda-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2578) : 3.674279 seconds
+Result [blowfish-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2578) : 3.677361 seconds
+Result [wahoo-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2578) : 3.702336 seconds
+Result [eel-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2578) : 3.741198 seconds
+Result [brill-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2578) : 3.671075 seconds
+Result [marlin-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2734) : 3.678094 seconds
+Result [shark-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2734) : 3.87378 seconds
+Result [grouper-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2734) : 3.995598 seconds
+Result [mackerel-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2578) : 3.657234 seconds
+Result [bonito-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2578) : 3.673634 seconds
+Result [dorado-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2578) : 3.700731 seconds
+Result [char-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2734) : 3.674474 seconds
+Result [flounder-0] : level-3 : parent(2343, 156, 2656) : (2421, 234, 2734) : 3.703212 seconds
+Result [swordfish-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2578) : 3.676565 seconds
+Result [sole-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2734) : 3.961275 seconds
+Result [cod-0] : level-3 : parent(2343, 156, 2656) : (2265, 78, 2734) : 3.698658 seconds
+Result [perch-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2734) : 5.495659 seconds
+Result [halibut-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2578) : 3.678043 seconds
+/usr/bin/xauth:  timeout in locking authority file /s/bach/g/under/lnarmour/.Xauthority
+Result [herring-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2578) : 3.907565 seconds
+Result [tarpon-0] : level-3 : parent(2343, 156, 2656) : (2421, 78, 2578) : 3.680263 seconds
+Result [sardine-0] : level-3 : parent(2343, 156, 2656) : (2265, 234, 2734) : 3.704097 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (2421, 78, 2578) 3.6955502 seconds
+...done.
+
+OPTIMAL : (2421, 78, 2578) 3.6955502 seconds : 11.274820909391696 GFlops/sec
+
+Creating tasks for parent (2031, 156, 2968) ...
+Result [dorado-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 3046) : 3.693905 seconds
+Result [bonito-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 2890) : 3.684486 seconds
+Result [tarpon-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 2890) : 3.691489 seconds
+Result [grouper-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 2890) : 3.845846 seconds
+Result [cod-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 3046) : 3.687027 seconds
+Result [perch-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 3046) : 5.253304 seconds
+Result [barracuda-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 2890) : 3.674441 seconds
+Result [char-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 3046) : 3.733284 seconds
+Result [wahoo-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 2890) : 3.731793 seconds
+Result [blowfish-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 2890) : 3.727641 seconds
+Result [brill-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 2890) : 3.729265 seconds
+Result [marlin-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 2890) : 3.681362 seconds
+Result [pollock-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 3046) : 3.683476 seconds
+Result [anchovy-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 2890) : 3.681123 seconds
+Result [dorado-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 2890) : 3.724237 seconds
+Result [tarpon-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 3046) : 3.707733 seconds
+Result [grouper-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 3046) : 3.853914 seconds
+Result [mackerel-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 2890) : 3.6809 seconds
+Result [swordfish-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 2890) : 3.68094 seconds
+Result [sardine-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 3046) : 3.751097 seconds
+Result [barracuda-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 2890) : 3.687931 seconds
+Result [bonito-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 3046) : 3.676818 seconds
+Result [wahoo-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 2890) : 3.715771 seconds
+Result [perch-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 3046) : 5.344956 seconds
+Result [flounder-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 3046) : 3.683145 seconds
+Result [halibut-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 2890) : 3.702212 seconds
+Result [shark-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 3046) : 3.910179 seconds
+Result [cod-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 3046) : 3.676628 seconds
+Result [char-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 2890) : 3.714239 seconds
+Result [brill-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 2890) : 3.846948 seconds
+Result [marlin-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 3046) : 3.85032 seconds
+Result [sole-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 3046) : 4.03138 seconds
+Result [blowfish-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 2890) : 3.84844 seconds
+Result [dorado-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 3046) : 3.710996 seconds
+Result [tarpon-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 3046) : 3.705773 seconds
+Result [eel-0] : level-3 : parent(2031, 156, 2968) : (1953, 78, 3046) : 3.691949 seconds
+Result [pollock-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 3046) : 3.721809 seconds
+Result [turbot-0] : level-3 : parent(2031, 156, 2968) : (2109, 78, 2890) : 3.724225 seconds
+Result [anchovy-0] : level-3 : parent(2031, 156, 2968) : (2109, 234, 3046) : 3.732195 seconds
+Result [herring-0] : level-3 : parent(2031, 156, 2968) : (1953, 234, 2890) : 3.831223 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (1953, 78, 3046) 3.697862 seconds
+...done.
+
+OPTIMAL : (1953, 78, 3046) 3.697862 seconds : 11.26777220639025 GFlops/sec
+
+Creating tasks for parent (1562, 312, 2812) ...
+Result [bonito-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2656) : 3.657395 seconds
+Result [wahoo-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2656) : 3.662874 seconds
+Result [mackerel-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2656) : 3.720421 seconds
+Result [brill-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2656) : 3.815351 seconds
+Result [blowfish-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2656) : 3.688255 seconds
+Result [turbot-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2656) : 3.713323 seconds
+Result [grouper-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2656) : 4.115924 seconds
+Result [perch-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2968) : 5.372789 seconds
+Result [flounder-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2968) : 3.700434 seconds
+Result [bonito-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2656) : 3.686747 seconds
+Result [sole-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2968) : 3.846584 seconds
+Result [mackerel-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2968) : 3.698392 seconds
+Result [brill-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2968) : 3.688038 seconds
+Result [dorado-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2968) : 3.829093 seconds
+Result [sardine-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2968) : 3.807215 seconds
+Result [blowfish-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2968) : 3.684501 seconds
+Result [wahoo-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2968) : 3.708827 seconds
+Result [shark-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2968) : 4.135032 seconds
+Result [grouper-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2656) : 4.088037 seconds
+Result [char-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2968) : 3.721748 seconds
+Result [halibut-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2656) : 3.704188 seconds
+Result [swordfish-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2656) : 3.660406 seconds
+Result [anchovy-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2656) : 3.81608 seconds
+Result [flounder-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2656) : 3.650995 seconds
+Result [turbot-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2968) : 3.671915 seconds
+Result [bonito-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2656) : 3.676477 seconds
+Result [sole-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2656) : 3.887882 seconds
+Result [brill-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2968) : 3.675813 seconds
+Result [mackerel-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2968) : 3.858824 seconds
+Result [perch-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2656) : 5.52367 seconds
+Result [barracuda-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2656) : 3.702966 seconds
+Result [dorado-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2968) : 3.72089 seconds
+Result [blowfish-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2968) : 3.724892 seconds
+Result [pollock-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2968) : 3.693004 seconds
+Result [eel-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2968) : 3.705831 seconds
+Result [sardine-0] : level-2 : parent(1562, 312, 2812) : (1718, 468, 2968) : 3.693024 seconds
+Result [marlin-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2656) : 3.669503 seconds
+Result [herring-0] : level-2 : parent(1562, 312, 2812) : (1406, 468, 2656) : 3.968296 seconds
+Result [cod-0] : level-2 : parent(1562, 312, 2812) : (1406, 156, 2968) : 3.714413 seconds
+Result [tarpon-0] : level-2 : parent(1562, 312, 2812) : (1718, 156, 2656) : 3.673276 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (1718, 156, 2656) 3.6793252 seconds
+Selected : (1718, 156, 2968) 3.6903346 seconds
+Selected : (1406, 156, 2968) 3.7343037999999997 seconds
+...done.
+
+Creating tasks for parent (1718, 156, 2656) ...
+Result [dorado-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2734) : 3.671425 seconds
+Result [marlin-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2578) : 3.702397 seconds
+Result [blowfish-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2578) : 3.66552 seconds
+Result [halibut-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2578) : 3.697894 seconds
+Result [turbot-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2578) : 3.667083 seconds
+Result [barracuda-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2578) : 3.692743 seconds
+Result [grouper-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2578) : 3.764016 seconds
+Result [pollock-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2734) : 3.666797 seconds
+Result [perch-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2734) : 5.378248 seconds
+Result [brill-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2578) : 3.71923 seconds
+Result [bonito-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2578) : 3.698693 seconds
+Result [anchovy-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2578) : 3.666584 seconds
+Result [cod-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2734) : 3.827038 seconds
+Result [marlin-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2734) : 3.693982 seconds
+Result [blowfish-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2734) : 3.656351 seconds
+Result [char-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2734) : 3.703901 seconds
+Result [swordfish-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2578) : 3.668466 seconds
+Result [pollock-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2578) : 3.70585 seconds
+Result [barracuda-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2734) : 3.756527 seconds
+Result [grouper-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2578) : 3.809946 seconds
+Result [wahoo-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2578) : 3.700334 seconds
+Result [dorado-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2578) : 3.67268 seconds
+Result [brill-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2578) : 3.668411 seconds
+Result [turbot-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2734) : 3.658271 seconds
+Result [cod-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2734) : 3.708491 seconds
+Result [marlin-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2734) : 3.681425 seconds
+Result [perch-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2578) : 5.27472 seconds
+Result [eel-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2734) : 3.666946 seconds
+Result [char-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2734) : 3.664347 seconds
+Result [halibut-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2734) : 3.664611 seconds
+Result [blowfish-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2734) : 3.680267 seconds
+Result [flounder-0] : level-3 : parent(1718, 156, 2656) : (1640, 78, 2734) : 3.819757 seconds
+Result [anchovy-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2734) : 3.656547 seconds
+Result [shark-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2734) : 4.145963 seconds
+Result [tarpon-0] : level-3 : parent(1718, 156, 2656) : (1796, 78, 2578) : 3.661134 seconds
+Result [bonito-0] : level-3 : parent(1718, 156, 2656) : (1796, 234, 2578) : 3.822466 seconds
+Result [sole-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2734) : 4.051966 seconds
+Result [herring-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2578) : 3.700233 seconds
+/usr/bin/xauth:  timeout in locking authority file /s/bach/g/under/lnarmour/.Xauthority
+Result [mackerel-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2578) : 3.668384 seconds
+Result [sardine-0] : level-3 : parent(1718, 156, 2656) : (1640, 234, 2734) : 3.693374 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (1796, 78, 2578) 3.6739394 seconds
+...done.
+
+OPTIMAL : (1796, 78, 2578) 3.6739394 seconds : 11.341141518737805 GFlops/sec
+
+Creating tasks for parent (1718, 156, 2968) ...
+Result [barracuda-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 2890) : 3.67708 seconds
+Result [bonito-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 2890) : 3.759044 seconds
+Result [sardine-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 3046) : 3.677012 seconds
+Result [blowfish-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 2890) : 3.703931 seconds
+Result [anchovy-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 2890) : 3.704014 seconds
+Result [flounder-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 3046) : 3.681751 seconds
+Result [dorado-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 3046) : 3.845035 seconds
+Result [herring-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 2890) : 3.995201 seconds
+Result [brill-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 2890) : 3.68821 seconds
+Result [halibut-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 2890) : 3.670615 seconds
+Result [wahoo-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 2890) : 3.709985 seconds
+Result [sardine-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 3046) : 3.669923 seconds
+Result [bonito-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 3046) : 3.718488 seconds
+Result [blowfish-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 3046) : 3.745646 seconds
+Result [pollock-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 3046) : 3.700729 seconds
+Result [marlin-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 2890) : 3.835981 seconds
+Result [flounder-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 3046) : 3.678837 seconds
+Result [barracuda-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 2890) : 3.731181 seconds
+Result [dorado-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 2890) : 3.696429 seconds
+Result [herring-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 2890) : 3.873661 seconds
+Result [eel-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 3046) : 3.723576 seconds
+Result [swordfish-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 2890) : 3.711146 seconds
+Result [tarpon-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 2890) : 3.702099 seconds
+Result [brill-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 2890) : 3.683543 seconds
+Result [anchovy-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 3046) : 3.704486 seconds
+Result [wahoo-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 2890) : 3.709652 seconds
+Result [bonito-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 3046) : 3.672616 seconds
+Result [sardine-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 3046) : 3.787437 seconds
+Result [blowfish-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 3046) : 3.67257 seconds
+Result [char-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 3046) : 3.687172 seconds
+Result [halibut-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 2890) : 3.660122 seconds
+Result [pollock-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 3046) : 3.713732 seconds
+Result [marlin-0] : level-3 : parent(1718, 156, 2968) : (1796, 234, 3046) : 3.705129 seconds
+Result [perch-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 3046) : 5.445289 seconds
+Result [turbot-0] : level-3 : parent(1718, 156, 2968) : (1796, 78, 2890) : 3.734165 seconds
+Result [cod-0] : level-3 : parent(1718, 156, 2968) : (1640, 78, 3046) : 3.715927 seconds
+Result [mackerel-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 2890) : 3.718488 seconds
+Result [shark-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 3046) : 3.849148 seconds
+Result [sole-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 3046) : 3.981759 seconds
+Result [grouper-0] : level-3 : parent(1718, 156, 2968) : (1640, 234, 2890) : 4.075155 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (1796, 78, 3046) 3.7034759999999998 seconds
+...done.
+
+OPTIMAL : (1796, 78, 3046) 3.7034759999999998 seconds : 11.250691692525256 GFlops/sec
+
+Creating tasks for parent (1406, 156, 2968) ...
+Result [char-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 3046) : 3.675621 seconds
+Result [barracuda-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 2890) : 3.666994 seconds
+Result [sardine-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 3046) : 3.69626 seconds
+Result [turbot-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 2890) : 3.72218 seconds
+Result [grouper-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 2890) : 3.861896 seconds
+Result [herring-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 2890) : 3.76639 seconds
+Result [flounder-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 3046) : 3.670269 seconds
+Result [eel-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 3046) : 3.757885 seconds
+Result [perch-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 3046) : 5.482714 seconds
+Result [brill-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 2890) : 3.682179 seconds
+Result [char-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 2890) : 3.655704 seconds
+Result [shark-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 3046) : 3.771802 seconds
+Result [pollock-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 3046) : 3.735236 seconds
+Result [barracuda-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 3046) : 3.690816 seconds
+Result [sardine-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 3046) : 3.675775 seconds
+Result [grouper-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 3046) : 3.834698 seconds
+Result [blowfish-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 2890) : 3.705232 seconds
+Result [marlin-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 2890) : 3.710881 seconds
+Result [flounder-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 2890) : 3.660701 seconds
+Result [sole-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 3046) : 3.923678 seconds
+Result [eel-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 2890) : 3.707388 seconds
+Result [herring-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 3046) : 3.78835 seconds
+Result [turbot-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 3046) : 3.697847 seconds
+Result [anchovy-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 2890) : 3.665365 seconds
+Result [halibut-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 2890) : 3.668039 seconds
+Result [mackerel-0] : level-3 : parent(1406, 156, 2968) : (1328, 234, 2890) : 3.699719 seconds
+Result [cod-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 3046) : 3.691918 seconds
+Result [brill-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 2890) : 3.681736 seconds
+Result [pollock-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 3046) : 3.694612 seconds
+Result [char-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 2890) : 3.681273 seconds
+Result [barracuda-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 3046) : 3.723409 seconds
+Result [sardine-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 3046) : 3.675222 seconds
+Result [grouper-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 3046) : 3.837354 seconds
+Result [perch-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 2890) : 5.36352 seconds
+Result [bonito-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 2890) : 3.699978 seconds
+Result [tarpon-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 2890) : 3.698934 seconds
+Result [shark-0] : level-3 : parent(1406, 156, 2968) : (1484, 234, 3046) : 3.790828 seconds
+Result [swordfish-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 2890) : 3.668969 seconds
+Result [wahoo-0] : level-3 : parent(1406, 156, 2968) : (1484, 78, 2890) : 3.726441 seconds
+Result [dorado-0] : level-3 : parent(1406, 156, 2968) : (1328, 78, 3046) : 3.700868 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (1328, 78, 2890) 3.6839496 seconds
+...done.
+
+OPTIMAL : (1328, 78, 2890) 3.6839496 seconds : 11.310324839044124 GFlops/sec
+
+Creating tasks for parent (2187, 937, 2812) ...
+Result [bonito-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2656) : 3.686298 seconds
+Result [barracuda-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2656) : 3.705941 seconds
+Result [halibut-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2656) : 3.857136 seconds
+Result [flounder-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2968) : 3.867868 seconds
+Result [anchovy-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2656) : 3.693047 seconds
+Result [cod-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2968) : 3.75473 seconds
+Result [tarpon-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2656) : 3.753034 seconds
+Result [blowfish-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2656) : 3.852451 seconds
+Result [barracuda-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2968) : 3.731839 seconds
+Result [sole-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2968) : 4.182134 seconds
+Result [perch-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2968) : 6.338417 seconds
+Result [halibut-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2968) : 3.87062 seconds
+Result [char-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2968) : 3.717275 seconds
+Result [bonito-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2656) : 3.696545 seconds
+Result [marlin-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2656) : 3.895296 seconds
+Result [anchovy-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2968) : 3.736789 seconds
+Result [cod-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2968) : 3.69075 seconds
+Result [flounder-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2968) : 3.745928 seconds
+Result [swordfish-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2656) : 3.692031 seconds
+Result [dorado-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2968) : 3.857902 seconds
+Result [blowfish-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2656) : 3.940091 seconds
+Result [barracuda-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2656) : 3.800881 seconds
+Result [halibut-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2968) : 3.814609 seconds
+Result [herring-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2656) : 4.953713 seconds
+Result [sole-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2656) : 4.195198 seconds
+Result [char-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2968) : 3.806185 seconds
+Result [shark-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2968) : 4.159456 seconds
+Result [tarpon-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2656) : 3.92405 seconds
+Result [marlin-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2968) : 3.809333 seconds
+Result [bonito-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2968) : 3.8409 seconds
+Result [turbot-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2656) : 3.738166 seconds
+Result [eel-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2968) : 3.753744 seconds
+Result [anchovy-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2968) : 4.100401 seconds
+Result [perch-0] : level-2 : parent(2187, 937, 2812) : (2343, 1093, 2656) : 6.452548 seconds
+Result [mackerel-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2656) : 3.851034 seconds
+Result [brill-0] : level-2 : parent(2187, 937, 2812) : (2031, 781, 2656) : 3.709224 seconds
+Result [pollock-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2968) : 3.769131 seconds
+Result [grouper-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2656) : 4.129682 seconds
+Result [wahoo-0] : level-2 : parent(2187, 937, 2812) : (2343, 781, 2656) : 3.769732 seconds
+Result [sardine-0] : level-2 : parent(2187, 937, 2812) : (2031, 1093, 2968) : 3.867384 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (2031, 781, 2656) 3.7293922 seconds
+Selected : (2343, 781, 2656) 3.7299016 seconds
+Selected : (2343, 781, 2968) 3.7551852 seconds
+...done.
+
+Creating tasks for parent (2031, 781, 2656) ...
+Result [barracuda-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2578) : 3.717353 seconds
+Result [brill-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2578) : 3.716778 seconds
+Result [bonito-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2578) : 3.672802 seconds
+Result [eel-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2734) : 3.738737 seconds
+Result [grouper-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2578) : 3.919971 seconds
+Result [sole-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2734) : 3.970969 seconds
+Result [dorado-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2734) : 3.68776 seconds
+Result [blowfish-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2578) : 3.696662 seconds
+Result [flounder-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2734) : 3.704956 seconds
+Result [wahoo-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2578) : 3.674421 seconds
+Result [perch-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2734) : 5.884853 seconds
+Result [turbot-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2578) : 3.840257 seconds
+Result [barracuda-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2578) : 3.697245 seconds
+Result [eel-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2734) : 3.766284 seconds
+Result [brill-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2734) : 3.738123 seconds
+Result [grouper-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2734) : 3.771161 seconds
+Result [sole-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2734) : 3.939368 seconds
+Result [char-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2734) : 3.709314 seconds
+Result [tarpon-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2578) : 3.687717 seconds
+Result [mackerel-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2578) : 3.731958 seconds
+Result [dorado-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2578) : 3.677048 seconds
+Result [bonito-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2734) : 3.69446 seconds
+Result [pollock-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2734) : 3.727493 seconds
+Result [halibut-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2578) : 3.762317 seconds
+Result [flounder-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2578) : 3.716814 seconds
+Result [wahoo-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2578) : 3.714138 seconds
+Result [blowfish-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2578) : 3.795001 seconds
+Result [barracuda-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2734) : 3.75219 seconds
+Result [brill-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2734) : 3.870453 seconds
+Result [grouper-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2734) : 3.883199 seconds
+Result [shark-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2734) : 3.985969 seconds
+Result [turbot-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2734) : 3.804624 seconds
+Result [eel-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2734) : 3.726746 seconds
+Result [perch-0] : level-3 : parent(2031, 781, 2656) : (2109, 859, 2578) : 6.148407 seconds
+Result [marlin-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2578) : 3.744046 seconds
+Result [anchovy-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2578) : 3.836857 seconds
+Result [sardine-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2734) : 3.697096 seconds
+Warning: No xauth data; using fake authentication data for X11 forwarding.
+Result [swordfish-0] : level-3 : parent(2031, 781, 2656) : (2109, 703, 2578) : 3.714712 seconds
+Result [cod-0] : level-3 : parent(2031, 781, 2656) : (1953, 703, 2734) : 3.684939 seconds
+Result [herring-0] : level-3 : parent(2031, 781, 2656) : (1953, 859, 2578) : 4.07207 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (1953, 703, 2734) 3.7051412 seconds
+...done.
+
+OPTIMAL : (1953, 703, 2734) 3.7051412 seconds : 11.245635299045192 GFlops/sec
+
+Creating tasks for parent (2343, 781, 2656) ...
+Result [anchovy-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2578) : 3.762875 seconds
+Result [sole-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2734) : 4.248885 seconds
+Result [herring-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2578) : 4.566918 seconds
+Result [cod-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2734) : 3.680459 seconds
+Result [tarpon-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2578) : 3.710085 seconds
+Result [sardine-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2734) : 3.763979 seconds
+Result [dorado-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2734) : 3.787946 seconds
+Result [blowfish-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2578) : 3.669499 seconds
+Result [eel-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2734) : 3.725314 seconds
+Result [perch-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2734) : 5.774547 seconds
+Result [grouper-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2578) : 3.943953 seconds
+Result [anchovy-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2578) : 3.661614 seconds
+Result [sole-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2734) : 3.953812 seconds
+Result [herring-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2734) : 4.125457 seconds
+Result [barracuda-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2578) : 3.676182 seconds
+Result [bonito-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2578) : 3.688512 seconds
+Result [halibut-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2578) : 3.73267 seconds
+Result [wahoo-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2578) : 3.732196 seconds
+Result [sardine-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2734) : 3.670647 seconds
+Result [swordfish-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2578) : 3.687373 seconds
+Result [mackerel-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2578) : 3.756084 seconds
+Result [blowfish-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2578) : 3.747864 seconds
+Result [dorado-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2578) : 3.867913 seconds
+Result [grouper-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2578) : 3.858343 seconds
+Result [anchovy-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2734) : 3.802194 seconds
+Result [sole-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2734) : 3.953045 seconds
+Result [flounder-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2734) : 3.70706 seconds
+Result [brill-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2578) : 3.87379 seconds
+Result [barracuda-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2734) : 3.734482 seconds
+Result [eel-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2578) : 3.71104 seconds
+Result [bonito-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2734) : 3.778834 seconds
+Result [cod-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2734) : 3.715985 seconds
+Result [perch-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2578) : 6.041047 seconds
+Result [herring-0] : level-3 : parent(2343, 781, 2656) : (2421, 859, 2734) : 4.601028 seconds
+Result [pollock-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2734) : 3.724248 seconds
+Result [shark-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2734) : 4.098876 seconds
+Result [tarpon-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2734) : 3.851471 seconds
+Result [char-0] : level-3 : parent(2343, 781, 2656) : (2265, 703, 2734) : 3.680644 seconds
+Result [marlin-0] : level-3 : parent(2343, 781, 2656) : (2265, 859, 2578) : 3.766572 seconds
+Result [turbot-0] : level-3 : parent(2343, 781, 2656) : (2421, 703, 2578) : 3.674477 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (2421, 703, 2578) 3.693149 seconds
+...done.
+
+OPTIMAL : (2421, 703, 2578) 3.693149 seconds : 11.282151536985555 GFlops/sec
+
+Creating tasks for parent (2343, 781, 2968) ...
+Result [barracuda-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 2890) : 3.765663 seconds
+Result [wahoo-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 2890) : 3.693376 seconds
+Result [char-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 3046) : 3.826343 seconds
+Result [grouper-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 2890) : 3.896688 seconds
+Result [eel-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 3046) : 3.709841 seconds
+Result [halibut-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 2890) : 3.74218 seconds
+Result [cod-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 3046) : 3.732717 seconds
+Result [perch-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 3046) : 5.832174 seconds
+Result [flounder-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 3046) : 3.729938 seconds
+Result [marlin-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 2890) : 3.725123 seconds
+Result [bonito-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 2890) : 3.706509 seconds
+Result [mackerel-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 2890) : 3.752752 seconds
+Result [barracuda-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 2890) : 3.710882 seconds
+Result [char-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 3046) : 3.744017 seconds
+Result [grouper-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 3046) : 3.949907 seconds
+Result [dorado-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 3046) : 3.697219 seconds
+Result [sardine-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 3046) : 3.73081 seconds
+Result [wahoo-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 3046) : 3.742277 seconds
+Result [cod-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 2890) : 3.736881 seconds
+Result [pollock-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 3046) : 3.728084 seconds
+Result [herring-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 2890) : 3.793225 seconds
+Result [bonito-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 2890) : 3.727278 seconds
+Result [eel-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 3046) : 3.741096 seconds
+Result [marlin-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 2890) : 3.751236 seconds
+Result [mackerel-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 3046) : 3.724814 seconds
+Result [perch-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 2890) : 6.005072 seconds
+Result [char-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 3046) : 3.707383 seconds
+Result [barracuda-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 3046) : 3.879082 seconds
+Result [grouper-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 3046) : 4.136382 seconds
+Result [brill-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 2890) : 3.702429 seconds
+Result [dorado-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 3046) : 3.704067 seconds
+Result [halibut-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 3046) : 3.693717 seconds
+Result [flounder-0] : level-3 : parent(2343, 781, 2968) : (2421, 859, 2890) : 3.733275 seconds
+Result [tarpon-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 2890) : 3.695218 seconds
+Result [sole-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 3046) : 3.988905 seconds
+Result [shark-0] : level-3 : parent(2343, 781, 2968) : (2265, 859, 3046) : 4.15129 seconds
+Result [turbot-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 2890) : 3.683818 seconds
+Result [swordfish-0] : level-3 : parent(2343, 781, 2968) : (2421, 703, 2890) : 3.70459 seconds
+Result [blowfish-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 2890) : 3.722838 seconds
+Result [anchovy-0] : level-3 : parent(2343, 781, 2968) : (2265, 703, 2890) : 3.854311 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (2421, 703, 2890) 3.6975768 seconds
+...done.
+
+OPTIMAL : (2421, 703, 2890) 3.6975768 seconds : 11.268641307644147 GFlops/sec
+
+Creating tasks for parent (4375, 625, 3125) ...
+Result [bonito-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 2812) : 3.835838 seconds
+Result [mackerel-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 2812) : 3.747654 seconds
+Result [blowfish-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 2812) : 3.675713 seconds
+Result [shark-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 3437) : 3.902767 seconds
+Result [grouper-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 2812) : 3.967669 seconds
+Result [sardine-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 3437) : 3.955284 seconds
+Result [sole-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 3437) : 4.017202 seconds
+Result [dorado-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 3437) : 3.727059 seconds
+Result [anchovy-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 2812) : 3.722241 seconds
+Result [wahoo-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 2812) : 3.719126 seconds
+Result [mackerel-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 3437) : 3.758602 seconds
+Result [swordfish-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 2812) : 3.676254 seconds
+Result [char-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 3437) : 3.735488 seconds
+Result [blowfish-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 3437) : 3.714377 seconds
+Result [bonito-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 2812) : 3.676945 seconds
+Result [shark-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 3437) : 3.820463 seconds
+Result [sardine-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 3437) : 3.724762 seconds
+Result [grouper-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 3437) : 4.131521 seconds
+Result [sole-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 2812) : 3.980542 seconds
+Result [barracuda-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 2812) : 3.707096 seconds
+Result [halibut-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 2812) : 3.759712 seconds
+Result [cod-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 3437) : 3.784288 seconds
+Result [perch-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 3437) : 5.932886 seconds
+Result [anchovy-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 2812) : 3.758011 seconds
+Result [mackerel-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 2812) : 3.733657 seconds
+Result [eel-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 3437) : 3.72113 seconds
+Result [marlin-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 2812) : 3.746149 seconds
+Result [flounder-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 3437) : 3.737702 seconds
+Result [swordfish-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 3437) : 3.80748 seconds
+Result [blowfish-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 3437) : 3.772262 seconds
+Result [bonito-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 3437) : 3.828902 seconds
+Result [shark-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 3437) : 4.022596 seconds
+Result [tarpon-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 2812) : 3.6794 seconds
+Result [wahoo-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 2812) : 3.686536 seconds
+Result [herring-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 2812) : 3.717168 seconds
+Result [pollock-0] : level-1 : parent(4375, 625, 3125) : (4062, 937, 3437) : 3.782984 seconds
+Result [char-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 3437) : 3.762031 seconds
+Result [brill-0] : level-1 : parent(4375, 625, 3125) : (4062, 312, 2812) : 3.76439 seconds
+Result [dorado-0] : level-1 : parent(4375, 625, 3125) : (4687, 937, 2812) : 3.707417 seconds
+Result [turbot-0] : level-1 : parent(4375, 625, 3125) : (4687, 312, 2812) : 3.846438 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (4687, 312, 2812) 3.7196326 seconds
+Selected : (4062, 312, 2812) 3.7410556 seconds
+Selected : (4062, 312, 3437) 3.7411334000000003 seconds
+...done.
+
+Creating tasks for parent (4687, 312, 2812) ...
+Result [barracuda-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2656) : 3.720365 seconds
+Result [halibut-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2656) : 3.66615 seconds
+Result [brill-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2656) : 3.696935 seconds
+Result [eel-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2968) : 3.747799 seconds
+Result [dorado-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2968) : 3.701976 seconds
+Result [swordfish-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2656) : 3.675749 seconds
+Result [pollock-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2968) : 3.704726 seconds
+Result [cod-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2968) : 3.852336 seconds
+Result [anchovy-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2656) : 3.682103 seconds
+Result [bonito-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2656) : 3.66896 seconds
+Result [char-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2968) : 3.706386 seconds
+Result [tarpon-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2656) : 3.689832 seconds
+Result [barracuda-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2656) : 3.674068 seconds
+Result [halibut-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2968) : 3.742319 seconds
+Result [sardine-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2968) : 3.675868 seconds
+Result [herring-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2656) : 3.763422 seconds
+Result [dorado-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2968) : 3.702814 seconds
+Result [swordfish-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2968) : 3.698949 seconds
+Result [pollock-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2656) : 3.712249 seconds
+Result [brill-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2968) : 3.743353 seconds
+Result [cod-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2656) : 3.712811 seconds
+Result [perch-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2968) : 5.47142 seconds
+Result [anchovy-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2656) : 3.662142 seconds
+Result [sole-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2968) : 3.933096 seconds
+Result [tarpon-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2968) : 3.725892 seconds
+Result [eel-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2968) : 3.854785 seconds
+Result [barracuda-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2968) : 3.712833 seconds
+Result [halibut-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2968) : 3.686209 seconds
+Result [flounder-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2968) : 3.83831 seconds
+Result [char-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2656) : 3.662304 seconds
+Result [sardine-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2968) : 3.751436 seconds
+Result [grouper-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2656) : 4.127333 seconds
+Result [herring-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2968) : 3.937632 seconds
+Result [marlin-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2656) : 3.700663 seconds
+Result [turbot-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2656) : 3.716334 seconds
+Result [bonito-0] : level-2 : parent(4687, 312, 2812) : (4843, 468, 2656) : 3.650533 seconds
+Result [blowfish-0] : level-2 : parent(4687, 312, 2812) : (4531, 156, 2656) : 3.727932 seconds
+Result [wahoo-0] : level-2 : parent(4687, 312, 2812) : (4843, 156, 2656) : 3.70417 seconds
+Result [mackerel-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2656) : 3.745651 seconds
+Result [shark-0] : level-2 : parent(4687, 312, 2812) : (4531, 468, 2968) : 4.051075 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (4843, 468, 2656) 3.6800078 seconds
+Selected : (4843, 156, 2656) 3.6920306 seconds
+Selected : (4531, 156, 2656) 3.699259 seconds
+...done.
+
+Creating tasks for parent (4843, 468, 2656) ...
+Result [barracuda-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2578) : 3.713202 seconds
+Result [swordfish-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2578) : 3.72663 seconds
+Result [anchovy-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2578) : 3.9001 seconds
+Result [herring-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2578) : 4.028244 seconds
+Result [halibut-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2578) : 3.672676 seconds
+Result [blowfish-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2578) : 3.666343 seconds
+Result [perch-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2734) : 5.467444 seconds
+Result [sardine-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2734) : 3.672044 seconds
+Result [flounder-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2734) : 3.696662 seconds
+Result [dorado-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2734) : 3.68107 seconds
+Result [barracuda-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2578) : 3.663991 seconds
+Result [swordfish-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2734) : 3.691994 seconds
+Result [anchovy-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2734) : 3.835881 seconds
+Result [herring-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2734) : 3.871555 seconds
+Result [brill-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2578) : 3.665098 seconds
+Result [tarpon-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2578) : 3.665454 seconds
+Result [blowfish-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2734) : 3.664632 seconds
+Result [halibut-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2734) : 3.710384 seconds
+Result [pollock-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2734) : 3.685145 seconds
+Result [turbot-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2578) : 3.667721 seconds
+Result [flounder-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2578) : 3.671323 seconds
+Result [swordfish-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2734) : 3.670539 seconds
+Result [barracuda-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2578) : 3.706626 seconds
+Result [anchovy-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2734) : 3.773279 seconds
+Result [herring-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2734) : 3.82287 seconds
+Result [marlin-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2578) : 3.697055 seconds
+Result [brill-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2734) : 3.675822 seconds
+Result [tarpon-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2734) : 3.699664 seconds
+Result [perch-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2578) : 5.477827 seconds
+Result [bonito-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2578) : 3.670191 seconds
+Result [char-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2734) : 3.691921 seconds
+Result [mackerel-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2578) : 3.695178 seconds
+Result [dorado-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2578) : 3.656689 seconds
+Result [sardine-0] : level-3 : parent(4843, 468, 2656) : (4921, 546, 2578) : 3.713688 seconds
+Result [shark-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2734) : 4.118516 seconds
+Result [eel-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2734) : 3.67874 seconds
+Warning: No xauth data; using fake authentication data for X11 forwarding.
+Result [grouper-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2578) : 3.821482 seconds
+Result [cod-0] : level-3 : parent(4843, 468, 2656) : (4765, 390, 2734) : 3.826488 seconds
+Result [wahoo-0] : level-3 : parent(4843, 468, 2656) : (4921, 390, 2578) : 3.826274 seconds
+Result [sole-0] : level-3 : parent(4843, 468, 2656) : (4765, 546, 2734) : 3.948485 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (4921, 390, 2578) 3.710014 seconds
+...done.
+
+OPTIMAL : (4921, 390, 2578) 3.710014 seconds : 11.23086507669962 GFlops/sec
+
+Creating tasks for parent (4843, 156, 2656) ...
+Result [blowfish-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2578) : 3.685913 seconds
+Result [mackerel-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2578) : 3.662527 seconds
+Result [herring-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2578) : 3.867432 seconds
+Result [perch-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2734) : 5.345858 seconds
+Result [cod-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2734) : 3.741561 seconds
+Result [bonito-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2578) : 3.724178 seconds
+Result [sardine-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2734) : 3.681668 seconds
+Result [flounder-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2734) : 3.686633 seconds
+Result [shark-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2734) : 4.121343 seconds
+Result [eel-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2734) : 3.696427 seconds
+Result [wahoo-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2578) : 3.685157 seconds
+Result [pollock-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2734) : 3.700815 seconds
+Result [anchovy-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2578) : 3.751306 seconds
+Result [mackerel-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2734) : 3.721764 seconds
+Result [blowfish-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2578) : 3.85255 seconds
+Result [herring-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2734) : 3.877083 seconds
+Result [dorado-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2734) : 3.694323 seconds
+Result [barracuda-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2578) : 3.714343 seconds
+Result [swordfish-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2578) : 3.696795 seconds
+Result [grouper-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2578) : 3.80409 seconds
+Result [cod-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2734) : 3.719411 seconds
+Result [bonito-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2734) : 3.778879 seconds
+Result [shark-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2578) : 3.836436 seconds
+Result [perch-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2734) : 5.2712 seconds
+Result [halibut-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2578) : 3.653703 seconds
+Result [brill-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2578) : 3.847598 seconds
+Result [sardine-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2578) : 3.691837 seconds
+Result [anchovy-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2734) : 3.709256 seconds
+Result [eel-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2578) : 3.829661 seconds
+Result [mackerel-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2734) : 3.67128 seconds
+Result [herring-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2734) : 3.763991 seconds
+Result [marlin-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2578) : 3.658718 seconds
+Result [char-0] : level-3 : parent(4843, 156, 2656) : (4765, 78, 2734) : 3.689433 seconds
+Result [flounder-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2578) : 3.686301 seconds
+Result [pollock-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2734) : 3.837321 seconds
+Result [blowfish-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2734) : 3.715723 seconds
+Result [sole-0] : level-3 : parent(4843, 156, 2656) : (4765, 234, 2734) : 3.90194 seconds
+Result [wahoo-0] : level-3 : parent(4843, 156, 2656) : (4921, 234, 2578) : 3.67855 seconds
+Result [turbot-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2578) : 3.679316 seconds
+Result [tarpon-0] : level-3 : parent(4843, 156, 2656) : (4921, 78, 2578) : 3.722535 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (4765, 78, 2734) 3.7016754 seconds
+...done.
+
+OPTIMAL : (4765, 78, 2734) 3.7016754 seconds : 11.256164348356062 GFlops/sec
+
+Creating tasks for parent (4531, 156, 2656) ...
+Result [bonito-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2578) : 3.778963 seconds
+Result [mackerel-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2578) : 3.672885 seconds
+Result [marlin-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2578) : 3.707688 seconds
+Result [tarpon-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2578) : 3.67743 seconds
+Result [dorado-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2734) : 3.743639 seconds
+Result [eel-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2734) : 3.715031 seconds
+Result [herring-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2578) : 3.755178 seconds
+Result [turbot-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2578) : 3.846045 seconds
+Result [bonito-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2578) : 3.713875 seconds
+Result [brill-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2578) : 3.67686 seconds
+Result [cod-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2734) : 3.715411 seconds
+Result [swordfish-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2578) : 3.734648 seconds
+Result [marlin-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2734) : 3.697813 seconds
+Result [mackerel-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2734) : 3.736816 seconds
+Result [barracuda-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2578) : 3.678392 seconds
+Result [blowfish-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2578) : 3.684858 seconds
+Result [halibut-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2578) : 3.668838 seconds
+Result [dorado-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2734) : 3.679867 seconds
+Result [herring-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2578) : 3.719445 seconds
+Result [turbot-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2578) : 3.671506 seconds
+Result [bonito-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2578) : 3.662162 seconds
+Result [brill-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2578) : 3.682225 seconds
+Result [eel-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2734) : 3.683119 seconds
+Result [sole-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2734) : 3.976299 seconds
+Result [tarpon-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2734) : 3.740188 seconds
+Result [shark-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2734) : 4.087669 seconds
+Result [swordfish-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2734) : 3.833402 seconds
+Result [mackerel-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2734) : 3.663634 seconds
+Result [marlin-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2734) : 3.697242 seconds
+Result [perch-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2734) : 5.505012 seconds
+Result [char-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2734) : 3.724479 seconds
+Result [flounder-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2734) : 3.71625 seconds
+Result [barracuda-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2734) : 3.683203 seconds
+Result [cod-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2578) : 3.671192 seconds
+Result [pollock-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2734) : 3.676476 seconds
+Result [wahoo-0] : level-3 : parent(4531, 156, 2656) : (4609, 78, 2578) : 3.681047 seconds
+Result [blowfish-0] : level-3 : parent(4531, 156, 2656) : (4609, 234, 2734) : 3.711876 seconds
+Result [grouper-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2578) : 4.111422 seconds
+Result [sardine-0] : level-3 : parent(4531, 156, 2656) : (4453, 234, 2734) : 3.717449 seconds
+Result [anchovy-0] : level-3 : parent(4531, 156, 2656) : (4453, 78, 2578) : 3.727777 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (4609, 234, 2578) 3.6813059999999997 seconds
+...done.
+
+OPTIMAL : (4609, 234, 2578) 3.6813059999999997 seconds : 11.318446949714767 GFlops/sec
+
+Creating tasks for parent (4062, 312, 2812) ...
+Result [blowfish-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2656) : 3.672918 seconds
+Result [eel-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2968) : 3.715537 seconds
+Result [cod-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2968) : 3.705968 seconds
+Result [char-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2968) : 3.847767 seconds
+Result [perch-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2968) : 5.193305 seconds
+Result [barracuda-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2656) : 3.67735 seconds
+Result [anchovy-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2656) : 3.84135 seconds
+Result [flounder-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2968) : 3.843553 seconds
+Result [dorado-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2968) : 3.712539 seconds
+Result [shark-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2968) : 3.794501 seconds
+Result [blowfish-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2656) : 3.656959 seconds
+Result [eel-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2968) : 3.716064 seconds
+Result [char-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2968) : 3.691557 seconds
+Result [brill-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2656) : 3.676007 seconds
+Result [bonito-0] : level-2 : parent(4062, 312, 2812) : (3906, 156, 2656) : 3.676075 seconds
+Result [sardine-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2968) : 3.754714 seconds
+Result [cod-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2968) : 3.701122 seconds
+Result [barracuda-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2968) : 3.785622 seconds
+Result [anchovy-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2656) : 3.699943 seconds
+Result [perch-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2968) : 5.331231 seconds
+Result [swordfish-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2656) : 3.675975 seconds
+Result [dorado-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2656) : 3.756621 seconds
+Result [blowfish-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2656) : 3.711609 seconds
+Result [eel-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2968) : 3.679488 seconds
+Result [shark-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2656) : 4.079407 seconds
+Result [halibut-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2656) : 3.662954 seconds
+Result [pollock-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2968) : 3.723951 seconds
+Result [brill-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2968) : 3.689248 seconds
+Result [bonito-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2968) : 3.706606 seconds
+Result [flounder-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2656) : 3.665297 seconds
+Result [sardine-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2968) : 3.878198 seconds
+Result [char-0] : level-2 : parent(4062, 312, 2812) : (4218, 468, 2968) : 3.71969 seconds
+Result [marlin-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2656) : 3.721155 seconds
+Result [grouper-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2656) : 3.814159 seconds
+Result [mackerel-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2656) : 3.742962 seconds
+Result [herring-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2656) : 3.949489 seconds
+Result [turbot-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2656) : 3.690734 seconds
+/usr/bin/xauth:  timeout in locking authority file /s/bach/g/under/lnarmour/.Xauthority
+Result [sole-0] : level-2 : parent(4062, 312, 2812) : (3906, 468, 2968) : 3.952609 seconds
+Result [wahoo-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2656) : 3.677526 seconds
+Result [tarpon-0] : level-2 : parent(4062, 312, 2812) : (4218, 156, 2656) : 3.696592 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (4218, 156, 2656) 3.6795572 seconds
+Selected : (3906, 156, 2656) 3.70874 seconds
+Selected : (4218, 468, 2968) 3.734646 seconds
+...done.
+
+Creating tasks for parent (4218, 156, 2656) ...
+Result [mackerel-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2578) : 3.674499 seconds
+Result [char-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2734) : 3.719803 seconds
+Result [wahoo-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2578) : 3.672468 seconds
+Result [bonito-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2578) : 3.864389 seconds
+Result [halibut-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2578) : 3.699569 seconds
+Result [brill-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2578) : 3.852421 seconds
+Result [sole-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2734) : 3.963653 seconds
+Result [cod-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2734) : 3.85462 seconds
+Result [swordfish-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2578) : 3.688698 seconds
+Result [dorado-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2734) : 3.872296 seconds
+Result [grouper-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2578) : 4.081626 seconds
+Result [shark-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2734) : 4.057078 seconds
+Result [blowfish-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2578) : 3.690019 seconds
+Result [herring-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2578) : 3.764953 seconds
+Result [mackerel-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2578) : 3.766168 seconds
+Result [wahoo-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2734) : 3.707886 seconds
+Result [bonito-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2734) : 3.686559 seconds
+Result [brill-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2734) : 3.716216 seconds
+Result [sole-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2578) : 3.992081 seconds
+Result [perch-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2734) : 5.445648 seconds
+Result [marlin-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2578) : 3.665364 seconds
+Result [pollock-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2734) : 3.679502 seconds
+Result [sardine-0] : level-3 : parent(4218, 156, 2656) : (4140, 234, 2734) : 3.80999 seconds
+Result [char-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2734) : 3.71643 seconds
+Result [cod-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2578) : 3.675822 seconds
+Result [dorado-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2578) : 3.696741 seconds
+Result [grouper-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2578) : 3.76982 seconds
+Result [shark-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2734) : 4.008128 seconds
+Result [barracuda-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2578) : 3.716849 seconds
+Result [turbot-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2578) : 3.730068 seconds
+Result [blowfish-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2734) : 3.700539 seconds
+Result [herring-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2734) : 3.860488 seconds
+Result [wahoo-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2734) : 3.67999 seconds
+Result [eel-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2734) : 3.713894 seconds
+Result [anchovy-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2578) : 3.814764 seconds
+Result [swordfish-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2578) : 3.702002 seconds
+Result [mackerel-0] : level-3 : parent(4218, 156, 2656) : (4296, 234, 2734) : 3.671545 seconds
+Result [flounder-0] : level-3 : parent(4218, 156, 2656) : (4140, 78, 2734) : 3.736584 seconds
+Result [halibut-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2734) : 3.705993 seconds
+Result [tarpon-0] : level-3 : parent(4218, 156, 2656) : (4296, 78, 2578) : 3.847494 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (4296, 78, 2734) 3.7066168 seconds
+...done.
+
+OPTIMAL : (4296, 78, 2734) 3.7066168 seconds : 11.24115842421765 GFlops/sec
+
+Creating tasks for parent (3906, 156, 2656) ...
+Result [blowfish-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2578) : 3.724977 seconds
+Result [barracuda-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2578) : 3.686873 seconds
+Result [herring-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2578) : 3.765866 seconds
+Result [dorado-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2734) : 3.695204 seconds
+Result [cod-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2734) : 3.718693 seconds
+Result [swordfish-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2578) : 3.674273 seconds
+Result [anchovy-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2578) : 3.871908 seconds
+Result [grouper-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2578) : 4.10989 seconds
+Result [shark-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2734) : 4.241956 seconds
+Result [perch-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2734) : 5.358067 seconds
+Result [mackerel-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2578) : 3.6881 seconds
+Result [tarpon-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2578) : 3.687549 seconds
+Result [blowfish-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2578) : 3.728944 seconds
+Result [dorado-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2734) : 3.681078 seconds
+Result [herring-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2734) : 3.746786 seconds
+Result [sole-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2734) : 4.007613 seconds
+Result [sardine-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2734) : 3.671857 seconds
+Result [brill-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2578) : 3.713521 seconds
+Result [turbot-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2578) : 3.767129 seconds
+Result [barracuda-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2734) : 3.727275 seconds
+Result [swordfish-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2734) : 3.69548 seconds
+Result [anchovy-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2578) : 3.659286 seconds
+Result [grouper-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2578) : 4.118677 seconds
+Result [shark-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2578) : 4.200385 seconds
+Result [halibut-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2578) : 3.659426 seconds
+Result [pollock-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2734) : 3.698063 seconds
+Result [marlin-0] : level-3 : parent(3906, 156, 2656) : (3828, 234, 2578) : 3.687359 seconds
+Result [mackerel-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2578) : 3.677437 seconds
+Result [cod-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2734) : 3.687101 seconds
+Result [tarpon-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2734) : 3.842724 seconds
+Result [dorado-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2734) : 3.685204 seconds
+Result [blowfish-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2734) : 3.688673 seconds
+Result [herring-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2734) : 3.854231 seconds
+Result [sole-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2734) : 3.931492 seconds
+Result [perch-0] : level-3 : parent(3906, 156, 2656) : (3984, 234, 2578) : 5.401607 seconds
+Result [flounder-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2734) : 3.686699 seconds
+Result [bonito-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2578) : 3.679849 seconds
+Result [char-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2734) : 3.724954 seconds
+Result [eel-0] : level-3 : parent(3906, 156, 2656) : (3828, 78, 2734) : 3.702887 seconds
+Result [wahoo-0] : level-3 : parent(3906, 156, 2656) : (3984, 78, 2578) : 3.7201 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3828, 78, 2734) 3.7056874 seconds
+...done.
+
+OPTIMAL : (3828, 78, 2734) 3.7056874 seconds : 11.243977748006122 GFlops/sec
+
+Creating tasks for parent (4218, 468, 2968) ...
+Result [dorado-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 3046) : 3.689165 seconds
+Result [bonito-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 2890) : 3.789968 seconds
+Result [tarpon-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 2890) : 3.748403 seconds
+Result [grouper-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 2890) : 4.126399 seconds
+Result [char-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 3046) : 3.717803 seconds
+Result [halibut-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 2890) : 3.714252 seconds
+Result [wahoo-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 2890) : 3.8477 seconds
+Result [herring-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 2890) : 3.879294 seconds
+Result [blowfish-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 2890) : 3.730137 seconds
+Result [sardine-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 3046) : 3.734398 seconds
+Result [marlin-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 2890) : 3.722856 seconds
+Result [anchovy-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 2890) : 3.716591 seconds
+Result [dorado-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 2890) : 3.698345 seconds
+Result [bonito-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 3046) : 3.676018 seconds
+Result [tarpon-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 3046) : 3.699718 seconds
+Result [grouper-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 3046) : 3.935043 seconds
+Result [perch-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 3046) : 5.517772 seconds
+Result [eel-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 3046) : 3.694528 seconds
+Result [cod-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 3046) : 3.694211 seconds
+Result [barracuda-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 2890) : 3.843163 seconds
+Result [halibut-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 3046) : 3.678983 seconds
+Result [char-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 3046) : 3.706566 seconds
+Result [wahoo-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 2890) : 3.68373 seconds
+Result [flounder-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 3046) : 3.738986 seconds
+Result [brill-0] : level-3 : parent(4218, 468, 2968) : (4140, 390, 2890) : 3.836905 seconds
+Result [sardine-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 2890) : 3.667216 seconds
+Result [blowfish-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 2890) : 3.725973 seconds
+Result [sole-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 3046) : 3.939881 seconds
+Result [marlin-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 2890) : 3.668482 seconds
+Result [herring-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 2890) : 3.670406 seconds
+Result [bonito-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 3046) : 3.732619 seconds
+Result [dorado-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 3046) : 3.729385 seconds
+Result [tarpon-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 3046) : 3.863074 seconds
+Result [grouper-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 3046) : 4.137822 seconds
+Result [turbot-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 2890) : 3.711484 seconds
+Result [anchovy-0] : level-3 : parent(4218, 468, 2968) : (4296, 546, 3046) : 3.761473 seconds
+Result [swordfish-0] : level-3 : parent(4218, 468, 2968) : (4296, 390, 2890) : 3.67178 seconds
+Result [pollock-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 3046) : 3.724222 seconds
+Result [shark-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 3046) : 3.970875 seconds
+Result [mackerel-0] : level-3 : parent(4218, 468, 2968) : (4140, 546, 2890) : 3.696056 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (4296, 546, 2890) 3.6831614 seconds
+...done.
+
+OPTIMAL : (4296, 546, 2890) 3.6831614 seconds : 11.312745259185943 GFlops/sec
+
+Creating tasks for parent (4062, 312, 3437) ...
+Result [brill-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3281) : 3.752134 seconds
+Result [grouper-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3281) : 3.865953 seconds
+Result [herring-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3281) : 4.077598 seconds
+Result [anchovy-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3281) : 3.713815 seconds
+Result [halibut-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3281) : 3.754248 seconds
+Result [tarpon-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3281) : 3.737715 seconds
+Result [dorado-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3593) : 3.772516 seconds
+Result [bonito-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3281) : 3.862533 seconds
+Result [brill-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3281) : 3.69703 seconds
+Result [grouper-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3593) : 3.888131 seconds
+Result [herring-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3593) : 3.956373 seconds
+Result [cod-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3593) : 3.729596 seconds
+Result [flounder-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3593) : 3.761658 seconds
+Result [mackerel-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3281) : 3.74094 seconds
+Result [halibut-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3593) : 3.727122 seconds
+Result [perch-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3593) : 5.51297 seconds
+Result [barracuda-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3281) : 3.717416 seconds
+Result [sardine-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3593) : 3.724728 seconds
+Result [dorado-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3281) : 3.752746 seconds
+Result [anchovy-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3593) : 3.893017 seconds
+Result [bonito-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3281) : 3.741553 seconds
+Result [brill-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3281) : 3.722253 seconds
+Result [grouper-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3281) : 4.272223 seconds
+Result [herring-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3281) : 4.009524 seconds
+Result [eel-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3593) : 3.753884 seconds
+Result [pollock-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3593) : 3.738124 seconds
+Result [cod-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3593) : 3.74183 seconds
+Result [tarpon-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3593) : 3.769278 seconds
+Result [halibut-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3593) : 3.717552 seconds
+Result [swordfish-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3281) : 3.765908 seconds
+Result [flounder-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3593) : 3.75811 seconds
+Result [perch-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3593) : 5.532263 seconds
+Result [marlin-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3281) : 3.714598 seconds
+Result [sole-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3593) : 4.05912 seconds
+Result [mackerel-0] : level-2 : parent(4062, 312, 3437) : (4218, 468, 3593) : 3.737799 seconds
+Result [turbot-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3281) : 3.700146 seconds
+Result [shark-0] : level-2 : parent(4062, 312, 3437) : (3906, 468, 3593) : 4.159228 seconds
+Result [wahoo-0] : level-2 : parent(4062, 312, 3437) : (4218, 156, 3281) : 3.875419 seconds
+Result [char-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3593) : 3.746415 seconds
+Result [blowfish-0] : level-2 : parent(4062, 312, 3437) : (3906, 156, 3281) : 3.766512 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (3906, 156, 3593) 3.7528138 seconds
+Selected : (4218, 156, 3281) 3.7552436 seconds
+Selected : (3906, 156, 3281) 3.762482 seconds
+...done.
+
+Creating tasks for parent (3906, 156, 3593) ...
+Result [char-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3671) : 3.756132 seconds
+Result [barracuda-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3515) : 3.741146 seconds
+Result [brill-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3515) : 3.744984 seconds
+Result [pollock-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3671) : 3.906708 seconds
+Result [blowfish-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3515) : 3.761559 seconds
+Result [anchovy-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3515) : 3.774198 seconds
+Result [sole-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3671) : 3.914309 seconds
+Result [perch-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3671) : 5.577785 seconds
+Result [cod-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3671) : 3.737029 seconds
+Result [halibut-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3515) : 3.720076 seconds
+Result [flounder-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3671) : 3.757283 seconds
+Result [barracuda-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3671) : 3.753948 seconds
+Result [char-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3515) : 3.799764 seconds
+Result [shark-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3671) : 4.166302 seconds
+Result [pollock-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3671) : 3.801986 seconds
+Result [bonito-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3515) : 3.766693 seconds
+Result [eel-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3671) : 3.801649 seconds
+Result [blowfish-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3671) : 3.762419 seconds
+Result [anchovy-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3671) : 3.82735 seconds
+Result [sole-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3515) : 4.012908 seconds
+Result [dorado-0] : level-3 : parent(3906, 156, 3593) : (3828, 78, 3671) : 3.753461 seconds
+Result [wahoo-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3515) : 3.733877 seconds
+Result [marlin-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3515) : 3.751329 seconds
+Result [cod-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3515) : 3.750599 seconds
+Result [halibut-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3515) : 3.768118 seconds
+Result [barracuda-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3671) : 3.791484 seconds
+Result [char-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3671) : 3.905602 seconds
+Result [shark-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3671) : 3.859623 seconds
+Result [pollock-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3671) : 3.756644 seconds
+Result [perch-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3515) : 5.502907 seconds
+Result [swordfish-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3515) : 3.741463 seconds
+Result [grouper-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3515) : 3.84387 seconds
+Result [flounder-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3515) : 3.709019 seconds
+Result [brill-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3671) : 3.81275 seconds
+Result [bonito-0] : level-3 : parent(3906, 156, 3593) : (3984, 234, 3671) : 3.898447 seconds
+Result [tarpon-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3515) : 3.897958 seconds
+Result [herring-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3515) : 3.929544 seconds
+Result [turbot-0] : level-3 : parent(3906, 156, 3593) : (3984, 78, 3515) : 3.896368 seconds
+Result [sardine-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3671) : 3.7404 seconds
+Result [mackerel-0] : level-3 : parent(3906, 156, 3593) : (3828, 234, 3515) : 3.726695 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3828, 78, 3515) 3.7577160000000003 seconds
+...done.
+
+OPTIMAL : (3828, 78, 3515) 3.7577160000000003 seconds : 11.088295833603887 GFlops/sec
+
+Creating tasks for parent (4218, 156, 3281) ...
+Result [bonito-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3203) : 3.718061 seconds
+Result [cod-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3359) : 3.75738 seconds
+Result [halibut-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3203) : 3.704711 seconds
+Result [eel-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3359) : 3.903274 seconds
+Result [shark-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3359) : 3.915365 seconds
+Result [flounder-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3359) : 3.74978 seconds
+Result [anchovy-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3203) : 3.72299 seconds
+Result [grouper-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3203) : 3.860169 seconds
+Result [blowfish-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3203) : 3.74758 seconds
+Result [brill-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3203) : 3.720218 seconds
+Result [marlin-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3203) : 3.771203 seconds
+Result [barracuda-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3203) : 3.882906 seconds
+Result [bonito-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3203) : 3.755643 seconds
+Result [cod-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3359) : 3.728516 seconds
+Result [eel-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3359) : 3.743304 seconds
+Result [shark-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3359) : 4.147312 seconds
+Result [turbot-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3203) : 3.706436 seconds
+Result [halibut-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3359) : 3.729135 seconds
+Result [sole-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3359) : 4.002826 seconds
+Result [flounder-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3359) : 3.894889 seconds
+Result [perch-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3359) : 5.562413 seconds
+Result [dorado-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3359) : 3.74938 seconds
+Result [pollock-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3359) : 3.711524 seconds
+Result [sardine-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3359) : 3.872819 seconds
+Result [brill-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3203) : 3.692229 seconds
+Result [blowfish-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3203) : 3.751593 seconds
+Result [anchovy-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3203) : 3.760273 seconds
+Result [marlin-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3203) : 3.870919 seconds
+Result [cod-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3359) : 3.699525 seconds
+Result [barracuda-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3359) : 3.766536 seconds
+Result [eel-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3359) : 3.752724 seconds
+Result [shark-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3359) : 4.189328 seconds
+Result [herring-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3203) : 3.756864 seconds
+Result [wahoo-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3203) : 3.75397 seconds
+Result [grouper-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3203) : 3.830528 seconds
+Result [bonito-0] : level-3 : parent(4218, 156, 3281) : (4296, 234, 3359) : 3.792894 seconds
+Result [swordfish-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3203) : 3.716196 seconds
+Result [tarpon-0] : level-3 : parent(4218, 156, 3281) : (4296, 78, 3203) : 3.782655 seconds
+Result [char-0] : level-3 : parent(4218, 156, 3281) : (4140, 78, 3359) : 3.886402 seconds
+Result [mackerel-0] : level-3 : parent(4218, 156, 3281) : (4140, 234, 3203) : 3.769854 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (4296, 78, 3203) 3.74298 seconds
+...done.
+
+OPTIMAL : (4296, 78, 3203) 3.74298 seconds : 11.131950121739004 GFlops/sec
+
+Creating tasks for parent (3906, 156, 3281) ...
+Result [char-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3359) : 3.754783 seconds
+Result [mackerel-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3203) : 3.764998 seconds
+Result [brill-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3203) : 3.879606 seconds
+Result [perch-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3359) : 5.491976 seconds
+Result [bonito-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3203) : 3.716202 seconds
+Result [turbot-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3203) : 3.741787 seconds
+Result [halibut-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3203) : 3.717307 seconds
+Result [dorado-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3359) : 3.794086 seconds
+Result [shark-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3359) : 3.926969 seconds
+Result [char-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3203) : 3.730567 seconds
+Result [brill-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3359) : 3.747355 seconds
+Result [pollock-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3359) : 3.733892 seconds
+Result [eel-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3359) : 3.786514 seconds
+Result [turbot-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3359) : 3.706917 seconds
+Result [bonito-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3359) : 3.77026 seconds
+Result [mackerel-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3359) : 3.762032 seconds
+Result [tarpon-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3203) : 3.725844 seconds
+Result [halibut-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3203) : 3.696983 seconds
+Result [herring-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3203) : 4.080422 seconds
+Result [dorado-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3203) : 3.73716 seconds
+Result [brill-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3203) : 3.689453 seconds
+Result [shark-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3203) : 4.142419 seconds
+Result [perch-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3359) : 5.53243 seconds
+Result [cod-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3359) : 3.732609 seconds
+Result [flounder-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3359) : 3.727212 seconds
+Result [sardine-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3359) : 3.872938 seconds
+Result [pollock-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3359) : 3.731329 seconds
+Result [char-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3203) : 3.717345 seconds
+Result [turbot-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3359) : 3.738059 seconds
+Result [mackerel-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3359) : 3.75507 seconds
+Result [bonito-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3359) : 3.699325 seconds
+Result [blowfish-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3203) : 3.720748 seconds
+Result [barracuda-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3203) : 3.75821 seconds
+Result [sole-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3359) : 3.953722 seconds
+Result [wahoo-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3203) : 3.712874 seconds
+Result [swordfish-0] : level-3 : parent(3906, 156, 3281) : (3984, 78, 3203) : 3.751624 seconds
+Result [eel-0] : level-3 : parent(3906, 156, 3281) : (3984, 234, 3359) : 3.756843 seconds
+Result [anchovy-0] : level-3 : parent(3906, 156, 3281) : (3828, 78, 3203) : 3.767164 seconds
+Result [marlin-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3203) : 3.732816 seconds
+Result [grouper-0] : level-3 : parent(3906, 156, 3281) : (3828, 234, 3203) : 3.798275 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3984, 78, 3203) 3.7325392 seconds
+...done.
+
+OPTIMAL : (3984, 78, 3203) 3.7325392 seconds : 11.163088834182012 GFlops/sec
+
+Creating tasks for parent (3125, 625, 3125) ...
+Result [anchovy-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 2812) : 3.677711 seconds
+Result [char-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 3437) : 3.803791 seconds
+Result [eel-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 3437) : 3.767759 seconds
+Result [mackerel-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 2812) : 3.902125 seconds
+Result [herring-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 2812) : 4.740318 seconds
+Result [bonito-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 2812) : 3.672117 seconds
+Result [dorado-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 3437) : 3.895906 seconds
+Result [sole-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 3437) : 4.023086 seconds
+Result [shark-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 3437) : 4.209494 seconds
+Result [brill-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 2812) : 3.708064 seconds
+Result [swordfish-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 2812) : 3.678659 seconds
+Result [flounder-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 3437) : 3.741888 seconds
+Result [anchovy-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 2812) : 3.679614 seconds
+Result [char-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 3437) : 3.738546 seconds
+Result [eel-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 3437) : 3.756685 seconds
+Result [mackerel-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 3437) : 3.726147 seconds
+Result [herring-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 3437) : 3.996638 seconds
+Result [barracuda-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 2812) : 3.709894 seconds
+Result [pollock-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 3437) : 3.781189 seconds
+Result [bonito-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 3437) : 3.753115 seconds
+Result [dorado-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 2812) : 3.758362 seconds
+Result [shark-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 2812) : 3.948926 seconds
+Result [sole-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 2812) : 4.171719 seconds
+Result [wahoo-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 2812) : 3.704391 seconds
+Result [perch-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 3437) : 5.971884 seconds
+Result [grouper-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 2812) : 4.096678 seconds
+Result [flounder-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 3437) : 3.751644 seconds
+Result [anchovy-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 3437) : 3.785346 seconds
+Result [mackerel-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 3437) : 3.763525 seconds
+Result [turbot-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 2812) : 3.706792 seconds
+Result [halibut-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 2812) : 3.780113 seconds
+Result [swordfish-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 2812) : 3.747223 seconds
+Result [char-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 3437) : 3.751919 seconds
+Result [eel-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 3437) : 3.764949 seconds
+Result [blowfish-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 2812) : 3.678568 seconds
+Result [cod-0] : level-1 : parent(3125, 625, 3125) : (2812, 312, 3437) : 3.718921 seconds
+Result [brill-0] : level-1 : parent(3125, 625, 3125) : (3437, 937, 2812) : 3.837628 seconds
+Result [tarpon-0] : level-1 : parent(3125, 625, 3125) : (3437, 312, 2812) : 3.685756 seconds
+Result [marlin-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 2812) : 3.904781 seconds
+Result [sardine-0] : level-1 : parent(3125, 625, 3125) : (2812, 937, 3437) : 3.943766 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (2812, 312, 2812) 3.6892708 seconds
+Selected : (3437, 312, 2812) 3.6910424 seconds
+Selected : (3437, 937, 3437) 3.7634766 seconds
+...done.
+
+Creating tasks for parent (2812, 312, 2812) ...
+Result [anchovy-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2656) : 3.698429 seconds
+Result [eel-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2968) : 3.706323 seconds
+Result [char-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2968) : 3.688291 seconds
+Result [turbot-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2656) : 3.673703 seconds
+Result [grouper-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2656) : 4.110334 seconds
+Result [brill-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2656) : 3.68601 seconds
+Result [flounder-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2968) : 3.713676 seconds
+Result [halibut-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2656) : 3.693264 seconds
+Result [swordfish-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2656) : 3.673332 seconds
+Result [bonito-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2656) : 3.689241 seconds
+Result [sardine-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2968) : 3.840045 seconds
+Result [anchovy-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2656) : 3.658139 seconds
+Result [char-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2968) : 3.671749 seconds
+Result [grouper-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2968) : 4.130401 seconds
+Result [mackerel-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2656) : 3.674031 seconds
+Result [blowfish-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2656) : 3.729435 seconds
+Result [herring-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2656) : 3.887374 seconds
+Result [halibut-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2656) : 3.712189 seconds
+Result [eel-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2968) : 3.670364 seconds
+Result [brill-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2968) : 3.84102 seconds
+Result [perch-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2968) : 5.345176 seconds
+Result [dorado-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2968) : 3.68791 seconds
+Result [pollock-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2968) : 3.724116 seconds
+Result [marlin-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2656) : 3.832855 seconds
+Result [flounder-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2656) : 3.68119 seconds
+Result [bonito-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2656) : 3.678123 seconds
+Result [anchovy-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2968) : 3.675828 seconds
+Result [char-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2968) : 3.671561 seconds
+Result [sardine-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2656) : 3.795576 seconds
+Result [grouper-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2968) : 4.137388 seconds
+Result [barracuda-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2656) : 3.696262 seconds
+Result [cod-0] : level-2 : parent(2812, 312, 2812) : (2656, 156, 2968) : 3.683489 seconds
+Result [mackerel-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2968) : 3.671789 seconds
+Result [shark-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2968) : 3.940214 seconds
+Result [turbot-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2968) : 3.721046 seconds
+Result [blowfish-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2968) : 3.713315 seconds
+Result [tarpon-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2656) : 3.70656 seconds
+Result [sole-0] : level-2 : parent(2812, 312, 2812) : (2656, 468, 2968) : 3.927021 seconds
+Result [swordfish-0] : level-2 : parent(2812, 312, 2812) : (2968, 468, 2656) : 3.70434 seconds
+Result [wahoo-0] : level-2 : parent(2812, 312, 2812) : (2968, 156, 2656) : 3.675229 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (2968, 156, 2656) 3.6773926 seconds
+Selected : (2656, 156, 2968) 3.6959378 seconds
+Selected : (2656, 156, 2656) 3.6998754 seconds
+...done.
+
+Creating tasks for parent (2968, 156, 2656) ...
+Result [cod-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2734) : 3.715165 seconds
+Result [flounder-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2734) : 3.720436 seconds
+Result [marlin-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2578) : 3.66876 seconds
+Result [grouper-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2578) : 3.853271 seconds
+Result [eel-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2734) : 3.842854 seconds
+Result [sardine-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2734) : 3.823821 seconds
+Result [pollock-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2734) : 3.681048 seconds
+Result [bonito-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2578) : 3.667294 seconds
+Result [blowfish-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2578) : 3.761157 seconds
+Result [brill-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2578) : 3.672629 seconds
+Result [shark-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2734) : 3.771172 seconds
+Result [tarpon-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2578) : 3.77724 seconds
+Result [turbot-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2578) : 3.669148 seconds
+Result [barracuda-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2578) : 3.71778 seconds
+Result [anchovy-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2578) : 3.839629 seconds
+Result [cod-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2578) : 3.685022 seconds
+Result [flounder-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2734) : 3.700974 seconds
+Result [sardine-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2734) : 3.689488 seconds
+Result [swordfish-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2578) : 3.671737 seconds
+Result [char-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2734) : 3.741565 seconds
+Result [pollock-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2578) : 3.658739 seconds
+Result [bonito-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2578) : 3.649859 seconds
+Result [brill-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2578) : 3.665463 seconds
+Result [eel-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2734) : 3.729576 seconds
+Result [shark-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2578) : 3.86648 seconds
+Result [perch-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2734) : 5.398705 seconds
+Result [turbot-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2734) : 3.651821 seconds
+Result [sole-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2734) : 3.906029 seconds
+Result [marlin-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2734) : 3.710277 seconds
+Result [barracuda-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2734) : 3.70133 seconds
+Result [anchovy-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2734) : 3.708731 seconds
+Result [tarpon-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2734) : 3.72927 seconds
+Result [cod-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2734) : 3.690789 seconds
+Result [mackerel-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2578) : 3.687392 seconds
+Result [grouper-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2734) : 3.826672 seconds
+Result [halibut-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2578) : 3.66094 seconds
+Result [blowfish-0] : level-3 : parent(2968, 156, 2656) : (3046, 234, 2578) : 3.684408 seconds
+Result [wahoo-0] : level-3 : parent(2968, 156, 2656) : (3046, 78, 2578) : 3.686323 seconds
+Result [dorado-0] : level-3 : parent(2968, 156, 2656) : (2890, 78, 2734) : 3.711008 seconds
+Result [herring-0] : level-3 : parent(2968, 156, 2656) : (2890, 234, 2578) : 3.753195 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3046, 234, 2734) 3.6963882 seconds
+...done.
+
+OPTIMAL : (3046, 234, 2734) 3.6963882 seconds : 11.272264819660085 GFlops/sec
+
+Creating tasks for parent (2656, 156, 2968) ...
+Result [bonito-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 2890) : 3.682681 seconds
+Result [eel-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 3046) : 3.701114 seconds
+Result [flounder-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 3046) : 3.703288 seconds
+Result [herring-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 2890) : 3.751453 seconds
+Result [halibut-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 2890) : 3.695562 seconds
+Result [wahoo-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 2890) : 3.676202 seconds
+Result [perch-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 3046) : 5.25409 seconds
+Result [cod-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 3046) : 3.728731 seconds
+Result [marlin-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 2890) : 3.714004 seconds
+Result [dorado-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 3046) : 3.729337 seconds
+Result [bonito-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 2890) : 3.685996 seconds
+Result [eel-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 3046) : 3.698003 seconds
+Result [herring-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 3046) : 3.726397 seconds
+Result [brill-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 2890) : 3.687919 seconds
+Result [pollock-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 3046) : 3.697473 seconds
+Result [tarpon-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 2890) : 3.696551 seconds
+Result [mackerel-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 2890) : 3.842981 seconds
+Result [halibut-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 3046) : 3.684995 seconds
+Result [flounder-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 3046) : 3.713155 seconds
+Result [char-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 3046) : 3.712079 seconds
+Result [blowfish-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 2890) : 3.691844 seconds
+Result [sole-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 3046) : 3.956268 seconds
+Result [wahoo-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 3046) : 3.714425 seconds
+Result [bonito-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 2890) : 3.662987 seconds
+Result [dorado-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 2890) : 3.7773 seconds
+Result [eel-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 3046) : 3.746263 seconds
+Result [herring-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 3046) : 4.03523 seconds
+Result [perch-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 2890) : 5.482463 seconds
+Result [barracuda-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 2890) : 3.722263 seconds
+Result [anchovy-0] : level-3 : parent(2656, 156, 2968) : (2578, 78, 2890) : 3.744541 seconds
+Result [swordfish-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 2890) : 3.74306 seconds
+Result [brill-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 3046) : 3.738295 seconds
+Result [pollock-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 3046) : 3.684127 seconds
+Result [tarpon-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 3046) : 3.704547 seconds
+Result [grouper-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 2890) : 3.880878 seconds
+Result [cod-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 2890) : 3.690552 seconds
+Result [shark-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 3046) : 4.143909 seconds
+Result [turbot-0] : level-3 : parent(2656, 156, 2968) : (2734, 78, 2890) : 3.731177 seconds
+Result [sardine-0] : level-3 : parent(2656, 156, 2968) : (2578, 234, 3046) : 3.841314 seconds
+Result [marlin-0] : level-3 : parent(2656, 156, 2968) : (2734, 234, 2890) : 3.683439 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (2578, 78, 2890) 3.7058496 seconds
+...done.
+
+OPTIMAL : (2578, 78, 2890) 3.7058496 seconds : 11.24348561438291 GFlops/sec
+
+Creating tasks for parent (2656, 156, 2656) ...
+Result [bonito-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2578) : 3.687066 seconds
+Result [blowfish-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2578) : 3.682353 seconds
+Result [wahoo-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2578) : 3.721498 seconds
+Result [herring-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2578) : 3.872367 seconds
+Result [grouper-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2578) : 4.101625 seconds
+Result [char-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2734) : 3.715444 seconds
+Result [barracuda-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2578) : 3.672108 seconds
+Result [marlin-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2578) : 3.676823 seconds
+Result [sole-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2734) : 3.859175 seconds
+Result [tarpon-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2578) : 3.675046 seconds
+Result [cod-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2734) : 3.708988 seconds
+Result [anchovy-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2578) : 3.857473 seconds
+Result [bonito-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2578) : 3.669208 seconds
+Result [blowfish-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2734) : 3.702427 seconds
+Result [wahoo-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2734) : 3.67234 seconds
+Result [herring-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2734) : 3.948545 seconds
+Result [grouper-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2734) : 3.90501 seconds
+Result [eel-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2734) : 3.68268 seconds
+Result [halibut-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2578) : 3.649467 seconds
+Result [swordfish-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2578) : 3.678509 seconds
+Result [mackerel-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2578) : 3.828677 seconds
+Result [barracuda-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2578) : 3.644418 seconds
+Result [marlin-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2578) : 3.673084 seconds
+Result [char-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2734) : 3.823889 seconds
+Result [sole-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2578) : 3.961432 seconds
+Result [flounder-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2734) : 3.669177 seconds
+Result [brill-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2578) : 3.678018 seconds
+Result [tarpon-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2578) : 3.692874 seconds
+Result [anchovy-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2734) : 3.661791 seconds
+Result [bonito-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2734) : 3.651634 seconds
+Result [blowfish-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2734) : 3.831798 seconds
+Result [herring-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2734) : 4.001322 seconds
+Result [shark-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2734) : 3.904883 seconds
+Result [cod-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2578) : 3.667269 seconds
+Result [wahoo-0] : level-3 : parent(2656, 156, 2656) : (2734, 234, 2734) : 3.719577 seconds
+Result [pollock-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2734) : 3.67616 seconds
+Result [sardine-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2734) : 3.664808 seconds
+Result [turbot-0] : level-3 : parent(2656, 156, 2656) : (2734, 78, 2578) : 3.838806 seconds
+Result [perch-0] : level-3 : parent(2656, 156, 2656) : (2578, 234, 2734) : 5.418871 seconds
+Result [dorado-0] : level-3 : parent(2656, 156, 2656) : (2578, 78, 2734) : 3.816776 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (2578, 78, 2578) 3.7154036 seconds
+...done.
+
+OPTIMAL : (2578, 78, 2578) 3.7154036 seconds : 11.21457347639612 GFlops/sec
+
+Creating tasks for parent (3437, 312, 2812) ...
+Result [eel-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2968) : 3.687203 seconds
+Result [char-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2968) : 3.689189 seconds
+Result [cod-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2968) : 3.74984 seconds
+Result [tarpon-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2656) : 3.742102 seconds
+Result [flounder-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2968) : 3.705367 seconds
+Result [mackerel-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2656) : 3.669028 seconds
+Result [grouper-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2656) : 3.85421 seconds
+Result [perch-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2968) : 5.420797 seconds
+Result [blowfish-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2656) : 3.665069 seconds
+Result [barracuda-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2656) : 3.666694 seconds
+Result [herring-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2656) : 3.712622 seconds
+Result [marlin-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2656) : 3.711097 seconds
+Result [eel-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2656) : 3.677542 seconds
+Result [cod-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2968) : 3.713423 seconds
+Result [tarpon-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2968) : 3.698355 seconds
+Result [halibut-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2656) : 3.675902 seconds
+Result [turbot-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2656) : 3.673461 seconds
+Result [char-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2968) : 3.707107 seconds
+Result [shark-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2968) : 3.933215 seconds
+Result [mackerel-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2968) : 3.70678 seconds
+Result [grouper-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2656) : 3.753054 seconds
+Result [dorado-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2968) : 3.702177 seconds
+Result [blowfish-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2656) : 3.679971 seconds
+Result [flounder-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2968) : 3.689968 seconds
+Result [herring-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2656) : 3.761301 seconds
+Result [marlin-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2968) : 3.740792 seconds
+Result [eel-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2968) : 3.695139 seconds
+Result [tarpon-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2968) : 3.675297 seconds
+Result [wahoo-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2656) : 3.673101 seconds
+Result [barracuda-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2656) : 3.677096 seconds
+Result [halibut-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2968) : 3.670763 seconds
+Result [cod-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2968) : 3.71022 seconds
+Result [bonito-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2656) : 3.692855 seconds
+Result [sole-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2968) : 3.934897 seconds
+Result [perch-0] : level-2 : parent(3437, 312, 2812) : (3593, 468, 2656) : 5.098636 seconds
+Result [swordfish-0] : level-2 : parent(3437, 312, 2812) : (3593, 156, 2656) : 3.701555 seconds
+Result [anchovy-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2656) : 3.826714 seconds
+Result [sardine-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2968) : 3.837849 seconds
+Result [pollock-0] : level-2 : parent(3437, 312, 2812) : (3281, 468, 2968) : 3.753678 seconds
+Result [brill-0] : level-2 : parent(3437, 312, 2812) : (3281, 156, 2656) : 3.808051 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (3593, 156, 2656) 3.6935522 seconds
+Selected : (3593, 468, 2968) 3.6984422 seconds
+Selected : (3593, 156, 2968) 3.7031266 seconds
+...done.
+
+Creating tasks for parent (3593, 156, 2656) ...
+Result [cod-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2734) : 3.69839 seconds
+Result [bonito-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2578) : 3.680195 seconds
+Result [blowfish-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2578) : 3.705032 seconds
+Result [eel-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2734) : 3.701071 seconds
+Result [perch-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2734) : 5.251081 seconds
+Result [tarpon-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2578) : 3.69225 seconds
+Result [brill-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2578) : 3.831581 seconds
+Result [grouper-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2578) : 4.136206 seconds
+Result [halibut-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2578) : 3.664315 seconds
+Result [pollock-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2734) : 3.681059 seconds
+Result [barracuda-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2578) : 3.710246 seconds
+Result [cod-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2578) : 3.700337 seconds
+Result [eel-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2734) : 3.858329 seconds
+Result [dorado-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2734) : 3.755482 seconds
+Result [sardine-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2734) : 3.778291 seconds
+Result [anchovy-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2578) : 3.844993 seconds
+Result [bonito-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2734) : 3.709809 seconds
+Result [blowfish-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2734) : 3.742236 seconds
+Result [tarpon-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2734) : 3.729828 seconds
+Result [brill-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2578) : 3.671277 seconds
+Result [grouper-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2578) : 3.937014 seconds
+Result [perch-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2734) : 5.386616 seconds
+Result [char-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2734) : 3.692282 seconds
+Result [herring-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2578) : 3.7698 seconds
+Result [turbot-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2578) : 3.792591 seconds
+Result [flounder-0] : level-3 : parent(3593, 156, 2656) : (3515, 78, 2734) : 3.846265 seconds
+Result [halibut-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2578) : 3.675101 seconds
+Result [barracuda-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2578) : 3.78042 seconds
+Result [cod-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2734) : 3.656881 seconds
+Result [eel-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2734) : 3.749023 seconds
+Result [marlin-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2578) : 3.661721 seconds
+Result [mackerel-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2578) : 3.709833 seconds
+Result [sole-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2734) : 3.847097 seconds
+Result [pollock-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2578) : 3.661243 seconds
+Result [dorado-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2734) : 3.698104 seconds
+Result [sardine-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2734) : 3.743981 seconds
+Result [anchovy-0] : level-3 : parent(3593, 156, 2656) : (3671, 234, 2734) : 3.727441 seconds
+Result [shark-0] : level-3 : parent(3593, 156, 2656) : (3515, 234, 2734) : 4.114782 seconds
+Result [swordfish-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2578) : 3.718741 seconds
+Result [wahoo-0] : level-3 : parent(3593, 156, 2656) : (3671, 78, 2578) : 3.692898 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3671, 234, 2734) 3.715086 seconds
+...done.
+
+OPTIMAL : (3671, 234, 2734) 3.715086 seconds : 11.215532202125782 GFlops/sec
+
+Creating tasks for parent (3593, 468, 2968) ...
+Result [anchovy-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 2890) : 3.700202 seconds
+Result [bonito-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 2890) : 3.687354 seconds
+Result [eel-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 3046) : 3.854111 seconds
+Result [flounder-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 3046) : 3.846822 seconds
+Result [wahoo-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 2890) : 3.665269 seconds
+Result [marlin-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 2890) : 3.717157 seconds
+Result [perch-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 3046) : 5.484804 seconds
+Result [cod-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 3046) : 3.711808 seconds
+Result [pollock-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 3046) : 3.737559 seconds
+Result [anchovy-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 2890) : 3.693402 seconds
+Result [bonito-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 3046) : 3.701962 seconds
+Result [flounder-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 3046) : 3.68375 seconds
+Result [eel-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 3046) : 3.745954 seconds
+Result [grouper-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 2890) : 4.125107 seconds
+Result [char-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 3046) : 3.703608 seconds
+Result [halibut-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 2890) : 3.670786 seconds
+Result [marlin-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 3046) : 3.733279 seconds
+Result [shark-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 3046) : 4.2678 seconds
+Result [mackerel-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 2890) : 3.838771 seconds
+Result [sole-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 3046) : 3.959302 seconds
+Result [cod-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 2890) : 3.723535 seconds
+Result [wahoo-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 3046) : 3.70761 seconds
+Result [anchovy-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 2890) : 3.680241 seconds
+Result [bonito-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 2890) : 3.676022 seconds
+Result [flounder-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 3046) : 3.691998 seconds
+Result [grouper-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 3046) : 4.142578 seconds
+Result [perch-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 2890) : 5.301733 seconds
+Result [blowfish-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 2890) : 3.711971 seconds
+Result [turbot-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 2890) : 3.760335 seconds
+Result [pollock-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 2890) : 3.671979 seconds
+Result [char-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 3046) : 3.85582 seconds
+Result [eel-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 3046) : 3.708016 seconds
+Result [swordfish-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 2890) : 3.715878 seconds
+Result [brill-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 2890) : 3.845747 seconds
+Result [halibut-0] : level-3 : parent(3593, 468, 2968) : (3671, 546, 3046) : 3.730566 seconds
+Result [barracuda-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 2890) : 3.844694 seconds
+Result [herring-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 2890) : 4.006602 seconds
+Result [sardine-0] : level-3 : parent(3593, 468, 2968) : (3515, 546, 3046) : 3.691034 seconds
+Result [dorado-0] : level-3 : parent(3593, 468, 2968) : (3515, 390, 3046) : 3.692708 seconds
+Result [tarpon-0] : level-3 : parent(3593, 468, 2968) : (3671, 390, 2890) : 3.756468 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3671, 390, 3046) 3.714511 seconds
+...done.
+
+OPTIMAL : (3671, 390, 3046) 3.714511 seconds : 11.217268347480104 GFlops/sec
+
+Creating tasks for parent (3593, 156, 2968) ...
+Result [anchovy-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 2890) : 3.701982 seconds
+Result [pollock-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 3046) : 3.729517 seconds
+Result [eel-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 3046) : 3.863862 seconds
+Result [bonito-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 2890) : 3.695507 seconds
+Result [brill-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 2890) : 3.705603 seconds
+Result [wahoo-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 2890) : 3.709308 seconds
+Result [swordfish-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 2890) : 3.728925 seconds
+Result [flounder-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 3046) : 3.863008 seconds
+Result [sole-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 3046) : 3.84716 seconds
+Result [herring-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 2890) : 3.907972 seconds
+Result [anchovy-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 2890) : 3.735039 seconds
+Result [pollock-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 3046) : 3.720686 seconds
+Result [eel-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 3046) : 3.714914 seconds
+Result [char-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 3046) : 3.733751 seconds
+Result [halibut-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 2890) : 3.708149 seconds
+Result [grouper-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 2890) : 3.839077 seconds
+Result [bonito-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 3046) : 3.713189 seconds
+Result [wahoo-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 3046) : 3.735761 seconds
+Result [dorado-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 3046) : 3.78627 seconds
+Result [cod-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 3046) : 3.705945 seconds
+Result [blowfish-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 2890) : 3.84307 seconds
+Result [brill-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 3046) : 3.699099 seconds
+Result [swordfish-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 2890) : 3.852669 seconds
+Result [flounder-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 2890) : 3.72734 seconds
+Result [anchovy-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 2890) : 3.673167 seconds
+Result [sole-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 2890) : 3.976995 seconds
+Result [herring-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 2890) : 3.94787 seconds
+Result [eel-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 3046) : 3.694044 seconds
+Result [pollock-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 3046) : 3.858221 seconds
+Result [mackerel-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 2890) : 3.684132 seconds
+Result [halibut-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 3046) : 3.693826 seconds
+Result [char-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 3046) : 3.704751 seconds
+Result [grouper-0] : level-3 : parent(3593, 156, 2968) : (3671, 234, 3046) : 3.838692 seconds
+Result [perch-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 3046) : 5.345613 seconds
+Result [turbot-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 2890) : 3.722141 seconds
+Result [shark-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 3046) : 4.160966 seconds
+Result [barracuda-0] : level-3 : parent(3593, 156, 2968) : (3515, 78, 2890) : 3.724696 seconds
+Result [tarpon-0] : level-3 : parent(3593, 156, 2968) : (3671, 78, 2890) : 3.718138 seconds
+Result [sardine-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 3046) : 3.695442 seconds
+Result [marlin-0] : level-3 : parent(3593, 156, 2968) : (3515, 234, 2890) : 3.709017 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3671, 78, 3046) 3.7167298 seconds
+...done.
+
+OPTIMAL : (3671, 78, 3046) 3.7167298 seconds : 11.210571902931083 GFlops/sec
+
+Creating tasks for parent (3437, 937, 3437) ...
+Result [bonito-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3281) : 3.72931 seconds
+Result [brill-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3281) : 3.733247 seconds
+Result [anchovy-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3281) : 3.774326 seconds
+Result [pollock-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3593) : 3.903463 seconds
+Result [barracuda-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3281) : 3.763706 seconds
+Result [sardine-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3593) : 3.839416 seconds
+Result [herring-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3281) : 4.89026 seconds
+Result [wahoo-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3281) : 3.722315 seconds
+Result [swordfish-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3281) : 3.71802 seconds
+Result [dorado-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3593) : 3.796739 seconds
+Result [mackerel-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3281) : 3.820073 seconds
+Result [eel-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3593) : 3.923246 seconds
+Result [bonito-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3281) : 3.734887 seconds
+Result [brill-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3593) : 3.743265 seconds
+Result [anchovy-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3593) : 3.811237 seconds
+Result [pollock-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3593) : 3.773912 seconds
+Result [perch-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3593) : 6.502776 seconds
+Result [flounder-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3593) : 3.779445 seconds
+Result [marlin-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3281) : 3.852664 seconds
+Result [barracuda-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3593) : 3.750292 seconds
+Result [sole-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3593) : 4.130597 seconds
+Result [sardine-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3593) : 3.764049 seconds
+Result [tarpon-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3281) : 3.727684 seconds
+Result [grouper-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3281) : 3.997906 seconds
+Result [shark-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3593) : 4.009693 seconds
+Result [wahoo-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3281) : 3.741798 seconds
+Result [swordfish-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3281) : 3.843261 seconds
+Result [dorado-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3281) : 3.811201 seconds
+Result [herring-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3281) : 4.79922 seconds
+Result [eel-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3593) : 3.844269 seconds
+Result [bonito-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3593) : 3.862142 seconds
+Result [anchovy-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3593) : 3.916248 seconds
+Result [pollock-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3593) : 3.874818 seconds
+Result [turbot-0] : level-2 : parent(3437, 937, 3437) : (3593, 781, 3281) : 3.779886 seconds
+Result [blowfish-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3281) : 3.802896 seconds
+Result [mackerel-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3281) : 3.963933 seconds
+Result [brill-0] : level-2 : parent(3437, 937, 3437) : (3593, 1093, 3593) : 3.900735 seconds
+Result [char-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3593) : 3.766934 seconds
+Result [cod-0] : level-2 : parent(3437, 937, 3437) : (3281, 781, 3593) : 3.762111 seconds
+Result [halibut-0] : level-2 : parent(3437, 937, 3437) : (3281, 1093, 3281) : 3.824653 seconds
+...done.
+
+Choosing best 3 results...
+Selected : (3593, 781, 3281) 3.7365584 seconds
+Selected : (3281, 781, 3281) 3.760697 seconds
+Selected : (3593, 781, 3593) 3.768551 seconds
+...done.
+
+Creating tasks for parent (3593, 781, 3281) ...
+Result [char-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3359) : 3.738249 seconds
+Result [anchovy-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3203) : 3.784575 seconds
+Result [brill-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3203) : 3.750925 seconds
+Result [wahoo-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3203) : 3.771563 seconds
+Result [shark-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3359) : 3.934942 seconds
+Result [marlin-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3203) : 3.732567 seconds
+Result [grouper-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3203) : 3.867272 seconds
+Result [dorado-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3359) : 3.830954 seconds
+Result [bonito-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3203) : 3.739971 seconds
+Result [pollock-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3359) : 3.797314 seconds
+Result [char-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3203) : 3.740744 seconds
+Result [anchovy-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3359) : 3.769786 seconds
+Result [brill-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3359) : 3.741802 seconds
+Result [wahoo-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3359) : 3.768479 seconds
+Result [shark-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3359) : 4.182318 seconds
+Result [flounder-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3359) : 3.72274 seconds
+Result [halibut-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3203) : 3.721809 seconds
+Result [sardine-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3359) : 3.795811 seconds
+Result [dorado-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3203) : 3.719495 seconds
+Result [marlin-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3359) : 3.895384 seconds
+Result [barracuda-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3203) : 3.718148 seconds
+Result [bonito-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3203) : 3.767607 seconds
+Result [pollock-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3203) : 3.743359 seconds
+Result [char-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3203) : 3.796306 seconds
+Result [anchovy-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3359) : 3.770938 seconds
+Result [grouper-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3203) : 4.137144 seconds
+Result [wahoo-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3359) : 3.791766 seconds
+Result [shark-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3359) : 4.210345 seconds
+Result [mackerel-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3203) : 3.736449 seconds
+Result [cod-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3359) : 3.750367 seconds
+Result [turbot-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3203) : 3.731629 seconds
+Result [perch-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3359) : 5.86396 seconds
+Result [flounder-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3359) : 3.744981 seconds
+Result [sole-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3359) : 3.954184 seconds
+Result [brill-0] : level-3 : parent(3593, 781, 3281) : (3671, 859, 3359) : 3.735346 seconds
+Result [eel-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3359) : 3.761315 seconds
+Result [swordfish-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3203) : 3.7421 seconds
+Result [herring-0] : level-3 : parent(3593, 781, 3281) : (3515, 859, 3203) : 3.946933 seconds
+Result [blowfish-0] : level-3 : parent(3593, 781, 3281) : (3515, 703, 3203) : 3.711668 seconds
+Result [tarpon-0] : level-3 : parent(3593, 781, 3281) : (3671, 703, 3203) : 3.766134 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3515, 703, 3203) 3.7410574 seconds
+...done.
+
+OPTIMAL : (3515, 703, 3203) 3.7410574 seconds : 11.137671040991423 GFlops/sec
+
+Creating tasks for parent (3281, 781, 3281) ...
+Result [bonito-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3203) : 3.716619 seconds
+Result [mackerel-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3203) : 3.809021 seconds
+Result [char-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3359) : 3.734975 seconds
+Result [eel-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3359) : 3.735155 seconds
+Result [marlin-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3203) : 3.79497 seconds
+Result [perch-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3359) : 5.734173 seconds
+Result [blowfish-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3203) : 3.721108 seconds
+Result [barracuda-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3203) : 3.729142 seconds
+Result [tarpon-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3203) : 3.754475 seconds
+Result [shark-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3359) : 3.89391 seconds
+Result [bonito-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3203) : 3.703132 seconds
+Result [mackerel-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3359) : 3.736969 seconds
+Result [flounder-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3359) : 3.75743 seconds
+Result [swordfish-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3203) : 3.752541 seconds
+Result [sardine-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3359) : 3.802653 seconds
+Result [brill-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3203) : 3.921085 seconds
+Result [char-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3359) : 3.733695 seconds
+Result [eel-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3359) : 3.773702 seconds
+Result [marlin-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3359) : 3.759844 seconds
+Result [wahoo-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3203) : 3.75003 seconds
+Result [sole-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3359) : 3.968841 seconds
+Result [blowfish-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3203) : 3.720666 seconds
+Result [barracuda-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3203) : 3.713402 seconds
+Result [bonito-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3203) : 3.762017 seconds
+Result [mackerel-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3359) : 3.751143 seconds
+Result [dorado-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3359) : 3.763537 seconds
+Result [perch-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3359) : 5.620756 seconds
+Result [pollock-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3359) : 3.797285 seconds
+Result [anchovy-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3203) : 3.789237 seconds
+Result [flounder-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3359) : 3.738468 seconds
+Result [sardine-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3359) : 3.737047 seconds
+Result [brill-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3359) : 3.738692 seconds
+Result [shark-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3203) : 4.178394 seconds
+Result [halibut-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3203) : 3.720039 seconds
+Result [herring-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3203) : 4.017871 seconds
+Result [tarpon-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3203) : 3.766004 seconds
+Result [cod-0] : level-3 : parent(3281, 781, 3281) : (3203, 703, 3359) : 3.75731 seconds
+Result [grouper-0] : level-3 : parent(3281, 781, 3281) : (3203, 859, 3203) : 4.103455 seconds
+Result [swordfish-0] : level-3 : parent(3281, 781, 3281) : (3359, 859, 3359) : 3.908198 seconds
+Result [turbot-0] : level-3 : parent(3281, 781, 3281) : (3359, 703, 3203) : 3.877898 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3203, 703, 3359) 3.7496814 seconds
+...done.
+
+OPTIMAL : (3203, 703, 3359) 3.7496814 seconds : 11.112055191320165 GFlops/sec
+
+Creating tasks for parent (3593, 781, 3593) ...
+Result [anchovy-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3515) : 3.829833 seconds
+Result [char-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3671) : 3.775007 seconds
+Result [bonito-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3515) : 3.870268 seconds
+Result [flounder-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3671) : 3.915472 seconds
+Result [halibut-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3515) : 3.760147 seconds
+Result [dorado-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3671) : 3.757089 seconds
+Result [cod-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3671) : 3.794403 seconds
+Result [sole-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3671) : 4.004445 seconds
+Result [grouper-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3515) : 4.056465 seconds
+Result [brill-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3515) : 3.750693 seconds
+Result [turbot-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3515) : 3.747728 seconds
+Result [char-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3671) : 3.736027 seconds
+Result [anchovy-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3515) : 3.812705 seconds
+Result [bonito-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3671) : 3.750398 seconds
+Result [flounder-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3671) : 3.910476 seconds
+Result [barracuda-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3515) : 3.762603 seconds
+Result [cod-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3515) : 3.771898 seconds
+Result [halibut-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3671) : 3.909596 seconds
+Result [shark-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3671) : 4.24529 seconds
+Result [sole-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3515) : 3.967299 seconds
+Result [grouper-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3515) : 4.199302 seconds
+Result [eel-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3671) : 3.749305 seconds
+Result [marlin-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3515) : 3.800323 seconds
+Result [turbot-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3515) : 3.783971 seconds
+Result [dorado-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3671) : 3.92948 seconds
+Result [brill-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3515) : 3.921617 seconds
+Result [char-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3671) : 3.819977 seconds
+Result [anchovy-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3671) : 3.800368 seconds
+Result [bonito-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3671) : 3.806506 seconds
+Result [flounder-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3671) : 3.800402 seconds
+Result [perch-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3671) : 5.681834 seconds
+Result [sardine-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3671) : 3.825979 seconds
+Result [herring-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3515) : 3.975182 seconds
+Result [barracuda-0] : level-3 : parent(3593, 781, 3593) : (3671, 859, 3671) : 3.758451 seconds
+Result [tarpon-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3515) : 3.789349 seconds
+Result [wahoo-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3515) : 3.735506 seconds
+Result [blowfish-0] : level-3 : parent(3593, 781, 3593) : (3515, 703, 3515) : 3.748213 seconds
+Warning: No xauth data; using fake authentication data for X11 forwarding.
+Result [mackerel-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3515) : 3.783817 seconds
+Result [pollock-0] : level-3 : parent(3593, 781, 3593) : (3515, 859, 3671) : 3.788528 seconds
+Result [swordfish-0] : level-3 : parent(3593, 781, 3593) : (3671, 703, 3515) : 3.736681 seconds
+...done.
+
+Choosing best 1 results...
+Selected : (3671, 703, 3515) 3.7643938 seconds
+...done.
+
+OPTIMAL : (3671, 703, 3515) 3.7643938 seconds : 11.068625887829977 GFlops/sec
