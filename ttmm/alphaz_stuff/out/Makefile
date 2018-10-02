@@ -1,7 +1,7 @@
-CFLAGS= -O3  -I/usr/include/malloc/ 
-VECFLAGS=-fopt-info-vec-all -ftree-vectorizer-verbose=0 -march=native -mfma -fassociative-math
+CFLAGS= -O3 -I/usr/include/malloc/ 
+VECFLAGS= -qopt-report=5 -qopt-report-phase=loop,vec -fma -xCORE-AVX-I 
 LIBRARIES=-lm
-CC=gcc
+CC=icc
 OBJS = TMM.o 
 all: plain check
 
