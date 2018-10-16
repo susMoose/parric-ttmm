@@ -3,11 +3,11 @@ VECFLAGS= -fopt-info-vec-all -ftree-vectorizer-verbose=0
 
 all: add add_v add_parallel
 add: add.c
-	gcc $< -o $@ $(CFLAGS)
+	icc $< -o $@ $(CFLAGS)
 add_v: add_v.c
-	gcc -O3 $< -o $@ $(CFLAGS)
+	icc -O3 $< -o $@ $(CFLAGS)
 add_parallel: add_parallel.c
-	gcc -O3 $< -o $@ $(CFLAGS)
+	icc -O3 $< -o $@ $(CFLAGS)
 clean:
 	rm -rf *.o add add_v add_parallel
 
