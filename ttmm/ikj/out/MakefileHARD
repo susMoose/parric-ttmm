@@ -1,0 +1,17 @@
+CFLAGS= -O3
+LIBRARIES=-lm
+CC=gcc
+OBJS = TMMH_$(SIZE1)_$(SIZE2)_$(SIZE3).o 
+all: plain
+
+debug: CFLAGS =-DDEBUG -g -Wall -Wextra -std=c99 -I/usr/include/malloc/
+debug: all
+		
+plain: $(OBJS)
+	$(CC) TMM-wrapper.c -o TMMH_$(SIZE1)_$(SIZE2)_$(SIZE3) $(OBJS) $(CFLAGS) $(LIBRARIES)
+
+TMMH_$(SIZE1)_$(SIZE2)_$(SIZE3).o : TMM.c
+	$(CC) TMM_H.c -o TMMH_$(SIZE1)_$(SIZE2)_$(SIZE3).o $(CFLAGS) $(LIBRARIES) -c -DSIZE1=$(SIZE1) -DSIZE2=$(SIZE2) -DSIZE3=$(SIZE3)
+
+clean:
+	rm -f *.o TMM TMMH*

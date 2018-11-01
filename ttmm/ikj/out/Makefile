@@ -1,6 +1,6 @@
-CFLAGS= -O3  -std=c99  -I/usr/include/malloc/
+CFLAGS= -O3
 LIBRARIES=-lm
-CC?=gcc
+CC=gcc
 OBJS = TMM.o 
 all: plain check
 
@@ -26,4 +26,4 @@ TMM_verify.o : TMM_verify.c
 	$(CC) TMM_verify.c -o TMM_verify.o $(CFLAGS) $(LIBRARIES) -c
 
 clean:
-	rm -f *.o TMM TMM.check TMM.verify TMM.verify-rand
+	rm -f *.o TMM TMMH* TMM.check TMM.verify TMM.verify-rand
