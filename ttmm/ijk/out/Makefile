@@ -1,6 +1,6 @@
-CFLAGS= -O3  -std=c99  -I/usr/include/malloc/
+CFLAGS= -O3  -std=c99  -I/usr/include/malloc/ -fopenmp
 LIBRARIES=-lm
-CC?=gcc
+CC=gcc
 OBJS = TMM.o 
 all: plain check
 
