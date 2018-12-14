@@ -177,7 +177,7 @@ class Result:
 
     def __str__(self):
         ret = 'Result [' +  str(self.machine) + '-'
-        if self.score >= 0:
+        if self.core >= 0:
             ret += str(self.core) + ']'
         if self.level >= 0:
             ret += ' : level-' + str(self.level)
