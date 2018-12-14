@@ -256,6 +256,7 @@ def main():
     parser.add_argument('--parent-center', '--parent-center', help='Comma-delimted list of initial parent center.', nargs='+')
     parser.add_argument('--parent-size', '--parent-size', help='Size of initial parent.')
     parser.add_argument('--rectangle')
+    parser.add_argument('-f', '--config-file', default=None)
 
     parser.add_argument('-i', '--iterations', help='Number of times to recurse down into smaller cubes.', default=3)
 
@@ -286,8 +287,46 @@ def main():
     if args['rectangle']:
         parent = Rectangle( ( 500, 32, 3000), ( 1000, 64, 2000) )
         
-    
-    return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
+    if args['config_file']:
+        return main_helper2(config_filename=args['config_file'], path_prefix=path_prefix)
+    else:
+        return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
+
+
+
+def main_helper2(config_filename='./config', path_prefix=''):
+
+    #load tasks from file
+    N = []
+    TS = []
+    try:
+        config = open(config_filename, 'r')
+        for line in config:
+            pieces = line.split(':')
+            if pieces[0] == 'N':
+                N.append(int(pieces[1]))
+            elif pieces[0] == 'TS':
+                #pieces[1] = 1,2,3
+                ts = pieces[1].split(',')
+                TS.append((int(ts[0]),int(ts[1]),int(ts[2])))
+        print(N)
+        print(TS)
+    except:
+        print('oh well')
+
+    init_machines()
+    # Add tasks to queue
+    tasks = queue.Queue()
+    print('\nCreating tasks from config file...')
+    for n in N:
+        for ts in TS:
+            (ts1, ts2, ts3) = ts
+            for i in range(5):
+                tasks.put(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
+                print(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
+    run_workers(machines, tasks, None, None, None)
+    print('...done.')
+
 
 # main_helper(N=5000, 
 #    partitions=[4,4,4,4],
