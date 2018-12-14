@@ -177,7 +177,7 @@ class Result:
 
     def __str__(self):
         ret = 'Result [' +  str(self.machine) + '-' + str(self.core) + '] : level-' + str(self.level)
-        ret += ' : parent' + str(self.parent.c)
+        ret += ' : parent' + str(self.parent.c if parent else 'n/a')
         ret += ' : ' + str(tuple(self.command.params[1:])) + ' : ' + str(self.time) + ' seconds'
         return ret
 
