@@ -177,7 +177,10 @@ class Result:
 
     def __str__(self):
         ret = 'Result [' +  str(self.machine) + '-' + str(self.core) + '] : level-' + str(self.level)
-        ret += ' : parent' + str(self.parent.c if isinstance(self.parent, Cube) else 'n/a')
+        if isinstance(self.parent, Cube)
+            ret += ' : parent' + str(self.parent.c)
+        else:
+            ret += ' : N={}'.format(self.parent)
         ret += ' : ' + str(tuple(self.command.params[1:])) + ' : ' + str(self.time) + ' seconds'
         return ret
 
@@ -196,6 +199,30 @@ def init_machines():
         print('Creating','Machine(\''+str(h)+'\')...', end='')
         machines.append(Machine(h))
         print('done.')
+
+
+def worker2(machine, core, tasks, results):
+    #global tasks
+    #global level
+    while True:
+        command = tasks.get()
+        if not command:
+            break
+
+        # remotely invoke 'command' on 'machine' via ssh
+        echo_pipe = subprocess.Popen(['echo', str(command)], stdout=subprocess.PIPE)
+        ssh_pipe = subprocess.Popen(['ssh', '-T', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
+        result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
+        #print('------>', result_bytes.decode('utf-8'))
+        time = float(result_bytes.decode('utf-8').split(' ')[3])
+        result = Result(machine, core, command, time, level, command.params[0])
+        if not command in results:
+            results[command]=[]
+        results[command].append(result)
+
+        print(str(result))
+
+        tasks.task_done()
 
 
 def worker(machine, core, tasks, level, results, parent):
@@ -227,7 +254,7 @@ def run_workers2(machines, tasks, results):
     threads = []
     for machine in machines:
         for i in range(0, machine.cores):
-            t = threading.Thread(target=worker, args=(machine, i, tasks, 0, results, 'n/a'))
+            t = threading.Thread(target=worker2, args=(machine, tasks, results))
             t.start()
             threads.append(t)
     tasks.join()
@@ -326,8 +353,8 @@ def main_helper2(config_filename='./config', path_prefix=''):
                 #pieces[1] = 1,2,3
                 ts = pieces[1].split(',')
                 TS.append((int(ts[0]),int(ts[1]),int(ts[2])))
-        print(N)
-        print(TS)
+        #print(N)
+        #print(TS)
     except:
         print('oh well')
 
@@ -340,7 +367,7 @@ def main_helper2(config_filename='./config', path_prefix=''):
             (ts1, ts2, ts3) = ts
             for i in range(5):
                 tasks.put(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
-                print(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
+                #print(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
 
     results = {}
     run_workers2(machines, tasks, results)
