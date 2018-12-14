@@ -198,25 +198,6 @@ def init_machines():
         print('done.')
 
 
-def worker2(machine, core, tasks):
-    while True:
-        command = tasks.get()
-        if not command:
-            break
-
-        # remotely invoke 'command' on 'machine' via ssh
-        echo_pipe = subprocess.Popen(['echo', str(command)], stdout=subprocess.PIPE)
-        ssh_pipe = subprocess.Popen(['ssh', '-T', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
-        result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
-        #print('------>', result_bytes.decode('utf-8'))
-        time = float(result_bytes.decode('utf-8').split(' ')[3])
-        result = Result(machine, core, command, time, None, None)
-
-        print(str(result))
-
-        tasks.task_done()
-
-
 def worker(machine, core, tasks, level, results, parent):
     #global tasks
     #global level
@@ -241,12 +222,12 @@ def worker(machine, core, tasks, level, results, parent):
         tasks.task_done()
 
 
-def run_workers2(machines, tasks):
+def run_workers2(machines, tasks, results):
 
     threads = []
     for machine in machines:
         for i in range(0, machine.cores):
-            t = threading.Thread(target=worker2, args=(machine, i, tasks))
+            t = threading.Thread(target=worker, args=(machine, i, tasks, 0, results, 'n/a'))
             t.start()
             threads.append(t)
     tasks.join()
@@ -360,7 +341,13 @@ def main_helper2(config_filename='./config', path_prefix=''):
             for i in range(5):
                 tasks.put(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
                 print(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
-    run_workers(machines, tasks, None, None, None)
+
+    results = {}
+    run_workers2(machines, tasks, results)
+
+    # print results
+    for result in results:
+        print(result)
     print('...done.')
 
 
