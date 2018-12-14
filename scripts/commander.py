@@ -176,7 +176,11 @@ class Result:
         self.parent = parent
 
     def __str__(self):
-        ret = 'Result [' +  str(self.machine) + '-' + str(self.core) + '] : level-' + str(self.level)
+        ret = 'Result [' +  str(self.machine) + '-'
+        if self.score >= 0:
+            ret += str(self.core) + ']'
+        if self.level >= 0:
+            ret += ' : level-' + str(self.level)
         if isinstance(self.parent, Cube) or isinstance(self.parent, Rectangle):
             ret += ' : parent' + str(self.parent.c)
         else:
@@ -215,7 +219,7 @@ def worker2(machine, tasks, results):
         result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
         #print('------>', result_bytes.decode('utf-8'))
         time = float(result_bytes.decode('utf-8').split(' ')[3])
-        result = Result(machine, core, command, time, level, command.params[0])
+        result = Result(machine, -1, command, time, -1, command.params[0])
         if not command in results:
             results[command]=[]
         results[command].append(result)
