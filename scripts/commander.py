@@ -18,29 +18,29 @@ global gflops
 hostnames = [
     'anchovy',
     'barracuda',
-    'blowfish',
-    'bonito',
-    'brill',
-    'char',
-    'cod',
-    'dorado',
-    'eel',
-    'flounder',
-    'grouper',
-    'halibut',
-    'herring',
-    'mackerel',
-    'marlin',
-    'perch',
-    'pollock',
-    'sardine',
-    'shark',
-    'sole',
-    'swordfish',
-    'tarpon',
-    'turbot',
-    'tuna',
-    'wahoo'
+    #'blowfish',
+    #'bonito',
+    #'brill',
+    #'char',
+    #'cod',
+    #'dorado',
+    #'eel',
+    #'flounder',
+    #'grouper',
+    #'halibut',
+    #'herring',
+    #'mackerel',
+    #'marlin',
+    #'perch',
+    #'pollock',
+    #'sardine',
+    #'shark',
+    #'sole',
+    #'swordfish',
+    #'tarpon',
+    #'turbot',
+    #'tuna',
+    #'wahoo'
 ]
 
 
@@ -177,7 +177,7 @@ class Result:
 
     def __str__(self):
         ret = 'Result [' +  str(self.machine) + '-' + str(self.core) + '] : level-' + str(self.level)
-        if isinstance(self.parent, Cube)
+        if isinstance(self.parent, Cube) or isinstance(self.parent, Rectangle):
             ret += ' : parent' + str(self.parent.c)
         else:
             ret += ' : N={}'.format(self.parent)
@@ -201,7 +201,7 @@ def init_machines():
         print('done.')
 
 
-def worker2(machine, core, tasks, results):
+def worker2(machine, tasks, results):
     #global tasks
     #global level
     while True:
