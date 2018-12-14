@@ -198,6 +198,25 @@ def init_machines():
         print('done.')
 
 
+def worker2(machine, core, tasks):
+    while True:
+        command = tasks.get()
+        if not command:
+            break
+
+        # remotely invoke 'command' on 'machine' via ssh
+        echo_pipe = subprocess.Popen(['echo', str(command)], stdout=subprocess.PIPE)
+        ssh_pipe = subprocess.Popen(['ssh', '-T', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
+        result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
+        #print('------>', result_bytes.decode('utf-8'))
+        time = float(result_bytes.decode('utf-8').split(' ')[3])
+        result = Result(machine, core, command, time, None, None)
+
+        print(str(result))
+
+        tasks.task_done()
+
+
 def worker(machine, core, tasks, level, results, parent):
     #global tasks
     #global level
@@ -220,6 +239,23 @@ def worker(machine, core, tasks, level, results, parent):
         print(str(result))
 
         tasks.task_done()
+
+
+def run_workers2(machines, tasks):
+
+    threads = []
+    for machine in machines:
+        for i in range(0, machine.cores):
+            t = threading.Thread(target=worker2, args=(machine, i, tasks))
+            t.start()
+            threads.append(t)
+    tasks.join()
+
+    for t in threads:
+        tasks.put(None)
+
+    for t in threads:
+        t.join()
 
 
 def run_workers(machines, tasks, level, results, parent):
