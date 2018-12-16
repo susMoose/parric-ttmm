@@ -1,0 +1,7 @@
+*.o
+*TMM
+*.verify
+*.verify-rand
+*.check
+*.glog
+*swp
