@@ -176,8 +176,15 @@ class Result:
         self.parent = parent
 
     def __str__(self):
-        ret = 'Result [' +  str(self.machine) + '-' + str(self.core) + '] : level-' + str(self.level)
-        ret += ' : parent' + str(self.parent.c)
+        ret = 'Result [' +  str(self.machine) + '-'
+        if self.core >= 0:
+            ret += str(self.core) + ']'
+        if self.level >= 0:
+            ret += ' : level-' + str(self.level)
+        if isinstance(self.parent, Cube) or isinstance(self.parent, Rectangle):
+            ret += ' : parent' + str(self.parent.c)
+        else:
+            ret += ' : N={}'.format(self.parent)
         ret += ' : ' + str(tuple(self.command.params[1:])) + ' : ' + str(self.time) + ' seconds'
         return ret
 
@@ -196,6 +203,30 @@ def init_machines():
         print('Creating','Machine(\''+str(h)+'\')...', end='')
         machines.append(Machine(h))
         print('done.')
+
+
+def worker2(machine, tasks, results):
+    #global tasks
+    #global level
+    while True:
+        command = tasks.get()
+        if not command:
+            break
+
+        # remotely invoke 'command' on 'machine' via ssh
+        echo_pipe = subprocess.Popen(['echo', str(command)], stdout=subprocess.PIPE)
+        ssh_pipe = subprocess.Popen(['ssh', '-T', str(machine.hostname)], stdin=echo_pipe.stdout, stdout=subprocess.PIPE)
+        result_bytes = ssh_pipe.stdout.read()  # b'Execution time : 0.062362 sec.\n'
+        #print('------>', result_bytes.decode('utf-8'))
+        time = float(result_bytes.decode('utf-8').split(' ')[3])
+        result = Result(machine, -1, command, time, -1, command.params[0])
+        if not command in results:
+            results[command]=[]
+        results[command].append(result)
+
+        print(str(result))
+
+        tasks.task_done()
 
 
 def worker(machine, core, tasks, level, results, parent):
@@ -220,6 +251,23 @@ def worker(machine, core, tasks, level, results, parent):
         print(str(result))
 
         tasks.task_done()
+
+
+def run_workers2(machines, tasks, results):
+
+    threads = []
+    for machine in machines:
+        for i in range(0, machine.cores):
+            t = threading.Thread(target=worker2, args=(machine, tasks, results))
+            t.start()
+            threads.append(t)
+    tasks.join()
+
+    for t in threads:
+        tasks.put(None)
+
+    for t in threads:
+        t.join()
 
 
 def run_workers(machines, tasks, level, results, parent):
@@ -256,6 +304,7 @@ def main():
     parser.add_argument('--parent-center', '--parent-center', help='Comma-delimted list of initial parent center.', nargs='+')
     parser.add_argument('--parent-size', '--parent-size', help='Size of initial parent.')
     parser.add_argument('--rectangle')
+    parser.add_argument('-f', '--config-file', default=None)
 
     parser.add_argument('-i', '--iterations', help='Number of times to recurse down into smaller cubes.', default=3)
 
@@ -286,8 +335,52 @@ def main():
     if args['rectangle']:
         parent = Rectangle( ( 500, 32, 3000), ( 1000, 64, 2000) )
         
-    
-    return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
+    if args['config_file']:
+        return main_helper2(config_filename=args['config_file'], path_prefix=path_prefix)
+    else:
+        return main_helper(N=N, partitions=partitions, path_prefix=path_prefix, keep=keep, iterations=iterations, parent=parent)
+
+
+
+def main_helper2(config_filename='./config', path_prefix=''):
+
+    #load tasks from file
+    N = []
+    TS = []
+    try:
+        config = open(config_filename, 'r')
+        for line in config:
+            pieces = line.split(':')
+            if pieces[0] == 'N':
+                N.append(int(pieces[1]))
+            elif pieces[0] == 'TS':
+                #pieces[1] = 1,2,3
+                ts = pieces[1].split(',')
+                TS.append((int(ts[0]),int(ts[1]),int(ts[2])))
+        #print(N)
+        #print(TS)
+    except:
+        print('oh well')
+
+    init_machines()
+    # Add tasks to queue
+    tasks = queue.Queue()
+    print('\nCreating tasks from config file...')
+    for n in N:
+        for ts in TS:
+            (ts1, ts2, ts3) = ts
+            for i in range(5):
+                tasks.put(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
+                #print(Command('{}/TMM'.format(path_prefix), [n, ts1, ts2, ts3]))
+
+    results = {}
+    run_workers2(machines, tasks, results)
+
+    # print results
+    for result in results:
+        print(result)
+    print('...done.')
+
 
 # main_helper(N=5000, 
 #    partitions=[4,4,4,4],
