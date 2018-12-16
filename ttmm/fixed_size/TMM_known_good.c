@@ -102,13 +102,14 @@ inline double __min_double(double x, double y){
 
 
 
-//Memory Macros
-#define A(i,j) A[i*Nbad+j]
-#define B(i,j) B[i*Nbad+j]
-#define R(i,j) R[i*Nbad+j]
 
-void TMM(long N, float* restrict A, float* restrict B, float* restrict R){
-	const long Nbad = N +1;
+
+//Memory Macros
+#define A(i,j) A[i][j]
+#define B(i,j) B[i][j]
+#define R(i,j) R[i][j]
+
+void TMM_good(long N, float** A, float** B, float** R){
 	///Parameter checking
 	if (!((N >= 1))) {
 		printf("The value of parameters are not valid.\n");
@@ -116,28 +117,52 @@ void TMM(long N, float* restrict A, float* restrict B, float* restrict R){
 	}
 	//Memory Allocation
 	
-	#define S1(i,k,j) R(i,j) = (A(i,k))*(B(k,j))
-	#define S2(i,k,j) R(i,j) = (R(i,j))+((A(i,k))*(B(k,j)))
+	#define S1(i,j,k) R(i,k) = (A(i,j))*(B(j,k))
+	#define S2(i,j,k) R(i,k) = (R(i,k))+((A(i,j))*(B(j,k)))
+	#define S0(i,j,i2) R(i,i2) = R(i,i2)
 	{
 		//Domain
 		//{i,j,k|j==i && i>=1 && N>=k && k>=i && k>=1 && N>=i && N>=1}
 		//{i,j,k|i>=1 && N>=k && k>=j && j>=i+1 && j>=2 && N>=j && k>=i && k>=1 && N>=1}
 		//{i,j,i2|j==N && i2>=1 && N>=i2 && i>=1 && i2>=i && N>=1}
-		int i,k,j;
-		for(i=1;i <= N;i+=1)
+		int c1,c2,c3;
+		for(c1=1;c1 <= N-2;c1+=1)
 		 {
-		 	for(k=i;k <= N;k+=1)
+		 	for(c3=c1;c3 <= N;c3+=1)
 		 	 {
-				 #pragma omp simd safelen(16)
-		 	 	for(j=k;j <= N;j+=1)
+		 	 	S1((c1),(c1),(c3));
+		 	 }
+		 	for(c2=c1+1;c2 <= N-1;c2+=1)
+		 	 {
+		 	 	for(c3=c2;c3 <= N;c3+=1)
 		 	 	 {
-					S2((i),(k),(j));
+		 	 	 	S2((c1),(c2),(c3));
 		 	 	 }
 		 	 }
+		 	for(c3=c1;c3 <= N-1;c3+=1)
+		 	 {
+		 	 	S0((c1),(N),(c3));
+		 	 }
+		 	S2((c1),(N),(N));
+		 	S0((c1),(N),(N));
 		 }
+		if ((N >= 2)) {
+			{
+				for(c3=N-1;c3 <= N;c3+=1)
+				 {
+				 	S1((N-1),(N-1),(c3));
+				 }
+				S0((N-1),(N),(N-1));
+				S2((N-1),(N),(N));
+				S0((N-1),(N),(N));
+			}
+		}
+		S1((N),(N),(N));
+		S0((N),(N),(N));
 	}
 	#undef S1
 	#undef S2
+	#undef S0
 	
 	//Memory Free
 }

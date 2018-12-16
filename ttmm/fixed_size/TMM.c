@@ -12,7 +12,9 @@
 #include <omp.h>
 #include <immintrin.h>
 #include <malloc.h>
-
+#include <mkl.h>
+#include "blockformat.h"
+#include <string.h>
 
 // Common Macros
 #define max(x, y)   ((x)>(y) ? (x) : (y))
@@ -102,43 +104,49 @@ inline double __min_double(double x, double y){
 
 
 
-//Memory Macros
-#define A(i,j) A[i*Nbad+j]
-#define B(i,j) B[i*Nbad+j]
-#define R(i,j) R[i*Nbad+j]
 
-void TMM(long N, float* restrict A, float* restrict B, float* restrict R){
-	const long Nbad = N +1;
+
+//Memory Macros
+#define A(i,j) A[i][j]
+#define B(i,j) B[i][j]
+#define R(i,j) R[i][j]
+
+void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, float** R){
 	///Parameter checking
-	if (!((N >= 1))) {
+	if (!((N >= 1 && ts1_l1 > 0 && ts2_l1 > 0 && ts3_l1 > 0))) {
 		printf("The value of parameters are not valid.\n");
 		exit(-1);
 	}
+        //clear R
+        memset(R[0], 0, sizeof(float)*(N+1)*(N+1));
 	//Memory Allocation
 	
-	#define S1(i,k,j) R(i,j) = (A(i,k))*(B(k,j))
-	#define S2(i,k,j) R(i,j) = (R(i,j))+((A(i,k))*(B(k,j)))
+	#define S1(i,j,k) R(i,k) = (A(i,j))*(B(j,k))
+	#define S2(i,j,k) R(i,k) = (R(i,k))+((A(i,j))*(B(j,k)))
+	#define S0(i,j,i2) R(i,i2) = R(i,i2)
+	//wrapper allocates matrices contiguously, so first row pointer works as pointer for entire matrix
+	float *flatA=A[0], *flatB=B[0], *flatC=R[0];
+    //bm is block-major
+    float *bmA, *bmB, *bmC;
+    int new_sizeA=0;
+    bmA=toBlocks(flatA,N+1, &new_sizeA);
+    int new_sizeB=0;
+    bmB=toBlocks(flatB,N+1, &new_sizeB);
+    int new_sizeC=0;
+    bmC=toBlocks(flatC,N+1, &new_sizeC);
+    
 	{
-		//Domain
-		//{i,j,k|j==i && i>=1 && N>=k && k>=i && k>=1 && N>=i && N>=1}
-		//{i,j,k|i>=1 && N>=k && k>=j && j>=i+1 && j>=2 && N>=j && k>=i && k>=1 && N>=1}
-		//{i,j,i2|j==N && i2>=1 && N>=i2 && i>=1 && i2>=i && N>=1}
-		int i,k,j;
-		for(i=1;i <= N;i+=1)
-		 {
-		 	for(k=i;k <= N;k+=1)
-		 	 {
-				 #pragma omp simd safelen(16)
-		 	 	for(j=k;j <= N;j+=1)
-		 	 	 {
-					S2((i),(k),(j));
-		 	 	 }
-		 	 }
-		 }
+		for(int i=0;i<new_sizeA/SIZE;i++)
+            for(int j=i;j<new_sizeB/SIZE;j++)
+                for(int k=i;k<=j;k++)
+                    cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, SIZE, SIZE, SIZE, 1, bmA+(i*SIZE*new_sizeA+k*SIZE), SIZE, bmB+(k*SIZE*new_sizeB+j*SIZE), SIZE, 1, bmC+(i*SIZE*new_sizeC+j*SIZE), SIZE);
+                
 	}
 	#undef S1
 	#undef S2
-	
+	#undef S0
+    //copy from bmC to R
+    fromBlocks(bmC, flatC, new_sizeC, N+1);
 	//Memory Free
 }
 
