@@ -6,6 +6,7 @@ then
     ECLIPSE=/home/jenkins/eclipse/eclipse
 else
     ECLIPSE=/s/chopin/e/proj/AlphaZ/BinTree/eclipse-alphaz-bundle/eclipse/eclipse
+    #ECLIPSE=/Applications/Eclipse.app/Contents/MacOS/eclipse
 fi
 
 SCRIPT=TMMScript.cs
