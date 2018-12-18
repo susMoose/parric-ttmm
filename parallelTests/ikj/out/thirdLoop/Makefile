@@ -1,10 +1,10 @@
-CFLAGS=  -O3  -std=c99  -I/usr/include/malloc/ 
+CFLAGS=  -O3  -std=c99  -I/usr/include/malloc/ -fopenmp
 LIBRARIES=-lm
 CC=gcc
 LD=xild
 AR=xiar
 OBJS = TMM.o 
-all: plain check
+all: plain check verify verify-rand
 
 debug: CFLAGS =-DDEBUG -g -Wall -Wextra -std=c99 -I/usr/include/malloc/
 debug: all
