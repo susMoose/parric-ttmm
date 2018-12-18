@@ -61,7 +61,7 @@ def avg_results(all_results):
     return avgs
 
 
-def main(all_results):
+def main(args, all_results):
     results = avg_results(all_results)
     points = {}
     for r in results:
@@ -73,13 +73,45 @@ def main(all_results):
             points[r.N]['times'].append(r.time)
             points[r.N]['gfps'].append(r.gflops/time)
 
-    for N in points:
+    '''for N in points:
         print(N, 'typ', type(N))
         print('\t', points[N]['TS'])
         print('\t', points[N]['times'])
-        print('\t', points[N]['gfps']) 
+        print('\t', points[N]['gfps'])
+    '''
 
-    plt.scatter(points[5000]['TS'], points[5000]['gfps'])
+    x1, x2 = [], []
+    y1, y2 = [], []
+    for N in points:
+        if N % 500 != 0:
+            continue
+        x1.append(N)
+        max = points[N]['gfps'][0];
+        for gfps in points[N]['gfps']:
+            if gfps < max:
+                continue
+            max = gfps
+        y1.append(max)
+    plt.scatter(x1, y1, label='IJK-I 500->8000')
+
+    for N in points:
+        if N % 500 == 0:
+            continue
+        x2.append(N)
+        max = points[N]['gfps'][0];
+        for gfps in points[N]['gfps']:
+            if gfps < max:
+                continue
+            max = gfps
+        y2.append(max)
+    plt.scatter(x2, y2, label='IJK-I 512->8192')
+
+
+    plt.xlabel('tile size (x,x,x)')
+    plt.ylabel('gflops/sec')
+    plt.title(args['file_path'])
+    plt.legend()
+    plt.show()
 
 
 
@@ -95,5 +127,5 @@ if __name__ == '__main__':
     parser.add_argument('-f', '--file-path', help='results file path', default='')
     args = vars(parser.parse_args())
     results = load_results(args)
-    sys.exit(main(results))
+    sys.exit(main(args, results))
 
