@@ -112,6 +112,7 @@ inline double __min_double(double x, double y){
 #define R(i,j) R[i][j]
 
 void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, float** R){
+	omp_set_num_threads(6);
 	///Parameter checking
 	if (!((N >= 1 && ts1_l1 > 0 && ts2_l1 > 0 && ts3_l1 > 0))) {
 		printf("The value of parameters are not valid.\n");
