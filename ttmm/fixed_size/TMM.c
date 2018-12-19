@@ -139,8 +139,11 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 		for(int i=0;i<new_sizeA/SIZE;i++)
             for(int j=i;j<new_sizeB/SIZE;j++)
                 for(int k=i;k<=j;k++)
+    #ifdef FIXED_SIZE_INTERIOR
+                    blockmult(bmA+(i*SIZE*new_sizeA+k*SIZE),bmB+(k*SIZE*new_sizeB+j*SIZE),bmC+(i*SIZE*new_sizeC+j*SIZE));
+    #else
                     cblas_sgemm(CblasRowMajor, CblasNoTrans, CblasNoTrans, SIZE, SIZE, SIZE, 1, bmA+(i*SIZE*new_sizeA+k*SIZE), SIZE, bmB+(k*SIZE*new_sizeB+j*SIZE), SIZE, 1, bmC+(i*SIZE*new_sizeC+j*SIZE), SIZE);
-                
+    #endif       
 	}
 	#undef S1
 	#undef S2

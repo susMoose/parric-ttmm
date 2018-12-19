@@ -112,76 +112,69 @@ inline double __min_double(double x, double y){
 #define R(i,j) R[i][j]
 
 void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, float** R){
+	omp_set_num_threads(6);
 	///Parameter checking
 	if (!((N >= 1 && ts1_l1 > 0 && ts2_l1 > 0 && ts3_l1 > 0))) {
 		printf("The value of parameters are not valid.\n");
 		exit(-1);
 	}
 	//Memory Allocation
-// 	#define S1(i,j,k) R(i,j) = (R(i,j))+((A(i,k))*(B(k,j)))
-// 	#define S2(i,j,k) R(i,j) = (A(i,k))*(B(k,j))
-// 	#define S0(i,j,i2) R(i,i2) = R(i,i2)
 	
-	float sum; 
-    
-// 	#define S1(i,j,k) sum = (R(i,j) += (A(i,k)*B(k,j)))
-// 	#define S2(i,j,k) sum = (R(i,j) = (A(i,k))*(B(k,j))) 
+	#define S1(i,j,k) R(i,j) = (R(i,j))+((A(i,k))*(B(k,j)))
+	#define S2(i,j,k) R(i,j) = (A(i,k))*(B(k,j))
+	#define S0(i,j,i2) R(i,i2) = R(i,i2)
 	{
 		//Domain
 		//{i,j,k|i>=1 && N>=j && j>=k && k>=i+1 && k>=2 && N>=k && j>=i && j>=1 && N>=1}
 		//{i,j,k|k==i && i>=1 && N>=j && j>=i && j>=1 && N>=i && N>=1}
 		//{i,j,i2|j==N && i2>=1 && N>=i2 && i>=1 && i2>=i && N>=1}
 		int ti1_l1,ti2_l1,ti3_l1,c1,c2,c3;
-        #pragma omp parallel for reduction(+:sum)
+		#pragma omp parallel for
 		for(ti1_l1=(ceild((-ts1_l1+2),(ts1_l1))) * (ts1_l1);ti1_l1 <= N-2;ti1_l1+=ts1_l1)
 		 {
 		 	for(ti2_l1=(ceild((ti1_l1-ts2_l1+1),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
 		 	 {
 		 	 	for(ti3_l1=(ceild((ti1_l1-ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= max(ti1_l1+ts1_l1-1,max(ti2_l1+ts2_l1-1,N));ti3_l1+=ts3_l1)
-                {
-                    for(c1=max(ti1_l1,1);c1 <= min(ti1_l1+ts1_l1-1,N-2);c1+=1)  //I
-                    {  
-                        for(c2=max(ti2_l1,c1);c2 <= min(ti2_l1+ts2_l1-1,c1);c2+=1) // J
-                        {
-                            for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)  // K
-                            {
-//                                 S2((c1),(c1),(c1)); // R(i,i) = A(i,i) * B(i,i)             "IF" ----
-                                R(c1,c1) = A(c1,c1) * B(c1,c1);
-                            }
-                        }
-                        
-                        for(c2=max(ti2_l1,c1+1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
-                        {
-                            for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)
-                            {
-//                                 S2((c1),(c2),(c1)); // R(i,j) = A(i,i) * B(i,j)    
-                                R(c1,c2) = A(c1,c1) * B(c1,c2);
-                            }
-                            sum = R(c1,c2);
-                            for(c3=max(ti3_l1,c1+1);c3 <= min(ti3_l1+ts3_l1-1,c2);c3+=1)
-                            {
-//                                 S1((c1),(c2),(c3));    // R(i,j) += A(i,k)*B(k,j)     ACCUMULATION OF K OVER THE I ROW 
-                                sum += A(c1,c3)*B(c3,c2);
-                            }
-                            R(c1,c2) = sum;
-                        }
-                        
-                        for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-                        {
-                            for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)
-                            {
-//                                 S2((c1),(N),(c1));     // R(i,N) = A(i,i) * B(i,N)      "IF"-----
-                                R(c1,N) = A(c1,c1) * B(c1,N);
-
-                            }
-                            for(c3=max(ti3_l1,c1+1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-                            {
-//                                 S1((c1),(N),(c3));      // R(i,j) += A(i,N)*B(N,j)      ACCUMULATION OF K OVER THE LAST Ith COL  
-                                R(c1,N) += A(c1,c3)*B(c3,N);
-                                
-                            }
-                        }
-                    }
+		 	 	 {
+		 	 	 	{
+		 	 	 		for(c1=max(ti1_l1,1);c1 <= min(ti1_l1+ts1_l1-1,N-2);c1+=1)
+		 	 	 		 {
+		 	 	 		 	for(c2=max(ti2_l1,c1);c2 <= min(ti2_l1+ts2_l1-1,c1);c2+=1)
+		 	 	 		 	 {
+		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S2((c1),(c1),(c1));
+		 	 	 		 	 	 }
+		 	 	 		 	 }
+		 	 	 		 	for(c2=max(ti2_l1,c1+1);c2 <= min(ti2_l1+ts2_l1-1,N-1);c2+=1)
+		 	 	 		 	 {
+		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S2((c1),(c2),(c1));
+		 	 	 		 	 	 }
+		 	 	 		 	 	for(c3=max(ti3_l1,c1+1);c3 <= min(ti3_l1+ts3_l1-1,c2);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S1((c1),(c2),(c3));
+		 	 	 		 	 	 }
+		 	 	 		 	 }
+		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+		 	 	 		 	 {
+		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S2((c1),(N),(c1));
+		 	 	 		 	 	 }
+		 	 	 		 	 	for(c3=max(ti3_l1,c1);c3 <= min(ti3_l1+ts3_l1-1,c1);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S0((c1),(N),(c1));
+		 	 	 		 	 	 }
+		 	 	 		 	 	for(c3=max(ti3_l1,c1+1);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S1((c1),(N),(c3));
+		 	 	 		 	 	 	S0((c1),(N),(c3));
+		 	 	 		 	 	 }
+		 	 	 		 	 }
+		 	 	 		 }
+		 	 	 	}
 		 	 	 }
 		 	 }
 		 }
@@ -200,28 +193,24 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 				 	 	 		 	 {
 				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
 				 	 	 		 	 	 {
-// 				 	 	 		 	 	 	S2((N-1),(N-1),(N-1));         //INITALIZE 2ND TO LAST ROW, COL OF 2ND TO LAST K (IE 2ND TO LAST MULT)
-                                            R(N-1,N-1) = A(N-1,N-1) * B(N-1,N-1);
-
-                                             
-                                        }
+				 	 	 		 	 	 	S2((N-1),(N-1),(N-1));
+				 	 	 		 	 	 }
 				 	 	 		 	 }
 				 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
 				 	 	 		 	 {
 				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
 				 	 	 		 	 	 {
-// 				 	 	 		 	 	 	S2((N-1),(N),(N-1));       //INITALIZE 2ND TO LAST ROW AND LAST COL OF 2ND TO LAST K (IE 2ND TO LAST MULT   
-                                            R(N-1,N) = A(N-1,N-1) * B(N-1,N);
-
-                                            
-                                             
-                                        }
+				 	 	 		 	 	 	S2((N-1),(N),(N-1));
+				 	 	 		 	 	 }
+				 	 	 		 	 	for(c3=max(ti3_l1,N-1);c3 <= min(ti3_l1+ts3_l1-1,N-1);c3+=1)
+				 	 	 		 	 	 {
+				 	 	 		 	 	 	S0((N-1),(N),(N-1));
+				 	 	 		 	 	 }
 				 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
 				 	 	 		 	 	 {
-// 				 	 	 		 	 	 	S1((N-1),(N),(N));     // ACCUMULATION OVER 2ND TO LAST ROW, LAST COL AND LAST MULT 
-                                            R(N-1,N) += A(N-1,N)*B(N,N);
-                                             
-                                        }
+				 	 	 		 	 	 	S1((N-1),(N),(N));
+				 	 	 		 	 	 	S0((N-1),(N),(N));
+				 	 	 		 	 	 }
 				 	 	 		 	 }
 				 	 	 		 }
 				 	 	 	}
@@ -235,18 +224,26 @@ void TMM(long N, long ts1_l1, long ts2_l1, long ts3_l1, float** A, float** B, fl
 		 	for(ti2_l1=(ceild((N-ts2_l1+1),(ts2_l1))) * (ts2_l1);ti2_l1 <= N;ti2_l1+=ts2_l1)
 		 	 {
 		 	 	for(ti3_l1=(ceild((N-ts3_l1+1),(ts3_l1))) * (ts3_l1);ti3_l1 <= N;ti3_l1+=ts3_l1)
-                {
-                    for(c1=max(ti1_l1,N);c1 <= min(ti1_l1+ts1_l1-1,N);c1+=1)
-                    {
-                        for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
-                        {
-                            for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
-                            {
-//                                 S2((N),(N),(N));         //LAST INIT 
-                                 R(N,N) = A(N,N) * B(N,N);
-                            }
-                        }
-                    }
+		 	 	 {
+		 	 	 	{
+		 	 	 		for(c1=max(ti1_l1,N);c1 <= min(ti1_l1+ts1_l1-1,N);c1+=1)
+		 	 	 		 {
+		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+		 	 	 		 	 {
+		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S2((N),(N),(N));
+		 	 	 		 	 	 }
+		 	 	 		 	 }
+		 	 	 		 	for(c2=max(ti2_l1,N);c2 <= min(ti2_l1+ts2_l1-1,N);c2+=1)
+		 	 	 		 	 {
+		 	 	 		 	 	for(c3=max(ti3_l1,N);c3 <= min(ti3_l1+ts3_l1-1,N);c3+=1)
+		 	 	 		 	 	 {
+		 	 	 		 	 	 	S0((N),(N),(N));
+		 	 	 		 	 	 }
+		 	 	 		 	 }
+		 	 	 		 }
+		 	 	 	}
 		 	 	 }
 		 	 }
 		 }
