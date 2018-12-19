@@ -1,11 +1,11 @@
 MKL_FLAGS=-I/s/parsons/l/sys/intel/mkl/include/ -L/s/parsons/l/sys/intel/compilers_and_libraries_2018.0.128/linux/mkl/lib/intel64  -lmkl_intel_lp64 -lmkl_intel_thread -lmkl_core  -L/s/parsons/l/sys/intel/lib/intel64 -liomp5 -lm
 
 SIZE=10
-
+N=5000
 CC=gcc
 
-TMM:TMM-wrapper.c TMM.o blockformat.o
-	$(CC) $^ -o $@ -O3 $(MKL_FLAGS)
+TMM:TMM-wrapper.c TMM.c blockformat.c
+	$(CC) $^ -o $@$(N)-$(SIZE) -O3 $(MKL_FLAGS) -DSIZE=$(SIZE)
 
 check: TMM-wrapper.c TMM.o blockformat.o
 	$(CC) $^ -o TMM.check -O3 $(MKL_FLAGS) -DCHECKING
@@ -17,9 +17,13 @@ correctness: clean
 TMM.o:TMM.c
 	$(CC) $^ -o $@ -O3 $(MKL_FLAGS) -DSIZE=$(SIZE) -c
 
-runTMM: TMM
+runTMM: TMM 
 	$$(./mkl_setup.sh) ; \
-	./TMM 5000 5000 5000 5000
+	./TMM$(N)-$(SIZE) $(N) $(N) $(N) $(N)
+
+run%: %
+	$$(./mkl_setup.sh) ; \
+	./$< $(N) $(N) $(N) $(N)
 
 runcheck: check
 	$$(./mkl_setup.sh) ; \
