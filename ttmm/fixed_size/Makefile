@@ -5,7 +5,7 @@ N=5000
 CC=gcc
 
 TMM:TMM-wrapper.c TMM.c blockformat.c
-	$(CC) $^ -o $@$(N)-$(SIZE) -O3 $(MKL_FLAGS) -DSIZE=$(SIZE)
+	$(CC) $^ -o $@$(SIZE) -O3 $(MKL_FLAGS) -DSIZE=$(SIZE)
 
 check: TMM-wrapper.c TMM.o blockformat.o
 	$(CC) $^ -o TMM.check -O3 $(MKL_FLAGS) -DCHECKING
@@ -17,13 +17,13 @@ correctness: clean
 TMM.o:TMM.c
 	$(CC) $^ -o $@ -O3 $(MKL_FLAGS) -DSIZE=$(SIZE) -c
 
-runTMM: TMM 
-	$$(./mkl_setup.sh) ; \
-	./TMM$(N)-$(SIZE) $(N) $(N) $(N) $(N)
+D%: TMM #dummy 'sentinel' file
+	touch $@
 
-run%: %
+runTMM: | D$(SIZE) 
 	$$(./mkl_setup.sh) ; \
-	./$< $(N) $(N) $(N) $(N)
+	./TMM$(SIZE) $(N) $(N) $(N) $(N)
+
 
 runcheck: check
 	$$(./mkl_setup.sh) ; \
@@ -39,3 +39,13 @@ blockmult.o: blockmult.c
 	$(CC) $< -c -DSIZE=$(SIZE) -O3 -o $@ -Wfatal-errors
 clean:
 	rm -f ./*.o TMM
+
+r: s
+	echo "running r"
+
+s: p
+	touch s
+
+p: 
+	echo "phony"
+	touch p
