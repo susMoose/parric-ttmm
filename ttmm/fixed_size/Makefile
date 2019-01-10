@@ -4,8 +4,8 @@ SIZE=10
 N=5000
 CC=gcc
 
-TMM:TMM-wrapper.c TMM.c blockformat.c
-	$(CC) $^ -o $@$(SIZE) -O3 $(MKL_FLAGS) -DSIZE=$(SIZE)
+D%:TMM-wrapper.c TMM.c blockformat.c
+	$(CC) $^ -o $@ -O3 $(MKL_FLAGS) -DSIZE=$(SIZE)
 
 check: TMM-wrapper.c TMM.o blockformat.o
 	$(CC) $^ -o TMM.check -O3 $(MKL_FLAGS) -DCHECKING
@@ -17,12 +17,10 @@ correctness: clean
 TMM.o:TMM.c
 	$(CC) $^ -o $@ -O3 $(MKL_FLAGS) -DSIZE=$(SIZE) -c
 
-D%: TMM #dummy 'sentinel' file
-	touch $@
 
-runTMM: | D$(SIZE) 
+runTMM:  D$(SIZE) 
 	$$(./mkl_setup.sh) ; \
-	./TMM$(SIZE) $(N) $(N) $(N) $(N)
+	./$< $(N) $(N) $(N) $(N)
 
 
 runcheck: check
