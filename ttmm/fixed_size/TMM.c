@@ -12,7 +12,11 @@
 #include <omp.h>
 #include <immintrin.h>
 #include <malloc.h>
+#ifdef FIXED_SIZE_INTERIOR
+void blockmult(const float* a, const float* b, float* c);
+#else
 #include <mkl.h>
+#endif
 #include "blockformat.h"
 #include <string.h>
 
